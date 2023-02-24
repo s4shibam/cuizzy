@@ -59,7 +59,7 @@
 
 **Demo Video**
 
-<img src="./media/Quizzy-Demo.gif" width="50%" height="50%" alt="Demo Video">
+<img src="./media/Quizzy-Demo.gif" alt="Demo Video">
 
 <br/>
 
