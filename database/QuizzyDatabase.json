@@ -1,0 +1,4434 @@
+{
+  "topics": {
+    "1": {
+      "topicID": "CPP",
+      "title": "C++ is faster than J... No! It's the fastest",
+      "noq": 10
+    },
+    "2": {
+      "topicID": "JavaScript",
+      "title": "JavaScript is weird but you can not neglect it",
+      "noq": 5
+    },
+    "3": {
+      "topicID": "Tailwind-CSS",
+      "title": "Tailwind is nothing but CSS with a pinch of salt",
+      "noq": 4
+    },
+    "4": {
+      "topicID": "React-JS",
+      "title": "React makes it painless to create interactive UIs",
+      "noq": 5
+    },
+    "5": {
+      "topicID": "HTML",
+      "title": "HTML is the white skeleton of web pages",
+      "noq": 5
+    },
+    "6": {
+      "topicID": "Github",
+      "title": "Github remembers everything you do with it",
+      "noq": 5
+    },
+    "7": {
+      "topicID": "CPP-STL",
+      "title": "CPP STL is the Library to save lives along with time",
+      "noq": 5
+    },
+    "8": {
+      "topicID": "SQL",
+      "title": "SQL - No one else can manage data like it",
+      "noq": 5
+    },
+    "9": {
+      "topicID": "Python",
+      "title": "Python is the Self Reliant Maverick Giant",
+      "noq": 4
+    },
+    "10": {
+      "topicID": "OOPS",
+      "title": "OOPS - Practice now or regret later",
+      "noq": 10
+    },
+    "11": {
+      "topicID": "CSS",
+      "title": "CSS helps HTML to look beautiful than girls",
+      "noq": 5
+    },
+    "12": {
+      "topicID": "Java",
+      "title": "Java is lengthy but many people like it",
+      "noq": 5
+    },
+    "13": {
+      "topicID": "Operating-Systems",
+      "title": "Operating Systems is the ultimate manager",
+      "noq": 5
+    },
+    "14": {
+      "topicID": "Time-&-Space-Complexity",
+      "title": "Time or Space - Which is more Complex?",
+      "noq": 5
+    },
+    "15": {
+      "topicID": "Node-JS",
+      "title": "Node JS can do what JavaScript can't",
+      "noq": 4
+    },
+    "16": {
+      "topicID": "React-Router",
+      "title": "React Router is the ideal guide for all roads",
+      "noq": 2
+    },
+    "17": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "18": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "19": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "20": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "21": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "22": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "23": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "24": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "25": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "26": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "27": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "28": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "29": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "30": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "31": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "32": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "33": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "34": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "35": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    },
+    "36": {
+      "topicID": "Null",
+      "title": "New Quiz Coming Soon",
+      "noq": 0
+    }
+  },
+  "quiz": {
+    "CPP": {
+      "questions": [
+        {
+          "title": "Who invented C++?",
+          "options": [
+            {
+              "title": "Dennis Ritchie"
+            },
+            {
+              "title": "Brian Kernighan"
+            },
+            {
+              "title": "Bjarne Stroustrup"
+            },
+            {
+              "title": "Guido van Rossum"
+            },
+            {
+              "title": "James Gosling"
+            },
+            {
+              "title": "Gennady Korotkevich"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following is the correct identifier?",
+          "options": [
+            {
+              "title": "$var_name"
+            },
+            {
+              "title": "VAR_123"
+            },
+            {
+              "title": "varname@"
+            },
+            {
+              "title": "--var-name"
+            },
+            {
+              "title": "v_a_r_n_a_m_e"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following is the address operator?",
+          "options": [
+            {
+              "title": "@ (At)"
+            },
+            {
+              "title": "# (Hashtag)"
+            },
+            {
+              "title": "& (And)"
+            },
+            {
+              "title": "% (Percentage)"
+            },
+            {
+              "title": "* (Asterisk)"
+            },
+            {
+              "title": "! (Exclamation)"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following syntax is correct to create a comment in the C++ program?",
+          "options": [
+            {
+              "title": "// Comment"
+            },
+            {
+              "title": "/ Comment /"
+            },
+            {
+              "title": "/* Comment */"
+            },
+            {
+              "title": "# Comment"
+            },
+            {
+              "title": "!(Comment)"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "For inserting a new line in C++ program, which one of the following statements can be used?",
+          "options": [
+            {
+              "title": "\\n"
+            },
+            {
+              "title": "\\nl"
+            },
+            {
+              "title": "\\r"
+            },
+            {
+              "title": "endl"
+            },
+            {
+              "title": "!new-line"
+            },
+            {
+              "title": "+new"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following is the correct syntax for declaring the array?",
+          "options": [
+            {
+              "title": "init array []"
+            },
+            {
+              "title": "int array [5];"
+            },
+            {
+              "title": "Array[5];"
+            },
+            {
+              "title": "char array[1];"
+            },
+            {
+              "title": "bool arr[12];"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "The C++ code which causes abnormal termination/behavior of a program should be written under _______ block.",
+          "options": [
+            {
+              "title": "catch"
+            },
+            {
+              "title": "try"
+            },
+            {
+              "title": "finally"
+            },
+            {
+              "title": "handleTermination"
+            },
+            {
+              "title": "handleError"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "C++ uses which approach?",
+          "options": [
+            {
+              "title": "From any Direction"
+            },
+            {
+              "title": "Depends upon code size"
+            },
+            {
+              "title": "Right to Left"
+            },
+            {
+              "title": "Left to Right"
+            },
+            {
+              "title": "Top to Down"
+            },
+            {
+              "title": "Bottom to Up"
+            }
+          ]
+        },
+        {
+          "title": "For N = 13, which of the following will return true?",
+          "options": [
+            {
+              "title": "(N == 13)"
+            },
+            {
+              "title": "(N != 12)"
+            },
+            {
+              "title": "!(N != 13)"
+            },
+            {
+              "title": "(N&1)"
+            },
+            {
+              "title": "(N%2 == 1)"
+            },
+            {
+              "title": "(N%2 == 0)"
+            }
+          ]
+        },
+        {
+          "title": "By which of the following can the if-else statement be replaced?",
+          "options": [
+            {
+              "title": "Conditional Operator"
+            },
+            {
+              "title": "Bitwise Operator"
+            },
+            {
+              "title": "Logical Operator"
+            },
+            {
+              "title": "Arithmetic Operator"
+            },
+            {
+              "title": "Assignment Operator"
+            },
+            {
+              "title": "if-else is non-replaceable"
+            }
+          ]
+        }
+      ]
+    },
+    "JavaScript": {
+      "questions": [
+        {
+          "title": "How to declare JavaScript variables?",
+          "options": [
+            {
+              "title": "with var"
+            },
+            {
+              "title": "with let"
+            },
+            {
+              "title": "with const"
+            },
+            {
+              "title": "with variable"
+            },
+            {
+              "title": "with declare"
+            },
+            {
+              "title": "with new"
+            }
+          ]
+        },
+        {
+          "title": "When was JavaScript invented?",
+          "options": [
+            {
+              "title": "September 1998"
+            },
+            {
+              "title": "October 1999"
+            },
+            {
+              "title": "September 1995"
+            },
+            {
+              "title": "January 1995"
+            },
+            {
+              "title": "December 1995"
+            },
+            {
+              "title": "March 1996"
+            }
+          ]
+        },
+        {
+          "title": "Who or which company created JavaScript?",
+          "options": [
+            {
+              "title": "Jordan Walke"
+            },
+            {
+              "title": "Netscape"
+            },
+            {
+              "title": "Jack Ma"
+            },
+
+            {
+              "title": "Tarzan"
+            },
+            {
+              "title": "Brendan Eich"
+            },
+            {
+              "title": "Oracle"
+            }
+          ]
+        },
+        {
+          "title": "What is the latest version of ECMAScript till 2023?",
+          "options": [
+            {
+              "title": "ES2020"
+            },
+            {
+              "title": "ES2021"
+            },
+            {
+              "title": "ES6"
+            },
+            {
+              "title": "ES23"
+            },
+            {
+              "title": "ES2022"
+            },
+            {
+              "title": "ES2022"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following methods is used to access HTML elements using Javascript?",
+          "options": [
+            {
+              "title": "getElementById()"
+            },
+            {
+              "title": "getElementByClassName()"
+            },
+            {
+              "title": "getElementsByTagName()"
+            },
+            {
+              "title": "querySelectorAll()"
+            },
+            {
+              "title": "selectElement()"
+            },
+            {
+              "title": "All of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "Tailwind-CSS": {
+      "questions": [
+        {
+          "title": "What is Tailwind CSS?",
+          "options": [
+            {
+              "title": "CSS Compiler"
+            },
+            {
+              "title": "CSS Framework"
+            },
+            {
+              "title": "CSS Pre-processor"
+            },
+            {
+              "title": "CSS Post-processor"
+            },
+            {
+              "title": "Markup modifier"
+            },
+            {
+              "title": "CSS Generator"
+            }
+          ]
+        },
+        {
+          "title": "Which is/are the correct syntax to center elements with Tailwind CSS?",
+          "options": [
+            {
+              "title": "grid h-screen place-items-center"
+            },
+            {
+              "title": "flex items-center justify-center"
+            },
+            {
+              "title": "flex items-center justify-center h-screen"
+            },
+
+            {
+              "title": "grid mx-auto"
+            },
+
+            {
+              "title": "flex m-center"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "How can you make horizontally centered in Tailwind CSS?",
+          "options": [
+            {
+              "title": "horizon-center"
+            },
+            {
+              "title": "justify-center"
+            },
+            {
+              "title": "align-center"
+            },
+
+            {
+              "title": "items-center"
+            },
+            {
+              "title": "h-center"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "How can you make vertically centered in Tailwind CSS?",
+          "options": [
+            {
+              "title": "vertical-center"
+            },
+            {
+              "title": "justify-center"
+            },
+            {
+              "title": "align-center"
+            },
+            {
+              "title": "items-center"
+            },
+            {
+              "title": "v-center"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "React-JS": {
+      "questions": [
+        {
+          "title": "What is React JS?",
+          "options": [
+            {
+              "title": "JavaScript Framework"
+            },
+            {
+              "title": "Node JS Framework"
+            },
+            {
+              "title": "JavaScript Library"
+            },
+            {
+              "title": "JavaScript Compiler"
+            },
+            {
+              "title": "Markup modifier"
+            },
+            {
+              "title": "JavaScript Generator"
+            }
+          ]
+        },
+        {
+          "title": "Which company developed React JS?",
+          "options": [
+            {
+              "title": "Apple"
+            },
+            {
+              "title": "Facebook"
+            },
+            {
+              "title": "Google"
+            },
+            {
+              "title": "Meta"
+            },
+            {
+              "title": "FAANG"
+            },
+            {
+              "title": "Oracle"
+            }
+          ]
+        },
+        {
+          "title": "Who invented React JS?",
+          "options": [
+            {
+              "title": "Dennis Ritchie"
+            },
+            {
+              "title": "Brian Kernighan"
+            },
+            {
+              "title": "Jordan Walke"
+            },
+            {
+              "title": "Guido van Rossum"
+            },
+            {
+              "title": "James Gosling"
+            },
+            {
+              "title": "Gennady Korotkevich"
+            }
+          ]
+        },
+        {
+          "title": "Using which of the following command can prevent default behavior at in React?",
+          "options": [
+            {
+              "title": "preventDefault"
+            },
+            {
+              "title": "preventDefault()"
+            },
+            {
+              "title": "window.preventDefault()"
+            },
+            {
+              "title": "avoidDefault()"
+            },
+            {
+              "title": "ignoreDefault()"
+            },
+            {
+              "title": "revokeDefault()"
+            }
+          ]
+        },
+        {
+          "title": "JSX stands for what?",
+          "options": [
+            {
+              "title": "JavaScript X"
+            },
+            {
+              "title": "JSON XML"
+            },
+            {
+              "title": "JSON"
+            },
+
+            {
+              "title": "Java Standalone XML"
+            },
+            {
+              "title": "JavaScript XML"
+            },
+            {
+              "title": "React JS + JavaScript"
+            }
+          ]
+        }
+      ]
+    },
+    "HTML": {
+      "questions": [
+        {
+          "title": "What does HTML stands for?",
+          "options": [
+            {
+              "title": "Home Tool Markup Language"
+            },
+            {
+              "title": "Hyperlinks and Text Markup Language"
+            },
+            {
+              "title": "Hyper Text Marking Language"
+            },
+            {
+              "title": "Hyper Text Markup Language"
+            },
+            {
+              "title": "Hypo Text Markup Language"
+            },
+            {
+              "title": "Higher order Text Marker Linguistics"
+            }
+          ]
+        },
+        {
+          "title": "Choose the correct HTML element for the largest heading:",
+          "options": [
+            {
+              "title": "<heading>"
+            },
+            {
+              "title": "<h1/>"
+            },
+            {
+              "title": "<h1>"
+            },
+            {
+              "title": "<h6>"
+            },
+            {
+              "title": "<h>"
+            },
+            {
+              "title": "<head>"
+            }
+          ]
+        },
+        {
+          "title": "What is the correct HTML element to define important text?",
+          "options": [
+            {
+              "title": "<i>"
+            },
+            {
+              "title": "<important>"
+            },
+            {
+              "title": "<strong>"
+            },
+            {
+              "title": "<text>"
+            },
+            {
+              "title": "<imp>"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Identify the Block element(s)?",
+          "options": [
+            {
+              "title": "<p>"
+            },
+            {
+              "title": "<div>"
+            },
+            {
+              "title": "<main>"
+            },
+            {
+              "title": "<nav>"
+            },
+            {
+              "title": "<fieldset>"
+            },
+            {
+              "title": "<hr>"
+            }
+          ]
+        },
+        {
+          "title": "Identify the Block element(s).",
+          "options": [
+            {
+              "title": "<a>"
+            },
+            {
+              "title": "<q>"
+            },
+            {
+              "title": "<bdo>"
+            },
+            {
+              "title": "<img>"
+            },
+            {
+              "title": "<button>"
+            },
+            {
+              "title": "<li>"
+            }
+          ]
+        }
+      ]
+    },
+    "Github": {
+      "questions": [
+        {
+          "title": "What is Git?",
+          "options": [
+            {
+              "title": "A nickname for Github"
+            },
+            {
+              "title": "A programming language"
+            },
+            {
+              "title": "A version control system"
+            },
+            {
+              "title": "A file manager"
+            },
+            {
+              "title": "A remote repository platform"
+            },
+            {
+              "title": "A package manager"
+            }
+          ]
+        },
+        {
+          "title": "What is the command to get the installed version of Git?",
+          "options": [
+            {
+              "title": "git --v"
+            },
+            {
+              "title": "git -v"
+            },
+            {
+              "title": "gitVersion"
+            },
+            {
+              "title": "git get -v"
+            },
+            {
+              "title": "get git -v"
+            },
+            {
+              "title": "git --version"
+            }
+          ]
+        },
+        {
+          "title": "What is the command to commit with the message 'New email':",
+          "options": [
+            {
+              "title": "git add msg 'New Email'"
+            },
+            {
+              "title": "git commit log 'New email'"
+            },
+            {
+              "title": "git commit message 'New email'"
+            },
+            {
+              "title": "git commit -m 'New Email'"
+            },
+            {
+              "title": "git commit -m 'New email'"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "In Git, a branch is:",
+          "options": [
+            {
+              "title": "A secret part of Git config"
+            },
+            {
+              "title": "An independent line of development"
+            },
+            {
+              "title": "Private version of the main repository"
+            },
+            {
+              "title": "Helps to break code in parts - public & private"
+            },
+            {
+              "title": "Nothing, it is a nonsense word"
+            },
+            {
+              "title": "A separate version of the main repository"
+            }
+          ]
+        },
+        {
+          "title": "What is the command to push the current repository to the remote origin?",
+          "options": [
+            {
+              "title": "git merge remote"
+            },
+            {
+              "title": "git push origin"
+            },
+            {
+              "title": "git remote commit"
+            },
+            {
+              "title": "git remote push"
+            },
+            {
+              "title": "git -rm -p"
+            },
+            {
+              "title": "git -rm -o push"
+            }
+          ]
+        }
+      ]
+    },
+    "CPP-STL": {
+      "questions": [
+        {
+          "title": "Pick the correct statement.",
+          "options": [
+            {
+              "title": "STL is a generalized library"
+            },
+            {
+              "title": "Components of STL are parameterized"
+            },
+            {
+              "title": "STL uses the concept of templates classes and functions to achieve generalized implementation"
+            },
+            {
+              "title": "STL means Standard Template Library"
+            },
+            {
+              "title": "All of the mentioned"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "What are Iterators?",
+          "options": [
+            {
+              "title": "Iterators are used to iterate over C-like arrays"
+            },
+            {
+              "title": "Iterators are used to point memory addresses of STL containers"
+            },
+            {
+              "title": "Iterators are used to iterate over pointers"
+            },
+            {
+              "title": "Iterators are used to iterate over functions"
+            },
+            {
+              "title": "Iterators are used to iterate over methods"
+            },
+            {
+              "title": "All of the mentioned"
+            }
+          ]
+        },
+        {
+          "title": "Which header file is used for Iterators?",
+          "options": [
+            {
+              "title": "<iterator>"
+            },
+            {
+              "title": "<algorithm>"
+            },
+            {
+              "title": "<iter>"
+            },
+            {
+              "title": "<loopIter>"
+            },
+            {
+              "title": "<stl>"
+            },
+            {
+              "title": "<cpp-stl.h>"
+            }
+          ]
+        },
+        {
+          "title": "Which method(s) is/are not available for Queue Data Structure?",
+          "options": [
+            {
+              "title": "empty()"
+            },
+            {
+              "title": "top()"
+            },
+            {
+              "title": "front()"
+            },
+            {
+              "title": "back()"
+            },
+            {
+              "title": "pull()"
+            },
+            {
+              "title": "swap()"
+            }
+          ]
+        },
+        {
+          "title": "Which method/methods is/are not available for Stack Data Structure?",
+          "options": [
+            {
+              "title": "empty()"
+            },
+            {
+              "title": "top()"
+            },
+            {
+              "title": "front()"
+            },
+            {
+              "title": "back()"
+            },
+            {
+              "title": "pull()"
+            },
+            {
+              "title": "swap()"
+            }
+          ]
+        }
+      ]
+    },
+    "SQL": {
+      "questions": [
+        {
+          "title": "What is the full form of SQL?",
+          "options": [
+            {
+              "title": "Structure Query Language"
+            },
+            {
+              "title": "Structural Query Language"
+            },
+            {
+              "title": "Structured Query Language"
+            },
+            {
+              "title": "Simulated Query Language"
+            },
+            {
+              "title": "Structured Query Linguistics"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "What are not the examples of SQL databases?",
+          "options": [
+            {
+              "title": "MySQL"
+            },
+            {
+              "title": "Cassandra"
+            },
+            {
+              "title": "Oracle"
+            },
+            {
+              "title": "MongoDB"
+            },
+            {
+              "title": "Hypertable"
+            },
+            {
+              "title": "PostgreSQL"
+            }
+          ]
+        },
+        {
+          "title": "What command is used to create a new table in SQL?",
+          "options": [
+            {
+              "title": "create table"
+            },
+            {
+              "title": "CREATE TABLE"
+            },
+            {
+              "title": "BUILD TABLE"
+            },
+            {
+              "title": "build table"
+            },
+            {
+              "title": "create new table"
+            },
+            {
+              "title": "CREATE NEW TABLE"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following is the full form of DDL?",
+          "options": [
+            {
+              "title": "Data Defination Language"
+            },
+            {
+              "title": "Data Definition Language"
+            },
+            {
+              "title": "Data Derivation Language"
+            },
+            {
+              "title": "Dynamic Data Language"
+            },
+            {
+              "title": "Detailed Data Language"
+            },
+            {
+              "title": "Data Declarative Language"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following allows you to uniquely identify a tuple?",
+          "options": [
+            {
+              "title": "schema"
+            },
+            {
+              "title": "Attribute"
+            },
+            {
+              "title": "Super key"
+            },
+            {
+              "title": "Domain"
+            },
+            {
+              "title": "unique"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "Python": {
+      "questions": [
+        {
+          "title": "Who invented Python?",
+          "options": [
+            {
+              "title": "Dennis Ritchie"
+            },
+            {
+              "title": "Guido van Rossum"
+            },
+            {
+              "title": "Brian Kernighan"
+            },
+            {
+              "title": "Bjarne Stroustrup"
+            },
+            {
+              "title": "James Gosling"
+            },
+            {
+              "title": "Gennady Korotkevich"
+            }
+          ]
+        },
+        {
+          "title": "When was Python invented?",
+          "options": [
+            {
+              "title": "September 1991"
+            },
+            {
+              "title": "October 1999"
+            },
+            {
+              "title": "February 1991"
+            },
+            {
+              "title": "January 1992"
+            },
+
+            {
+              "title": "December 1995"
+            },
+            {
+              "title": "March 1996"
+            }
+          ]
+        },
+        {
+          "title": "What is the correct file extension for Python files?",
+          "options": [
+            {
+              "title": ".py"
+            },
+            {
+              "title": ".p"
+            },
+            {
+              "title": ".pyt"
+            },
+            {
+              "title": ".pip"
+            },
+            {
+              "title": ".code"
+            },
+            {
+              "title": ".pn"
+            }
+          ]
+        },
+        {
+          "title": "Which method can be used to return a string in upper case letters?",
+          "options": [
+            {
+              "title": "toUpperCase()"
+            },
+            {
+              "title": "upperCase()"
+            },
+            {
+              "title": "uppercase()"
+            },
+            {
+              "title": "upper()"
+            },
+            {
+              "title": "toUpper()"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "OOPS": {
+      "questions": [
+        {
+          "title": "Which is/are the example(s) of purely Object Oriented Language?",
+          "options": [
+            {
+              "title": "Visual Basic"
+            },
+            {
+              "title": "C Language"
+            },
+            {
+              "title": "Java"
+            },
+            {
+              "title": "Fortran"
+            },
+            {
+              "title": "C++"
+            },
+            {
+              "title": "Smalltalk"
+            }
+          ]
+        },
+        {
+          "title": "What is the implicit return type of constructor?",
+          "options": [
+            {
+              "title": "No return type"
+            },
+            {
+              "title": "A class object in which it is defined"
+            },
+            {
+              "title": "void"
+            },
+            {
+              "title": "Constructor itself"
+            },
+            {
+              "title": "class"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Under which pillar of OOPS do base class and derived class relationships come?",
+          "options": [
+            {
+              "title": "Polymorphism"
+            },
+            {
+              "title": "Inheritance"
+            },
+            {
+              "title": "Encapsulation"
+            },
+            {
+              "title": "Abstraction"
+            },
+            {
+              "title": "Aggregation"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following is not a type of inheritance?",
+          "options": [
+            {
+              "title": "Multiple"
+            },
+            {
+              "title": "Multilevel"
+            },
+            {
+              "title": "Distributed"
+            },
+            {
+              "title": "Hierarchical"
+            },
+            {
+              "title": "Individual"
+            },
+            {
+              "title": "Single"
+            }
+          ]
+        },
+        {
+          "title": "Another name of overloading is?",
+          "options": [
+            {
+              "title": "Pseudo Polymorphism"
+            },
+            {
+              "title": "Transient Polymorphism"
+            },
+            {
+              "title": "Ad-hoc Polymorphism"
+            },
+            {
+              "title": "Virtual Polymorphism"
+            },
+            {
+              "title": "Additional Polymorphism"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Choose the option below which is used to free the memory allocated for an object in C++.",
+          "options": [
+            {
+              "title": "Free()"
+            },
+            {
+              "title": "unallocate()"
+            },
+            {
+              "title": "delete"
+            },
+            {
+              "title": "collect"
+            },
+            {
+              "title": "resetMemory()"
+            },
+            {
+              "title": "memset()"
+            }
+          ]
+        },
+        {
+          "title": "Which is shown by function overriding?",
+          "options": [
+            {
+              "title": "Polymorphism"
+            },
+            {
+              "title": "Inheritance"
+            },
+            {
+              "title": "Encapsulation"
+            },
+            {
+              "title": "Abstraction"
+            },
+            {
+              "title": "Aggregation"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Choose the option below for which instance of the class cannot be created.",
+          "options": [
+            {
+              "title": "Parent Class"
+            },
+            {
+              "title": "Anonymous Class"
+            },
+            {
+              "title": "Nested Class"
+            },
+            {
+              "title": "Abstract Class"
+            },
+            {
+              "title": "All of the above"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Virtual functions should be defined in?",
+          "options": [
+            {
+              "title": "Derived Class"
+            },
+            {
+              "title": "Base Class"
+            },
+            {
+              "title": "Parent Class"
+            },
+            {
+              "title": "Child Class"
+            },
+            {
+              "title": "Nothing exists like Virtual function"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Another name of the generic class is?",
+          "options": [
+            {
+              "title": "Template class"
+            },
+            {
+              "title": "Final class"
+            },
+            {
+              "title": "Abstract class"
+            },
+            {
+              "title": "Default class"
+            },
+            {
+              "title": "Efficient class"
+            },
+            {
+              "title": "Organic class"
+            }
+          ]
+        }
+      ]
+    },
+    "CSS": {
+      "questions": [
+        {
+          "title": "What does CSS stand for?",
+          "options": [
+            {
+              "title": "Computer Style Sheets"
+            },
+            {
+              "title": "Cascading Style Sheet"
+            },
+            {
+              "title": "Colorful Style Sheets"
+            },
+            {
+              "title": "Creative Style Sheets"
+            },
+            {
+              "title": "Conjugated Style Sheet"
+            },
+            {
+              "title": "Cascading Style Sheets"
+            }
+          ]
+        },
+        {
+          "title": "Which HTML tag is used to define an internal style sheet?",
+          "options": [
+            {
+              "title": "<css>"
+            },
+            {
+              "title": "<style>"
+            },
+            {
+              "title": "<script>"
+            },
+            {
+              "title": "<style/css>"
+            },
+            {
+              "title": "<css/style>"
+            },
+            {
+              "title": "None tag needed for that"
+            }
+          ]
+        },
+        {
+          "title": "How to insert a comment in a CSS file?",
+          "options": [
+            {
+              "title": "// This is a comment //"
+            },
+            {
+              "title": "/* This is a comment */"
+            },
+            {
+              "title": "// This is a comment"
+            },
+            {
+              "title": "' This is a comment"
+            },
+            {
+              "title": "! This is a comment"
+            },
+            {
+              "title": "{ This is a comment }"
+            }
+          ]
+        },
+        {
+          "title": "How to add a background color for all <h1> elements?",
+          "options": [
+            {
+              "title": "all.h1 {background-color:#FFFFFF;}"
+            },
+            {
+              "title": "h1 {background-color:#FFFFFF;}"
+            },
+            {
+              "title": "h1.all {background-color:#FFFFFF;}"
+            },
+            {
+              "title": "h1 > h1 {background-color:#FFFFFF;}"
+            },
+            {
+              "title": "All are correct"
+            },
+            {
+              "title": "It is impossible to do so"
+            }
+          ]
+        },
+        {
+          "title": "How to display hyperlinks without an underline?",
+          "options": [
+            {
+              "title": "a {decoration:no-underline;}"
+            },
+            {
+              "title": "a {text-decoration:no-underline;}"
+            },
+            {
+              "title": "a {underline:none;}"
+            },
+            {
+              "title": "a {text-decoration:none;}"
+            },
+            {
+              "title": "a > link {text-decoration:none;}"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "Java": {
+      "questions": [
+        {
+          "title": "Who invented Java?",
+          "options": [
+            {
+              "title": "Dennis Ritchie"
+            },
+            {
+              "title": "Brian Kernighan"
+            },
+            {
+              "title": "Bjarne Stroustrup"
+            },
+            {
+              "title": "Guido van Rossum"
+            },
+            {
+              "title": "James Gosling"
+            },
+            {
+              "title": "Gennady Korotkevich"
+            }
+          ]
+        },
+        {
+          "title": "When was Java invented?",
+          "options": [
+            {
+              "title": "September 1998"
+            },
+            {
+              "title": "October 1999"
+            },
+            {
+              "title": "May 1995"
+            },
+            {
+              "title": "January 1995"
+            },
+            {
+              "title": "December 1995"
+            },
+            {
+              "title": "March 1996"
+            }
+          ]
+        },
+        {
+          "title": "Which method can be used to find the length of a string?",
+          "options": [
+            {
+              "title": "length()"
+            },
+            {
+              "title": "getLength()"
+            },
+            {
+              "title": "len()"
+            },
+            {
+              "title": "getSize()"
+            },
+            {
+              "title": "size()"
+            },
+            {
+              "title": "String length is non measurable"
+            }
+          ]
+        },
+        {
+          "title": "Which operator(s) can be used to compare two values?",
+          "options": [
+            {
+              "title": "<>"
+            },
+            {
+              "title": "==="
+            },
+            {
+              "title": "=="
+            },
+            {
+              "title": "><"
+            },
+            {
+              "title": "!="
+            },
+            {
+              "title": "Two values can't be compared"
+            }
+          ]
+        },
+        {
+          "title": "What is/are the correct way(s) to create an object called myObj of MyClass?",
+          "options": [
+            {
+              "title": "new myObj = MyClass();"
+            },
+            {
+              "title": "class MyClass = new myObj();"
+            },
+            {
+              "title": "MyClass myObj = new MyClass();"
+            },
+            {
+              "title": "class myObj = new MyClass();"
+            },
+            {
+              "title": "new MyClass() = new myObj();"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "Operating-Systems": {
+      "questions": [
+        {
+          "title": "Which of the following are CPU scheduling algorithms?",
+          "options": [
+            {
+              "title": "Priority Scheduling"
+            },
+            {
+              "title": "Round Robin"
+            },
+            {
+              "title": "Shortest Job First"
+            },
+            {
+              "title": "Multilevel Queue"
+            },
+            {
+              "title": "Low Memory Load First"
+            },
+            {
+              "title": "All of the above"
+            }
+          ]
+        },
+        {
+          "title": "What type of scheduling FIFO is?",
+          "options": [
+            {
+              "title": "Pre-emptive Scheduling"
+            },
+            {
+              "title": "Non Pre-emptive Scheduling"
+            },
+            {
+              "title": "Deadline Scheduling"
+            },
+            {
+              "title": "High Memory Scheduling"
+            },
+            {
+              "title": "Low Memory Scheduling"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Which of the type of OS reads and reacts in terms of actual time?",
+          "options": [
+            {
+              "title": "Windows OS"
+            },
+            {
+              "title": "MAC OS"
+            },
+            {
+              "title": "Android OS"
+            },
+            {
+              "title": "Quick Sharing OS"
+            },
+            {
+              "title": "Batch OS"
+            },
+            {
+              "title": "Real Time OS"
+            }
+          ]
+        },
+        {
+          "title": "UNIX is written in which language?",
+          "options": [
+            {
+              "title": "C#"
+            },
+            {
+              "title": "C"
+            },
+            {
+              "title": "C++"
+            },
+            {
+              "title": "Java"
+            },
+            {
+              "title": "Ruby on Rails"
+            },
+            {
+              "title": "UNIX itself a language"
+            }
+          ]
+        },
+        {
+          "title": "What are the types of Semaphore?",
+          "options": [
+            {
+              "title": "Counting and Binary"
+            },
+            {
+              "title": "Counting and Decimal"
+            },
+            {
+              "title": "Decimal and Binary"
+            },
+            {
+              "title": "Counting and Mutex"
+            },
+            {
+              "title": "Counting, Binary and Mutex"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "Time-&-Space-Complexity": {
+      "questions": [
+        {
+          "title": "A measure of the amount of memory needed for an algorithm to execute is called:",
+          "options": [
+            {
+              "title": "Time Efficiency"
+            },
+            {
+              "title": "Functional Efficiency"
+            },
+            {
+              "title": "Space Efficiency"
+            },
+            {
+              "title": "Amortized Efficiency"
+            },
+            {
+              "title": "No Functional Efficiency"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "What is the average time complexity of Merge Sort?",
+          "options": [
+            {
+              "title": "O(N)"
+            },
+            {
+              "title": "O(N*Log(M))"
+            },
+            {
+              "title": "O(N*Log(N))"
+            },
+            {
+              "title": "O(Log(N))"
+            },
+            {
+              "title": "O(1)"
+            },
+            {
+              "title": "No one can measure this."
+            }
+          ]
+        },
+        {
+          "title": "What does it mean when we say that an algorithm X is asymptotically more efficient than Y?",
+          "options": [
+            {
+              "title": "X will always be a better choice for small inputs"
+            },
+            {
+              "title": "X will always be a better choice for large inputs"
+            },
+            {
+              "title": "Y will always be a better choice for small inputs"
+            },
+            {
+              "title": "X will always be a better choice for all inputs"
+            },
+            {
+              "title": "X will not be a better choice for small inputs"
+            },
+            {
+              "title": "Y will not be a better choice for small inputs"
+            }
+          ]
+        },
+        {
+          "title": "What is the time complexity of Sieve of Eratosthenes process?",
+          "options": [
+            {
+              "title": "O(Log(N))"
+            },
+            {
+              "title": "O(N*Log(N))"
+            },
+            {
+              "title": "O(Log(Log(N)))"
+            },
+            {
+              "title": "O(N*Log(Log(N)))"
+            },
+            {
+              "title": "O(N)"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "What is the Minimum average time complexity to search a value with an 1D array?",
+          "options": [
+            {
+              "title": "O(1)"
+            },
+            {
+              "title": "O(N)"
+            },
+            {
+              "title": "O(Log3(N))"
+            },
+            {
+              "title": "O(Log(N))"
+            },
+            {
+              "title": "O(N^2)"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "Node-JS": {
+      "questions": [
+        {
+          "title": "Who invented Node JS?",
+          "options": [
+            {
+              "title": "Dennis Ritchie"
+            },
+            {
+              "title": "Brian Kernighan"
+            },
+            {
+              "title": "Bjarne Stroustrup"
+            },
+            {
+              "title": "Guido van Rossum"
+            },
+            {
+              "title": "James Gosling"
+            },
+            {
+              "title": "Ryan Dahl"
+            }
+          ]
+        },
+        {
+          "title": "What is the full form of REPL?",
+          "options": [
+            {
+              "title": "Read Eval Print Loop"
+            },
+            {
+              "title": "Research Eval Print Loop"
+            },
+            {
+              "title": "Read Earn Point Learn"
+            },
+            {
+              "title": "Read Eval Point Loop"
+            },
+            {
+              "title": "Reading Evaluating Printing Loop"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "To include the HTTP server in the node module, what function do we use?",
+          "options": [
+            {
+              "title": "get()"
+            },
+            {
+              "title": "createServer()"
+            },
+            {
+              "title": "getServer()"
+            },
+            {
+              "title": "getHTTP()"
+            },
+            {
+              "title": "require()"
+            },
+            {
+              "title": "fetch()"
+            }
+          ]
+        },
+        {
+          "title": "Default scope in Node.js application is?",
+          "options": [
+            {
+              "title": "Global"
+            },
+            {
+              "title": "Local"
+            },
+            {
+              "title": "Window"
+            },
+            {
+              "title": "DOM"
+            },
+            {
+              "title": "Node JS Server"
+            },
+            {
+              "title": "Local to Object"
+            }
+          ]
+        }
+      ]
+    },
+    "React-Router": {
+      "questions": [
+        {
+          "title": "After v6.4 which React Router(s) support(s) Data API?",
+          "options": [
+            {
+              "title": "createBrowserRouter"
+            },
+            {
+              "title": "createMemoryRouter"
+            },
+            {
+              "title": "MemoryRouter"
+            },
+            {
+              "title": "BrowserRouter"
+            },
+            {
+              "title": "NativeRouter"
+            },
+            {
+              "title": "createHashRouter"
+            }
+          ]
+        },
+        {
+          "title": "After v6.4 which React Router(s) do/does not support Data API?",
+          "options": [
+            {
+              "title": "createBrowserRouter"
+            },
+            {
+              "title": "createMemoryRouter"
+            },
+            {
+              "title": "MemoryRouter"
+            },
+            {
+              "title": "BrowserRouter"
+            },
+            {
+              "title": "NativeRouter"
+            },
+            {
+              "title": "createHashRouter"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "answers": {
+    "CPP": {
+      "questions": [
+        {
+          "title": "Who invented C++?",
+          "options": [
+            {
+              "title": "Dennis Ritchie"
+            },
+            {
+              "title": "Brian Kernighan"
+            },
+            {
+              "title": "Bjarne Stroustrup",
+              "correct": true
+            },
+            {
+              "title": "Guido van Rossum"
+            },
+            {
+              "title": "James Gosling"
+            },
+            {
+              "title": "Gennady Korotkevich"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following is the correct identifier?",
+          "options": [
+            {
+              "title": "$var_name"
+            },
+            {
+              "title": "VAR_123",
+              "correct": true
+            },
+            {
+              "title": "varname@"
+            },
+            {
+              "title": "--var-name"
+            },
+            {
+              "title": "v_a_r_n_a_m_e",
+              "correct": true
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following is the address operator?",
+          "options": [
+            {
+              "title": "@ (At)"
+            },
+            {
+              "title": "# (Hashtag)"
+            },
+            {
+              "title": "& (And)",
+              "correct": true
+            },
+            {
+              "title": "% (Percentage)"
+            },
+            {
+              "title": "* (Asterisk)"
+            },
+            {
+              "title": "! (Exclamation)"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following syntax is correct to create a comment in the C++ program?",
+          "options": [
+            {
+              "title": "// Comment",
+              "correct": true
+            },
+            {
+              "title": "/ Comment /"
+            },
+            {
+              "title": "/* Comment */",
+              "correct": true
+            },
+            {
+              "title": "# Comment"
+            },
+            {
+              "title": "!(Comment)"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "For inserting a new line in C++ program, which one of the following statements can be used?",
+          "options": [
+            {
+              "title": "\\n",
+              "correct": true
+            },
+            {
+              "title": "\\nl"
+            },
+            {
+              "title": "\\r"
+            },
+            {
+              "title": "endl",
+              "correct": true
+            },
+            {
+              "title": "!new-line"
+            },
+            {
+              "title": "+new"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following is the correct syntax for declaring the array?",
+          "options": [
+            {
+              "title": "init array []"
+            },
+            {
+              "title": "int array [5];",
+              "correct": true
+            },
+            {
+              "title": "Array[5];"
+            },
+            {
+              "title": "char array[1];",
+              "correct": true
+            },
+            {
+              "title": "bool arr[12];",
+              "correct": true
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "The C++ code which causes abnormal termination/behavior of a program should be written under _______ block.",
+          "options": [
+            {
+              "title": "catch"
+            },
+            {
+              "title": "try",
+              "correct": true
+            },
+            {
+              "title": "finally"
+            },
+            {
+              "title": "handleTermination"
+            },
+            {
+              "title": "handleError"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "C++ uses which approach?",
+          "options": [
+            {
+              "title": "From any Direction"
+            },
+            {
+              "title": "Depends upon code size"
+            },
+            {
+              "title": "Right to Left"
+            },
+            {
+              "title": "Left to Right"
+            },
+            {
+              "title": "Top to Down"
+            },
+            {
+              "title": "Bottom to Up",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "title": "For N = 13, which of the following will return true?",
+          "options": [
+            {
+              "title": "(N == 13)",
+              "correct": true
+            },
+            {
+              "title": "(N != 12)",
+              "correct": true
+            },
+            {
+              "title": "!(N != 13)",
+              "correct": true
+            },
+            {
+              "title": "(N&1)",
+              "correct": true
+            },
+            {
+              "title": "(N%2 == 1)",
+              "correct": true
+            },
+            {
+              "title": "(N%2 == 0)"
+            }
+          ]
+        },
+        {
+          "title": "By which of the following can the if-else statement be replaced?",
+          "options": [
+            {
+              "title": "Conditional Operator",
+              "correct": true
+            },
+            {
+              "title": "Bitwise Operator"
+            },
+            {
+              "title": "Logical Operator"
+            },
+            {
+              "title": "Arithmetic Operator"
+            },
+            {
+              "title": "Assignment Operator"
+            },
+            {
+              "title": "if-else is non-replaceable"
+            }
+          ]
+        }
+      ]
+    },
+    "JavaScript": {
+      "questions": [
+        {
+          "title": "How to declare JavaScript variables?",
+          "options": [
+            {
+              "title": "with var",
+              "correct": true
+            },
+            {
+              "title": "with let",
+              "correct": true
+            },
+            {
+              "title": "with const",
+              "correct": true
+            },
+            {
+              "title": "with variable"
+            },
+            {
+              "title": "with declare"
+            },
+            {
+              "title": "with new"
+            }
+          ]
+        },
+        {
+          "title": "When was JavaScript invented?",
+          "options": [
+            {
+              "title": "September 1998"
+            },
+            {
+              "title": "October 1999"
+            },
+            {
+              "title": "September 1995",
+              "correct": true
+            },
+            {
+              "title": "January 1995"
+            },
+            {
+              "title": "December 1995"
+            },
+            {
+              "title": "March 1996"
+            }
+          ]
+        },
+        {
+          "title": "Who or which company created JavaScript?",
+          "options": [
+            {
+              "title": "Jordan Walke"
+            },
+            {
+              "title": "Netscape",
+              "correct": true
+            },
+            {
+              "title": "Jack Ma"
+            },
+
+            {
+              "title": "Tarzan"
+            },
+            {
+              "title": "Brendan Eich",
+              "correct": true
+            },
+            {
+              "title": "Oracle"
+            }
+          ]
+        },
+        {
+          "title": "What is the latest version of ECMAScript till 2023?",
+          "options": [
+            {
+              "title": "ES2020"
+            },
+            {
+              "title": "ES2021",
+              "correct": true
+            },
+            {
+              "title": "ES6"
+            },
+            {
+              "title": "ES23"
+            },
+            {
+              "title": "ES2022"
+            },
+            {
+              "title": "ES2022"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following methods is used to access HTML elements using Javascript?",
+          "options": [
+            {
+              "title": "getElementById()",
+              "correct": true
+            },
+            {
+              "title": "getElementByClassName()",
+              "correct": true
+            },
+            {
+              "title": "getElementsByTagName()",
+              "correct": true
+            },
+            {
+              "title": "querySelectorAll()",
+              "correct": true
+            },
+            {
+              "title": "selectElement()"
+            },
+            {
+              "title": "All of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "Tailwind-CSS": {
+      "questions": [
+        {
+          "title": "What is Tailwind CSS?",
+          "options": [
+            {
+              "title": "CSS Compiler"
+            },
+            {
+              "title": "CSS Framework",
+              "correct": true
+            },
+            {
+              "title": "CSS Pre-processor"
+            },
+            {
+              "title": "CSS Post-processor"
+            },
+            {
+              "title": "Markup modifier"
+            },
+            {
+              "title": "CSS Generator"
+            }
+          ]
+        },
+        {
+          "title": "Which is/are the correct syntax to center elements with Tailwind CSS?",
+          "options": [
+            {
+              "title": "grid h-screen place-items-center",
+              "correct": true
+            },
+            {
+              "title": "flex items-center justify-center"
+            },
+            {
+              "title": "flex items-center justify-center h-screen",
+              "correct": true
+            },
+
+            {
+              "title": "grid mx-auto"
+            },
+
+            {
+              "title": "flex m-center"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "How can you make horizontally centered in Tailwind CSS?",
+          "options": [
+            {
+              "title": "horizon-center"
+            },
+            {
+              "title": "justify-center",
+              "correct": true
+            },
+            {
+              "title": "align-center"
+            },
+
+            {
+              "title": "items-center"
+            },
+            {
+              "title": "h-center"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "How can you make vertically centered in Tailwind CSS?",
+          "options": [
+            {
+              "title": "vertical-center"
+            },
+            {
+              "title": "justify-center"
+            },
+            {
+              "title": "align-center"
+            },
+            {
+              "title": "items-center",
+              "correct": true
+            },
+            {
+              "title": "v-center"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "React-JS": {
+      "questions": [
+        {
+          "title": "What is React JS?",
+          "options": [
+            {
+              "title": "JavaScript Framework"
+            },
+            {
+              "title": "Node JS Framework"
+            },
+            {
+              "title": "JavaScript Library",
+              "correct": true
+            },
+            {
+              "title": "JavaScript Compiler"
+            },
+            {
+              "title": "Markup modifier"
+            },
+            {
+              "title": "JavaScript Generator"
+            }
+          ]
+        },
+        {
+          "title": "Which company developed React JS?",
+          "options": [
+            {
+              "title": "Apple"
+            },
+            {
+              "title": "Facebook",
+              "correct": true
+            },
+            {
+              "title": "Google"
+            },
+            {
+              "title": "Meta",
+              "correct": true
+            },
+            {
+              "title": "FAANG"
+            },
+            {
+              "title": "Oracle"
+            }
+          ]
+        },
+        {
+          "title": "Who invented React JS?",
+          "options": [
+            {
+              "title": "Dennis Ritchie"
+            },
+            {
+              "title": "Brian Kernighan"
+            },
+            {
+              "title": "Jordan Walke",
+              "correct": true
+            },
+            {
+              "title": "Guido van Rossum"
+            },
+            {
+              "title": "James Gosling"
+            },
+            {
+              "title": "Gennady Korotkevich"
+            }
+          ]
+        },
+        {
+          "title": "Using which of the following command can prevent default behavior at in React?",
+          "options": [
+            {
+              "title": "preventDefault"
+            },
+            {
+              "title": "preventDefault()",
+              "correct": true
+            },
+            {
+              "title": "window.preventDefault()"
+            },
+            {
+              "title": "avoidDefault()"
+            },
+            {
+              "title": "ignoreDefault()"
+            },
+            {
+              "title": "revokeDefault()"
+            }
+          ]
+        },
+        {
+          "title": "JSX stands for what?",
+          "options": [
+            {
+              "title": "JavaScript X"
+            },
+            {
+              "title": "JSON XML"
+            },
+            {
+              "title": "JSON"
+            },
+
+            {
+              "title": "Java Standalone XML"
+            },
+            {
+              "title": "JavaScript XML",
+              "correct": true
+            },
+            {
+              "title": "React JS + JavaScript"
+            }
+          ]
+        }
+      ]
+    },
+    "HTML": {
+      "questions": [
+        {
+          "title": "What does HTML stands for?",
+          "options": [
+            {
+              "title": "Home Tool Markup Language"
+            },
+            {
+              "title": "Hyperlinks and Text Markup Language"
+            },
+            {
+              "title": "Hyper Text Marking Language"
+            },
+            {
+              "title": "Hyper Text Markup Language",
+              "correct": true
+            },
+            {
+              "title": "Hypo Text Markup Language"
+            },
+            {
+              "title": "Higher order Text Marker Linguistics"
+            }
+          ]
+        },
+        {
+          "title": "Choose the correct HTML element for the largest heading:",
+          "options": [
+            {
+              "title": "<heading>"
+            },
+            {
+              "title": "<h1/>"
+            },
+            {
+              "title": "<h1>",
+              "correct": true
+            },
+            {
+              "title": "<h6>"
+            },
+            {
+              "title": "<h>"
+            },
+            {
+              "title": "<head>"
+            }
+          ]
+        },
+        {
+          "title": "What is the correct HTML element to define important text?",
+          "options": [
+            {
+              "title": "<i>"
+            },
+            {
+              "title": "<important>"
+            },
+            {
+              "title": "<strong>",
+              "correct": true
+            },
+            {
+              "title": "<text>"
+            },
+            {
+              "title": "<imp>"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Identify the Block element(s)?",
+          "options": [
+            {
+              "title": "<p>",
+              "correct": true
+            },
+            {
+              "title": "<div>",
+              "correct": true
+            },
+            {
+              "title": "<main>",
+              "correct": true
+            },
+            {
+              "title": "<nav>",
+              "correct": true
+            },
+            {
+              "title": "<fieldset>",
+              "correct": true
+            },
+            {
+              "title": "<hr>",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "title": "Identify the Block element(s).",
+          "options": [
+            {
+              "title": "<a>",
+              "correct": true
+            },
+            {
+              "title": "<q>",
+              "correct": true
+            },
+            {
+              "title": "<bdo>",
+              "correct": true
+            },
+            {
+              "title": "<img>",
+              "correct": true
+            },
+            {
+              "title": "<button>",
+              "correct": true
+            },
+            {
+              "title": "<li>"
+            }
+          ]
+        }
+      ]
+    },
+    "Github": {
+      "questions": [
+        {
+          "title": "What is Git?",
+          "options": [
+            {
+              "title": "A nickname for Github"
+            },
+            {
+              "title": "A programming language"
+            },
+            {
+              "title": "A version control system",
+              "correct": true
+            },
+            {
+              "title": "A file manager"
+            },
+            {
+              "title": "A remote repository platform"
+            },
+            {
+              "title": "A package manager"
+            }
+          ]
+        },
+        {
+          "title": "What is the command to get the installed version of Git?",
+          "options": [
+            {
+              "title": "git --v"
+            },
+            {
+              "title": "git -v",
+              "correct": true
+            },
+            {
+              "title": "gitVersion"
+            },
+            {
+              "title": "git get -v"
+            },
+            {
+              "title": "get git -v"
+            },
+            {
+              "title": "git --version",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "title": "What is the command to commit with the message 'New email':",
+          "options": [
+            {
+              "title": "git add msg 'New Email'"
+            },
+            {
+              "title": "git commit log 'New email'"
+            },
+            {
+              "title": "git commit message 'New email'"
+            },
+            {
+              "title": "git commit -m 'New Email'"
+            },
+            {
+              "title": "git commit -m 'New email'",
+              "correct": true
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "In Git, a branch is:",
+          "options": [
+            {
+              "title": "A secret part of Git config"
+            },
+            {
+              "title": "An independent line of development",
+              "correct": true
+            },
+            {
+              "title": "Private version of the main repository"
+            },
+            {
+              "title": "Helps to break code in parts - public & private"
+            },
+            {
+              "title": "Nothing, it is a nonsense word"
+            },
+            {
+              "title": "A separate version of the main repository",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "title": "What is the command to push the current repository to the remote origin?",
+          "options": [
+            {
+              "title": "git merge remote"
+            },
+            {
+              "title": "git push origin",
+              "correct": true
+            },
+            {
+              "title": "git remote commit"
+            },
+            {
+              "title": "git remote push"
+            },
+            {
+              "title": "git -rm -p"
+            },
+            {
+              "title": "git -rm -o push"
+            }
+          ]
+        }
+      ]
+    },
+    "CPP-STL": {
+      "questions": [
+        {
+          "title": "Pick the correct statement.",
+          "options": [
+            {
+              "title": "STL is a generalized library"
+            },
+            {
+              "title": "Components of STL are parameterized"
+            },
+            {
+              "title": "STL uses the concept of templates classes and functions to achieve generalized implementation",
+              "correct": true
+            },
+            {
+              "title": "STL means Standard Template Library",
+              "correct": true
+            },
+            {
+              "title": "All of the mentioned"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "What are Iterators?",
+          "options": [
+            {
+              "title": "Iterators are used to iterate over C-like arrays"
+            },
+            {
+              "title": "Iterators are used to point memory addresses of STL containers",
+              "correct": true
+            },
+            {
+              "title": "Iterators are used to iterate over pointers"
+            },
+            {
+              "title": "Iterators are used to iterate over functions"
+            },
+            {
+              "title": "Iterators are used to iterate over methods"
+            },
+            {
+              "title": "All of the mentioned"
+            }
+          ]
+        },
+        {
+          "title": "Which header file is used for Iterators?",
+          "options": [
+            {
+              "title": "<iterator>",
+              "correct": true
+            },
+            {
+              "title": "<algorithm>"
+            },
+            {
+              "title": "<iter>"
+            },
+            {
+              "title": "<loopIter>"
+            },
+            {
+              "title": "<stl>"
+            },
+            {
+              "title": "<cpp-stl.h>"
+            }
+          ]
+        },
+        {
+          "title": "Which method(s) is/are not available for Queue Data Structure?",
+          "options": [
+            {
+              "title": "empty()"
+            },
+            {
+              "title": "top()",
+              "correct": true
+            },
+            {
+              "title": "front()"
+            },
+            {
+              "title": "back()"
+            },
+            {
+              "title": "pull()",
+              "correct": true
+            },
+            {
+              "title": "swap()"
+            }
+          ]
+        },
+        {
+          "title": "Which method/methods is/are not available for Stack Data Structure?",
+          "options": [
+            {
+              "title": "empty()"
+            },
+            {
+              "title": "top()"
+            },
+            {
+              "title": "front()",
+              "correct": true
+            },
+            {
+              "title": "back()"
+            },
+            {
+              "title": "pull()",
+              "correct": true
+            },
+            {
+              "title": "swap()"
+            }
+          ]
+        }
+      ]
+    },
+    "SQL": {
+      "questions": [
+        {
+          "title": "What is the full form of SQL?",
+          "options": [
+            {
+              "title": "Structure Query Language"
+            },
+            {
+              "title": "Structural Query Language"
+            },
+            {
+              "title": "Structured Query Language",
+              "correct": true
+            },
+            {
+              "title": "Simulated Query Language"
+            },
+            {
+              "title": "Structured Query Linguistics"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "What are not the examples of SQL databases?",
+          "options": [
+            {
+              "title": "MySQL"
+            },
+            {
+              "title": "Cassandra",
+              "correct": true
+            },
+            {
+              "title": "Oracle"
+            },
+            {
+              "title": "MongoDB",
+              "correct": true
+            },
+            {
+              "title": "Hypertable",
+              "correct": true
+            },
+            {
+              "title": "PostgreSQL"
+            }
+          ]
+        },
+        {
+          "title": "What command is used to create a new table in SQL?",
+          "options": [
+            {
+              "title": "create table",
+              "correct": true
+            },
+            {
+              "title": "CREATE TABLE",
+              "correct": true
+            },
+            {
+              "title": "BUILD TABLE"
+            },
+            {
+              "title": "build table"
+            },
+            {
+              "title": "create new table"
+            },
+            {
+              "title": "CREATE NEW TABLE"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following is the full form of DDL?",
+          "options": [
+            {
+              "title": "Data Defination Language"
+            },
+            {
+              "title": "Data Definition Language",
+              "correct": true
+            },
+            {
+              "title": "Data Derivation Language"
+            },
+            {
+              "title": "Dynamic Data Language"
+            },
+            {
+              "title": "Detailed Data Language"
+            },
+            {
+              "title": "Data Declarative Language"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following allows you to uniquely identify a tuple?",
+          "options": [
+            {
+              "title": "schema"
+            },
+            {
+              "title": "Attribute"
+            },
+            {
+              "title": "Super key",
+              "correct": true
+            },
+            {
+              "title": "Domain"
+            },
+            {
+              "title": "unique"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "Python": {
+      "questions": [
+        {
+          "title": "Who invented Python?",
+          "options": [
+            {
+              "title": "Dennis Ritchie"
+            },
+            {
+              "title": "Guido van Rossum",
+              "correct": true
+            },
+            {
+              "title": "Brian Kernighan"
+            },
+            {
+              "title": "Bjarne Stroustrup"
+            },
+            {
+              "title": "James Gosling"
+            },
+            {
+              "title": "Gennady Korotkevich"
+            }
+          ]
+        },
+        {
+          "title": "When was Python invented?",
+          "options": [
+            {
+              "title": "September 1991"
+            },
+            {
+              "title": "October 1999"
+            },
+            {
+              "title": "February 1991",
+              "correct": true
+            },
+            {
+              "title": "January 1992"
+            },
+
+            {
+              "title": "December 1995"
+            },
+            {
+              "title": "March 1996"
+            }
+          ]
+        },
+        {
+          "title": "What is the correct file extension for Python files?",
+          "options": [
+            {
+              "title": ".py",
+              "correct": true
+            },
+            {
+              "title": ".p"
+            },
+            {
+              "title": ".pyt"
+            },
+            {
+              "title": ".pip"
+            },
+            {
+              "title": ".code"
+            },
+            {
+              "title": ".pn"
+            }
+          ]
+        },
+        {
+          "title": "Which method can be used to return a string in upper case letters?",
+          "options": [
+            {
+              "title": "toUpperCase()"
+            },
+            {
+              "title": "upperCase()"
+            },
+            {
+              "title": "uppercase()"
+            },
+            {
+              "title": "upper()",
+              "correct": true
+            },
+            {
+              "title": "toUpper()"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "OOPS": {
+      "questions": [
+        {
+          "title": "Which is/are the example(s) of purely Object Oriented Language?",
+          "options": [
+            {
+              "title": "Visual Basic"
+            },
+            {
+              "title": "C Language"
+            },
+            {
+              "title": "Java"
+            },
+            {
+              "title": "Fortran"
+            },
+            {
+              "title": "C++"
+            },
+            {
+              "title": "Smalltalk",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "title": "What is the implicit return type of constructor?",
+          "options": [
+            {
+              "title": "No return type"
+            },
+            {
+              "title": "A class object in which it is defined",
+              "correct": true
+            },
+            {
+              "title": "void"
+            },
+            {
+              "title": "Constructor itself"
+            },
+            {
+              "title": "class"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Under which pillar of OOPS do base class and derived class relationships come?",
+          "options": [
+            {
+              "title": "Polymorphism"
+            },
+            {
+              "title": "Inheritance",
+              "correct": true
+            },
+            {
+              "title": "Encapsulation"
+            },
+            {
+              "title": "Abstraction"
+            },
+            {
+              "title": "Aggregation"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Which of the following is not a type of inheritance?",
+          "options": [
+            {
+              "title": "Multiple"
+            },
+            {
+              "title": "Multilevel"
+            },
+            {
+              "title": "Distributed",
+              "correct": true
+            },
+            {
+              "title": "Hierarchical"
+            },
+            {
+              "title": "Individual",
+              "correct": true
+            },
+            {
+              "title": "Single"
+            }
+          ]
+        },
+        {
+          "title": "Another name of overloading is?",
+          "options": [
+            {
+              "title": "Pseudo Polymorphism"
+            },
+            {
+              "title": "Transient Polymorphism"
+            },
+            {
+              "title": "Ad-hoc Polymorphism",
+              "correct": true
+            },
+            {
+              "title": "Virtual Polymorphism"
+            },
+            {
+              "title": "Additional Polymorphism"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Choose the option below which is used to free the memory allocated for an object in C++.",
+          "options": [
+            {
+              "title": "Free()"
+            },
+            {
+              "title": "unallocate()"
+            },
+            {
+              "title": "delete",
+              "correct": true
+            },
+            {
+              "title": "collect"
+            },
+            {
+              "title": "resetMemory()"
+            },
+            {
+              "title": "memset()"
+            }
+          ]
+        },
+        {
+          "title": "Which is shown by function overriding?",
+          "options": [
+            {
+              "title": "Polymorphism",
+              "correct": true
+            },
+            {
+              "title": "Inheritance"
+            },
+            {
+              "title": "Encapsulation"
+            },
+            {
+              "title": "Abstraction"
+            },
+            {
+              "title": "Aggregation"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Choose the option below for which instance of the class cannot be created.",
+          "options": [
+            {
+              "title": "Parent Class"
+            },
+            {
+              "title": "Anonymous Class"
+            },
+            {
+              "title": "Nested Class"
+            },
+            {
+              "title": "Abstract Class",
+              "correct": true
+            },
+            {
+              "title": "All of the above"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Virtual functions should be defined in?",
+          "options": [
+            {
+              "title": "Derived Class"
+            },
+            {
+              "title": "Base Class",
+              "correct": true
+            },
+            {
+              "title": "Parent Class",
+              "correct": true
+            },
+            {
+              "title": "Child Class"
+            },
+            {
+              "title": "Nothing exists like Virtual function"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Another name of the generic class is?",
+          "options": [
+            {
+              "title": "Template class",
+              "correct": true
+            },
+            {
+              "title": "Final class"
+            },
+            {
+              "title": "Abstract class"
+            },
+            {
+              "title": "Default class"
+            },
+            {
+              "title": "Efficient class"
+            },
+            {
+              "title": "Organic class"
+            }
+          ]
+        }
+      ]
+    },
+    "CSS": {
+      "questions": [
+        {
+          "title": "What does CSS stand for?",
+          "options": [
+            {
+              "title": "Computer Style Sheets"
+            },
+            {
+              "title": "Cascading Style Sheet"
+            },
+            {
+              "title": "Colorful Style Sheets"
+            },
+            {
+              "title": "Creative Style Sheets"
+            },
+            {
+              "title": "Conjugated Style Sheet"
+            },
+            {
+              "title": "Cascading Style Sheets",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "title": "Which HTML tag is used to define an internal style sheet?",
+          "options": [
+            {
+              "title": "<css>"
+            },
+            {
+              "title": "<style>",
+              "correct": true
+            },
+            {
+              "title": "<script>"
+            },
+            {
+              "title": "<style/css>"
+            },
+            {
+              "title": "<css/style>"
+            },
+            {
+              "title": "None tag needed for that"
+            }
+          ]
+        },
+        {
+          "title": "How to insert a comment in a CSS file?",
+          "options": [
+            {
+              "title": "// This is a comment //"
+            },
+            {
+              "title": "/* This is a comment */",
+              "correct": true
+            },
+            {
+              "title": "// This is a comment"
+            },
+            {
+              "title": "' This is a comment"
+            },
+            {
+              "title": "! This is a comment"
+            },
+            {
+              "title": "{ This is a comment }"
+            }
+          ]
+        },
+        {
+          "title": "How to add a background color for all <h1> elements?",
+          "options": [
+            {
+              "title": "all.h1 {background-color:#FFFFFF;}"
+            },
+            {
+              "title": "h1 {background-color:#FFFFFF;}",
+              "correct": true
+            },
+            {
+              "title": "h1.all {background-color:#FFFFFF;}"
+            },
+            {
+              "title": "h1 > h1 {background-color:#FFFFFF;}"
+            },
+            {
+              "title": "All are correct"
+            },
+            {
+              "title": "It is impossible to do so"
+            }
+          ]
+        },
+        {
+          "title": "How to display hyperlinks without an underline?",
+          "options": [
+            {
+              "title": "a {decoration:no-underline;}"
+            },
+            {
+              "title": "a {text-decoration:no-underline;}"
+            },
+            {
+              "title": "a {underline:none;}"
+            },
+            {
+              "title": "a {text-decoration:none;}",
+              "correct": true
+            },
+            {
+              "title": "a > link {text-decoration:none;}"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "Java": {
+      "questions": [
+        {
+          "title": "Who invented Java?",
+          "options": [
+            {
+              "title": "Dennis Ritchie"
+            },
+            {
+              "title": "Brian Kernighan"
+            },
+            {
+              "title": "Bjarne Stroustrup"
+            },
+            {
+              "title": "Guido van Rossum"
+            },
+            {
+              "title": "James Gosling",
+              "correct": true
+            },
+            {
+              "title": "Gennady Korotkevich"
+            }
+          ]
+        },
+        {
+          "title": "When was Java invented?",
+          "options": [
+            {
+              "title": "September 1998"
+            },
+            {
+              "title": "October 1999"
+            },
+            {
+              "title": "May 1995",
+              "correct": true
+            },
+            {
+              "title": "January 1995"
+            },
+            {
+              "title": "December 1995"
+            },
+            {
+              "title": "March 1996"
+            }
+          ]
+        },
+        {
+          "title": "Which method can be used to find the length of a string?",
+          "options": [
+            {
+              "title": "length()",
+              "correct": true
+            },
+            {
+              "title": "getLength()"
+            },
+            {
+              "title": "len()"
+            },
+            {
+              "title": "getSize()"
+            },
+            {
+              "title": "size()"
+            },
+            {
+              "title": "String length is non measurable"
+            }
+          ]
+        },
+        {
+          "title": "Which operator(s) can be used to compare two values?",
+          "options": [
+            {
+              "title": "<>"
+            },
+            {
+              "title": "==="
+            },
+            {
+              "title": "==",
+              "correct": true
+            },
+            {
+              "title": "><"
+            },
+            {
+              "title": "!=",
+              "correct": true
+            },
+            {
+              "title": "Two values can't be compared"
+            }
+          ]
+        },
+        {
+          "title": "What is/are the correct way(s) to create an object called myObj of MyClass?",
+          "options": [
+            {
+              "title": "new myObj = MyClass();"
+            },
+            {
+              "title": "class MyClass = new myObj();"
+            },
+            {
+              "title": "MyClass myObj = new MyClass();",
+              "correct": true
+            },
+            {
+              "title": "class myObj = new MyClass();"
+            },
+            {
+              "title": "new MyClass() = new myObj();"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "Operating-Systems": {
+      "questions": [
+        {
+          "title": "Which of the following are CPU scheduling algorithms?",
+          "options": [
+            {
+              "title": "Priority Scheduling",
+              "correct": true
+            },
+            {
+              "title": "Round Robin",
+              "correct": true
+            },
+            {
+              "title": "Shortest Job First",
+              "correct": true
+            },
+            {
+              "title": "Multilevel Queue",
+              "correct": true
+            },
+            {
+              "title": "Low Memory Load First"
+            },
+            {
+              "title": "All of the above"
+            }
+          ]
+        },
+        {
+          "title": "What type of scheduling FIFO is?",
+          "options": [
+            {
+              "title": "Pre-emptive Scheduling"
+            },
+            {
+              "title": "Non Pre-emptive Scheduling",
+              "correct": true
+            },
+            {
+              "title": "Deadline Scheduling"
+            },
+            {
+              "title": "High Memory Scheduling"
+            },
+            {
+              "title": "Low Memory Scheduling"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "Which of the type of OS reads and reacts in terms of actual time?",
+          "options": [
+            {
+              "title": "Windows OS"
+            },
+            {
+              "title": "MAC OS"
+            },
+            {
+              "title": "Android OS"
+            },
+            {
+              "title": "Quick Sharing OS"
+            },
+            {
+              "title": "Batch OS"
+            },
+            {
+              "title": "Real Time OS",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "title": "UNIX is written in which language?",
+          "options": [
+            {
+              "title": "C#"
+            },
+            {
+              "title": "C",
+              "correct": true
+            },
+            {
+              "title": "C++"
+            },
+            {
+              "title": "Java"
+            },
+            {
+              "title": "Ruby on Rails"
+            },
+            {
+              "title": "UNIX itself a language"
+            }
+          ]
+        },
+        {
+          "title": "What are the types of Semaphore?",
+          "options": [
+            {
+              "title": "Counting and Binary",
+              "correct": true
+            },
+            {
+              "title": "Counting and Decimal"
+            },
+            {
+              "title": "Decimal and Binary"
+            },
+            {
+              "title": "Counting and Mutex"
+            },
+            {
+              "title": "Counting, Binary and Mutex"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "Time-&-Space-Complexity": {
+      "questions": [
+        {
+          "title": "A measure of the amount of memory needed for an algorithm to execute is called:",
+          "options": [
+            {
+              "title": "Time Efficiency"
+            },
+            {
+              "title": "Functional Efficiency"
+            },
+            {
+              "title": "Space Efficiency",
+              "correct": true
+            },
+            {
+              "title": "Amortized Efficiency"
+            },
+            {
+              "title": "No Functional Efficiency"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "What is the average time complexity of Merge Sort?",
+          "options": [
+            {
+              "title": "O(N)"
+            },
+            {
+              "title": "O(N*Log(M))"
+            },
+            {
+              "title": "O(N*Log(N))",
+              "correct": true
+            },
+            {
+              "title": "O(Log(N))"
+            },
+            {
+              "title": "O(1)"
+            },
+            {
+              "title": "No one can measure this."
+            }
+          ]
+        },
+        {
+          "title": "What does it mean when we say that an algorithm X is asymptotically more efficient than Y?",
+          "options": [
+            {
+              "title": "X will always be a better choice for small inputs"
+            },
+            {
+              "title": "X will always be a better choice for large inputs",
+              "correct": true
+            },
+            {
+              "title": "Y will always be a better choice for small inputs"
+            },
+            {
+              "title": "X will always be a better choice for all inputs"
+            },
+            {
+              "title": "X will not be a better choice for small inputs"
+            },
+            {
+              "title": "Y will not be a better choice for small inputs"
+            }
+          ]
+        },
+        {
+          "title": "What is the time complexity of Sieve of Eratosthenes process?",
+          "options": [
+            {
+              "title": "O(Log(N))"
+            },
+            {
+              "title": "O(N*Log(N))"
+            },
+            {
+              "title": "O(Log(Log(N)))"
+            },
+            {
+              "title": "O(N*Log(Log(N)))",
+              "correct": true
+            },
+            {
+              "title": "O(N)"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "What is the Minimum average time complexity to search a value with an 1D array?",
+          "options": [
+            {
+              "title": "O(1)"
+            },
+            {
+              "title": "O(N)"
+            },
+            {
+              "title": "O(Log3(N))",
+              "correct": true
+            },
+            {
+              "title": "O(Log(N))"
+            },
+            {
+              "title": "O(N^2)"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        }
+      ]
+    },
+    "Node-JS": {
+      "questions": [
+        {
+          "title": "Who invented Node JS?",
+          "options": [
+            {
+              "title": "Dennis Ritchie"
+            },
+            {
+              "title": "Brian Kernighan"
+            },
+            {
+              "title": "Bjarne Stroustrup"
+            },
+            {
+              "title": "Guido van Rossum"
+            },
+            {
+              "title": "James Gosling"
+            },
+            {
+              "title": "Ryan Dahl",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "title": "What is the full form of REPL?",
+          "options": [
+            {
+              "title": "Read Eval Print Loop",
+              "correct": true
+            },
+            {
+              "title": "Research Eval Print Loop"
+            },
+            {
+              "title": "Read Earn Point Learn"
+            },
+            {
+              "title": "Read Eval Point Loop"
+            },
+            {
+              "title": "Reading Evaluating Printing Loop"
+            },
+            {
+              "title": "None of the above"
+            }
+          ]
+        },
+        {
+          "title": "To include the HTTP server in the node module, what function do we use?",
+          "options": [
+            {
+              "title": "get()"
+            },
+            {
+              "title": "createServer()"
+            },
+            {
+              "title": "getServer()"
+            },
+            {
+              "title": "getHTTP()"
+            },
+            {
+              "title": "require()",
+              "correct": true
+            },
+            {
+              "title": "fetch()"
+            }
+          ]
+        },
+        {
+          "title": "Default scope in Node.js application is?",
+          "options": [
+            {
+              "title": "Global"
+            },
+            {
+              "title": "Local"
+            },
+            {
+              "title": "Window"
+            },
+            {
+              "title": "DOM",
+              "correct": true
+            },
+            {
+              "title": "Node JS Server"
+            },
+            {
+              "title": "Local to Object"
+            }
+          ]
+        }
+      ]
+    },
+    "React-Router": {
+      "questions": [
+        {
+          "title": "After v6.4 which React Router(s) support(s) Data API?",
+          "options": [
+            {
+              "title": "createBrowserRouter",
+              "correct": true
+            },
+            {
+              "title": "createMemoryRouter",
+              "correct": true
+            },
+            {
+              "title": "MemoryRouter"
+            },
+            {
+              "title": "BrowserRouter"
+            },
+            {
+              "title": "NativeRouter"
+            },
+            {
+              "title": "createHashRouter",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "title": "After v6.4 which React Router(s) do/does not support Data API?",
+          "options": [
+            {
+              "title": "createBrowserRouter"
+            },
+            {
+              "title": "createMemoryRouter"
+            },
+            {
+              "title": "MemoryRouter",
+              "correct": true
+            },
+            {
+              "title": "BrowserRouter",
+              "correct": true
+            },
+            {
+              "title": "NativeRouter",
+              "correct": true
+            },
+            {
+              "title": "createHashRouter"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "videos": [
+    {
+      "title": "CPP A complete and modern course for beginners",
+      "link": "FpfHmAkRVK4"
+    },
+    {
+      "title": "C++ Basics in One Shot - Strivers A2Z DSA Course - L1",
+      "link": "EAR7De6Goz4"
+    },
+    {
+      "title": "TypeScript Tutorial for Beginners",
+      "link": "d56mG7DezGs"
+    },
+    {
+      "title": "NestJs Course for Beginners - Create a REST API",
+      "link": "GHTA143_b-s"
+    },
+    {
+      "title": "Time and Space Complexity - Strivers A2Z DSA Course",
+      "link": "FPu9Uld7W-E"
+    },
+    {
+      "title": "How to pass data with useNavigate hook in React.js | use of useLocation Hook in ReactJS in Hindi",
+      "link": "1qPzmBlTlJQ"
+    },
+    {
+      "title": "#46 React Router v6 Private Route Tutorial",
+      "link": "99RWZsEITx4"
+    },
+    {
+      "title": "Lecture 3: ER Model Explained || ER Diagram Notations || DBMS for Placements",
+      "link": "kMHJhhIx5k4"
+    },
+    {
+      "title": "Sorting - Part 1 | Selection Sort, Bubble Sort, Insertion Sort | Strivers A2Z DSA Course",
+      "link": "HGk_ypEuS24"
+    },
+    {
+      "title": "#2 React Virtual DOM Explained - Easy Explanation - React Tutorial Bangla Series",
+      "link": "2C5834qx0sA"
+    },
+    {
+      "title": "Lecture 9: Complete SQL in 1 VIDEO",
+      "link": "D_wNQR3LeeM"
+    },
+    {
+      "title": "Complete C++ STL in 1 Video | Time Complexity and Notes",
+      "link": "RRVYpIET_RU"
+    },
+    {
+      "title": "Asynchronous JavaScript & EVENT LOOP from scratch 🔥 | Namaste JavaScript Ep.15",
+      "link": "8zKuNo4ay8E"
+    },
+    {
+      "title": "Node Js Tutorial in Hindi 🔥🔥",
+      "link": "BLl32FvcdVM"
+    },
+    {
+      "title": "Complete Git and GitHub Tutorial",
+      "link": "apGV9Kg7ics"
+    },
+    {
+      "title": "Python Tutorial - Python Full Course for Beginners",
+      "link": "_uQrJ0TkZlc"
+    },
+    {
+      "title": "Learn React Router v6 In 45 Minutes",
+      "link": "Ul3y1LXxzdU"
+    },
+    {
+      "title": "Java Collections Framework | Java Placement Course",
+      "link": "VphowcSkBX4"
+    },
+    {
+      "title": "React Router v6 Tutorial in Hindi #9: useNavigate Hook 🔥",
+      "link": "CPdMl4CzgqY"
+    },
+    {
+      "title": "Functions / Methods in Java",
+      "link": "vvanI8NRlSI"
+    },
+    {
+      "title": "Docker Tutorial for Beginners",
+      "link": "pTFZFxd4hOI"
+    },
+    {
+      "title": "HTML Tutorial For Beginners In Hindi (With Notes) 🔥",
+      "link": "BsDoLVMnmZs"
+    },
+    {
+      "title": "Java OOPs in One Shot | Object Oriented Programming | Java Language | Placement Course",
+      "link": "bSrm9RXwBaI"
+    },
+    {
+      "title": "MySQL Tutorial for Beginners [Full Course]",
+      "link": "7S_tz1z_5bA"
+    },
+    {
+      "title": "C Programming Tutorial For Beginners: Learn C In Hindi",
+      "link": "YXcgD8hRHYY"
+    },
+    {
+      "title": "Node.js Tutorial for Beginners: Learn Node in 1 Hour",
+      "link": "TlB_eWDSMt4"
+    },
+    {
+      "title": "Debounce Function in JavaScript - JavaScript Job Interview question",
+      "link": "dD9O8DnIBj4"
+    },
+    {
+      "title": "Java Swing For Beginners | What is Java Swing | Java Swing Tutorial | Intellipaat",
+      "link": "6zm8c6QFmjo"
+    }
+  ]
+}

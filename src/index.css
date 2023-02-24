@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  * {
+    @apply m-0 box-border scroll-smooth p-0 font-montserrat text-darkText dark:text-lightText;
+  }
+
+  body {
+    @apply bg-lightBG dark:bg-darkBG;
+  }
+
+  /* Active site page */
+  .active-page {
+    @apply underline decoration-brightViolet underline-offset-[6px];
+  }
+
+  /* Answer option box */
+  .answer-option {
+    @apply flex w-full cursor-pointer items-center rounded-md border border-dullWhite bg-lightText px-3 py-3 text-lg font-medium outline-none transition-all duration-500 hover:bg-dullWhite dark:border-gray-600 dark:bg-slate-900 dark:bg-darkText/60 dark:hover:bg-gray-700 sm:px-5 sm:py-4;
+  }
+
+  /* Answer result */
+  .answer-correct {
+    @apply bg-successGreen font-semibold dark:bg-successGreen;
+  }
+
+  .answer-wrong {
+    @apply bg-failureRed font-semibold dark:bg-failureRed;
+  }
+
+  .answer-correct > span,
+  .answer-wrong > span {
+    @apply text-darkText dark:text-darkText;
+  }
+
+  /* Button: normal border, hover fill left to right */
+  .border-button {
+    background: linear-gradient(to left, #00000000 50%, #a972cb 50%) right;
+    background-size: 210%;
+    @apply flex items-center justify-center border-darkViolet py-1 px-2 tracking-wider transition-all duration-500 ease-in-out hover:bg-left dark:border-brightViolet md:text-lg xl:border;
+  }
+
+  .border-button span {
+    @apply text-darkText dark:text-white;
+  }
+
+  .reset-button span {
+    @apply dark:text-darkText;
+  }
+
+  /* Button: hover fill change left to right */
+  .fill-button {
+    background: linear-gradient(to left, #66c887 50%, #a972cb 50%) right;
+    background-size: 200%;
+    @apply flex items-center justify-center rounded-lg px-4 py-2 text-2xl font-bold uppercase tracking-wider text-darkText transition-all duration-700 ease-in-out hover:bg-left;
+  }
+
+  /* Button: hover fill change right to left */
+  .back-button {
+    background: linear-gradient(to right, #ff7f82 50%, #a972cb 50%) left;
+    background-size: 200%;
+    @apply hover:bg-right;
+  }
+
+  /* Form background glassmorphism interface */
+  .frame-BG {
+    @apply rounded-md border border-dullWhite bg-white/70 p-4 shadow-lg backdrop-blur-lg dark:border-white/10 dark:bg-white/5 dark:shadow-gray-800;
+  }
+
+  /* Link bound text */
+  .link-text {
+    @apply font-medium tracking-wider text-blue-500 underline-offset-4 hover:underline;
+  }
+
+  /* Navigation bar */
+  .navigation-bar {
+    @apply left-0 right-0 top-0 border-b border-b-gray-300 bg-white shadow-darkViolet drop-shadow-lg backdrop-blur-lg dark:border-b-gray-500 dark:bg-slate-900/90;
+  }
+
+  /* Page heading */
+  .page-heading {
+    @apply mt-36 mb-10 text-center text-2xl font-bold uppercase tracking-wider text-darkViolet dark:text-slate-300 sm:text-5xl xl:mt-24;
+  }
+
+  /* Responsive display */
+  .responsive {
+    @apply grid grid-cols-1 items-center justify-center gap-4 lg:grid-cols-2;
+  }
+
+  /* Score row */
+  .score-row {
+    @apply mb-2 grid grid-cols-[1fr_70px_100px] gap-1 [&>*]:text-center [&>*]:font-semibold [&>*]:uppercase;
+  }
+
+  /* Stat */
+  .stat {
+    @apply text-center text-5xl font-semibold uppercase text-lightText md:text-6xl [&>*]:text-lightText;
+  }
+}
