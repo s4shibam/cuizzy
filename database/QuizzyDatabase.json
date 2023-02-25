@@ -850,7 +850,7 @@
           ]
         },
         {
-          "title": "Identify the Block element(s).",
+          "title": "Identify the Inline element(s).",
           "options": [
             {
               "title": "<a>"
@@ -2904,7 +2904,7 @@
           ]
         },
         {
-          "title": "Identify the Block element(s).",
+          "title": "Identify the Inline element(s).",
           "options": [
             {
               "title": "<a>",
