@@ -67,7 +67,7 @@ function Result() {
               <button
                 type='button'
                 className='border-button border border-darkViolet px-4 py-2 uppercase'
-                title='Home'
+                title='Retry Quiz'
               >
                 Retry Quiz
               </button>
