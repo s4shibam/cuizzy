@@ -58,7 +58,7 @@ function Profile() {
 
           <div className='my-2 flex w-full items-center justify-center'>
             <button
-              className='border-button reset rounded-xl border bg-white px-2'
+              className='border-button reset rounded-xl border px-2'
               type='button'
               onClick={sendResetMail}
               disabled={resetLoading}
@@ -66,7 +66,7 @@ function Profile() {
               <span className='icon material-icons-outlined text-4xl text-darkText dark:text-darkText xl:text-2xl'>
                 lock_reset
               </span>
-              <span className='text ml-2 uppercase dark:text-darkText'>
+              <span className='text text ml-2 uppercase dark:text-darkText'>
                 Reset Password
               </span>
             </button>
