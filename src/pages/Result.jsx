@@ -63,13 +63,13 @@ function Result() {
               </button>
             )}
 
-            <Link to='/'>
+            <Link to={`/quiz/${id}`}>
               <button
                 type='button'
                 className='border-button border border-darkViolet px-4 py-2 uppercase'
                 title='Home'
               >
-                Back To Home
+                Retry Quiz
               </button>
             </Link>
           </div>
