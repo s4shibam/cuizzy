@@ -7,6 +7,7 @@ import ProgressBar from '../components/ProgressBar';
 import Rules from '../components/Rules';
 import { useAuth } from '../contexts/AuthContext';
 import useQuiz from '../hooks/useQuiz';
+import PageNotFound from './PageNotFound';
 
 const initialState = null;
 
@@ -88,17 +89,15 @@ function Quiz() {
 
     navigate(`/result/${id}`, { state: { qna } });
   }, [currentUser, id, navigate, qna]);
-
+  console.log(qna);
   return (
-    <div className='quiz mx-auto w-[85%] animate-reveal'>
-      <h1 className='page-heading'>{id.split('-').join(' ')} Quiz!</h1>
-
-      <Rules />
-
-      {loading && <p className='text-center'>Loading ...</p>}
-      {error && <p className='text-center'>There was an error!</p>}
+    <>
+      {loading && <p className='page-heading text-lg'>Loading ...</p>}
+      {error && <PageNotFound />}
       {!loading && !error && qna && qna.length > 0 && (
-        <>
+        <div className='quiz mx-auto w-[85%] animate-reveal'>
+          <h1 className='page-heading'>{id.split('-').join(' ')} Quiz!</h1>
+          <Rules />
           <div className='question frame-BG mb-40 flex flex-col justify-center rounded-md p-3'>
             <div className='flex flex-col items-center justify-center text-xl font-bold text-darkText dark:text-lightText sm:text-3xl'>
               {qna[currentQuestion].title}
@@ -118,9 +117,9 @@ function Quiz() {
             progress={percentage}
             submit={submit}
           />
-        </>
+        </div>
       )}
-    </div>
+    </>
   );
 }
 

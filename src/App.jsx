@@ -17,6 +17,7 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Learn from './pages/Learn';
 import Login from './pages/Login';
+import PageNotFound from './pages/PageNotFound';
 import Profile from './pages/Profile';
 import Quiz from './pages/Quiz';
 import Quizzes from './pages/Quizzes';
@@ -50,8 +51,8 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<MainNavigationBar />}>
-        <Route path='/' element={<Home />} />
-        <Route path='/*' element={<PublicOutlet />}>
+        <Route index element={<Home />} />
+        <Route path='/' element={<PublicOutlet />}>
           <Route path='signup' element={<SignUp />} />
           <Route path='login' element={<Login />} />
         </Route>
@@ -59,12 +60,13 @@ function App() {
         <Route path='about' element={<About />} />
         <Route path='reset' element={<Reset />} />
         <Route path='learn' element={<Learn />} />
-        <Route path='/*' element={<PrivateOutlet />}>
+        <Route path='/' element={<PrivateOutlet />}>
           <Route path='quiz/:id' element={<Quiz />} />
           <Route path='video/:id' element={<Video />} />
           <Route path='profile' element={<Profile />} />
           <Route path='result/:id' element={<Result />} />
         </Route>
+        <Route path='*' element={<PageNotFound />} />
       </Route>
     )
   );
