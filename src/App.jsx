@@ -61,10 +61,18 @@ function App() {
         <Route path='reset' element={<Reset />} />
         <Route path='learn' element={<Learn />} />
         <Route path='/' element={<PrivateOutlet />}>
-          <Route path='quiz/:id' element={<Quiz />} />
+          <Route
+            path='quiz/:id'
+            element={<Quiz />}
+            errorElement={<PageNotFound />}
+          />
           <Route path='video/:id' element={<Video />} />
           <Route path='profile' element={<Profile />} />
-          <Route path='result/:id' element={<Result />} />
+          <Route
+            path='result/:id'
+            element={<Result />}
+            errorElement={<PageNotFound />}
+          />
         </Route>
         <Route path='*' element={<PageNotFound />} />
       </Route>

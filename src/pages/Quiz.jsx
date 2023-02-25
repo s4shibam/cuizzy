@@ -89,11 +89,12 @@ function Quiz() {
 
     navigate(`/result/${id}`, { state: { qna } });
   }, [currentUser, id, navigate, qna]);
-  console.log(qna);
+
   return (
     <>
       {loading && <p className='page-heading text-lg'>Loading ...</p>}
       {error && <PageNotFound />}
+      {!loading && !error && qna && qna.length === 0 && <PageNotFound />}
       {!loading && !error && qna && qna.length > 0 && (
         <div className='quiz mx-auto w-[85%] animate-reveal'>
           <h1 className='page-heading'>{id.split('-').join(' ')} Quiz!</h1>
