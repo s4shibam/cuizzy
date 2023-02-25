@@ -25,16 +25,16 @@ function BasicInfo() {
         <div className='mx-auto grid w-[calc(100vw-25%)] grid-cols-2 gap-10 md:grid-cols-4'>
           <p className='stat'>
             200+
-            <p className='text-base md:text-lg'>Questions</p>
+            <span className='block text-base md:text-lg'>Questions</span>
           </p>
           <p className='stat'>
-            100+ <p className='text-base md:text-lg'>Quizzes</p>
+            100+ <span className='block text-base md:text-lg'>Quizzes</span>
           </p>
           <p className='stat'>
-            150+ <p className='text-base md:text-lg'>Lectures</p>
+            150+ <span className='block text-base md:text-lg'>Lectures</span>
           </p>
           <p className='stat'>
-            400+ <p className='text-base md:text-lg'>Learners</p>
+            400+ <span className='block text-base md:text-lg'>Learners</span>
           </p>
         </div>
       </div>
@@ -43,8 +43,11 @@ function BasicInfo() {
           Why Quizzy?
         </p>
         <div className='grid grid-cols-1 place-content-center gap-x-10 gap-y-14 lg:grid-cols-3'>
-          {reasons.map((reason) => (
-            <div className='frame-BG mx-auto flex max-w-sm flex-col content-center gap-y-4 border-b-4 border-b-brightViolet p-8 text-center'>
+          {reasons.map((reason, index) => (
+            <div
+              className='frame-BG mx-auto flex max-w-sm flex-col content-center gap-y-4 border-b-4 border-b-brightViolet p-8 text-center'
+              key={index}
+            >
               <div className='icon-wrapper mx-auto grid h-fit w-fit place-content-center rounded-full bg-brightViolet/80 p-4'>
                 <span className='icon material-icons-outlined text-5xl text-lightText'>
                   {reason.image}
