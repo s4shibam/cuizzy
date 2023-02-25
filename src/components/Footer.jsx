@@ -83,7 +83,10 @@ function Footer() {
       <div className='sm:flex sm:items-center sm:justify-between md:mx-10'>
         <span className='text-sm text-darkText dark:text-lightText sm:text-center'>
           © 2023{' '}
-          <a href='https://flowbite.com/' className='hover:underline'>
+          <a
+            href='https://s4shibam-quizzy.netlify.app'
+            className='hover:underline'
+          >
             Quizzy™.
           </a>
           &ensp; All Rights Reserved.
