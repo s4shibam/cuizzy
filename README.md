@@ -4,20 +4,20 @@
 
 **Details**
 
-- This is a Web Application to play quizzes online as well as to learn new topics while watching video content in the platform itself.
-- Extremely user experience centric, modern interface based application having options to change theme as well to provide the best experience to the user.
+- This is a Web Application to play quizzes online as well as to learn new topics while watching video content on the platform itself.
+- Extremely user experience-centric, modern interface-based applications have options to change the theme as well to provide the best experience to the user.
 
 <br/>
 
 **Features**
 
-- Signup or login to access quizzes as well as to attempt them, `Firebase` authentication has been used to do so.
-- User can change their display name on demand, as well as `Forgot Password` option is available to reset password of the particular account.
+- Signup or login to access quizzes as well as to attempt them, `Firebase authentication` has been used to do so.
+- User can change their display name on demand, as well as `Forgot Password` option is available to reset the password of the particular account.
 - Dedicated profile section.
-- User can select their preferred theme (light/dark) for the web application.
-- Watch video content in the platform itself.
-- After solving a particular quiz, user can see their performance as well as the correct answers of that quiz problem.
-- Download certificate of achievement.
+- Users can select their preferred theme (light/dark) for the web application.
+- Watch video content on the platform itself.
+- After solving a particular quiz, user can see their performance as well as the correct answers to that quiz problem.
+- Download the certificate of achievement.
 
 <br/>
 
