@@ -47,14 +47,14 @@ export default function showAlert(type = '', msg = '') {
 
     if (!message) {
       toast.success('Success!', {
-        position: 'top-center',
+        position: 'bottom-left',
         theme: 'colored'
       });
     }
     // toast.success('Success!');
     else {
       toast.success(message, {
-        position: 'top-center',
+        position: 'bottom-left',
         theme: 'colored'
       });
     }
@@ -66,12 +66,12 @@ export default function showAlert(type = '', msg = '') {
 
     if (!message) {
       toast.error('Error occurred!', {
-        position: 'top-center',
+        position: 'bottom-left',
         theme: 'colored'
       });
     } else {
       toast.error(message, {
-        position: 'top-center',
+        position: 'bottom-left',
         theme: 'colored'
       });
     }
