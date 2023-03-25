@@ -9,8 +9,8 @@ function Footer() {
           <Link to='/' className='flex items-center'>
             <img
               src={logo}
-              className='mr-2 h-8 rounded-full bg-white'
-              alt='FlowBite Logo'
+              className='mr-2 h-8 rounded-full bg-white'x
+              alt='Quizzy Logo'
             />
             <span className='self-center whitespace-nowrap text-2xl font-semibold text-darkText dark:text-lightText'>
               Quizzy
@@ -83,13 +83,10 @@ function Footer() {
       <div className='sm:flex sm:items-center sm:justify-between md:mx-10'>
         <span className='text-sm text-darkText dark:text-lightText sm:text-center'>
           © 2023{' '}
-          <a
-            href='https://s4shibam-quizzy.netlify.app'
-            className='hover:underline'
-          >
-            Quizzy™.
-          </a>
-          &ensp; All Rights Reserved.
+          <Link to='/' className='hover:underline'>
+            Quizzy
+          </Link>
+          .&ensp; All Rights Reserved.
         </span>
         <div className='mt-4 flex space-x-6 sm:mt-0 sm:justify-center'>
           <a href='#' className='text-darkText dark:text-lightText'>
@@ -130,7 +127,11 @@ function Footer() {
             </svg>
             <span className='sr-only'>Twitter page</span>
           </a>
-          <a href='#' className='text-darkText dark:text-lightText'>
+          <a
+            href='https://github.com/s4shibam'
+            target='_blank'
+            className='text-darkText dark:text-lightText'
+          >
             <svg
               className='h-5 w-5 dark:fill-lightText'
               viewBox='0 0 24 24'
