@@ -4,7 +4,7 @@ import { Link, useLocation, useParams } from 'react-router-dom';
 import DesignComponent from '../components/DesignComponent';
 import DetailedReport from '../components/DetailedReport';
 import ResultSummary from '../components/ResultSummary';
-import useAnswers from '../hooks/useAnswers';
+import {useAnswers} from '../hooks';
 
 function Result() {
   const { id } = useParams();

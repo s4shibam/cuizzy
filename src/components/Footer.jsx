@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/images/Logo.webp';
+import { logo } from '../assets';
 
 function Footer() {
   return (
@@ -9,7 +9,8 @@ function Footer() {
           <Link to='/' className='flex items-center'>
             <img
               src={logo}
-              className='mr-2 h-8 rounded-full bg-white'x
+              className='mr-2 h-8 rounded-full bg-white'
+              x
               alt='Quizzy Logo'
             />
             <span className='self-center whitespace-nowrap text-2xl font-semibold text-darkText dark:text-lightText'>

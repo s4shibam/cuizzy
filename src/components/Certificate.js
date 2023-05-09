@@ -1,5 +1,5 @@
 import { PDFDocument, StandardFonts } from 'pdf-lib';
-import certificateTemplate from '../assets/images/Certificate-Template.pdf';
+import { certificateTemplate } from '../assets';
 import saveAs from './FileSaver.js';
 
 // Draw the text on the page - Certificate Modification

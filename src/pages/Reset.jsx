@@ -1,4 +1,4 @@
-import resetImg from '../assets/images/Reset.webp';
+import { reset } from '../assets';
 import DesignComponent from '../components/DesignComponent';
 import ResetPasswordForm from '../components/forms/ResetPasswordForm';
 
@@ -10,7 +10,7 @@ function Reset() {
         <div className='signup-image hidden items-center justify-center pb-8 lg:flex '>
           <img
             className='mt-5 w-full justify-self-center lg:max-w-[75%]'
-            src={resetImg}
+            src={reset}
             alt='Sign Up'
           />
         </div>

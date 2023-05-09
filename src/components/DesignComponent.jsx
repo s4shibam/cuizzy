@@ -1,10 +1,10 @@
-import gradientImage from '../assets/images/Background-Gradient.webp';
+import { bgGradient } from '../assets';
 
 function DesignComponent() {
   return (
     <div>
       <img
-        src={gradientImage}
+        src={{ bgGradient }}
         className='fixed top-0 left-[80%] -z-40 h-[350px] w-[200px] blur-[250px] lg:h-[700px] lg:w-[400px]'
         alt='bg-gradient'
       />

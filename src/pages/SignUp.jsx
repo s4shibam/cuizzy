@@ -1,4 +1,4 @@
-import signupImg from '../assets/images/Signup.webp';
+import { signup } from '../assets';
 import DesignComponent from '../components/DesignComponent';
 import SignUpForm from '../components/forms/SignUpForm';
 
@@ -10,7 +10,7 @@ function SignUp() {
         <div className='signup-image hidden items-center justify-center lg:flex'>
           <img
             className='w-full justify-self-center lg:max-w-[80%]'
-            src={signupImg}
+            src={ signup }
             alt='Sign Up'
           />
         </div>

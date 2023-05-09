@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Form, TextInput } from './';
 import showAlert from './AlertList';
-import Form from './elements/Form';
-import TextInput from './elements/TextInput';
 
 function ContactUs() {
   const [name, setName] = useState('');

@@ -3,7 +3,7 @@ import { useState } from 'react';
 function Rules({ className }) {
   const [display, setDisplay] = useState(false);
   return (
-    <div className={`frame-BG mb-6 w-full ${className}`}>
+    <div className={`frame-BG mb-6 w-full py-2 ${className}`}>
       <span className='BG flex items-center'>
         <span className='icon material-icons-outlined mr-2 text-2xl text-darkViolet dark:text-brightViolet'>
           description
@@ -12,11 +12,13 @@ function Rules({ className }) {
           RULES
         </span>
         <button
-          className='icon material-icons-outlined mr-2 ml-auto text-2xl text-darkViolet dark:text-brightViolet '
+          className={`icon material-icons-outlined mr-2 ml-auto text-3xl text-darkViolet transition-transform duration-300 dark:text-brightViolet ${
+            display && 'rotate-45'
+          }`}
           type='button'
           onClick={() => setDisplay((prevState) => !prevState)}
         >
-          {display ? 'close' : 'menu'}
+          add
         </button>
       </span>
       {display && (

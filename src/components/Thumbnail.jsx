@@ -1,5 +1,5 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import logo from '../assets/images/Logo.webp';
+import { logo } from '../assets';
 
 function Thumbnail({ title, id, noq, type }) {
   let link = null;

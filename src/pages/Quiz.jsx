@@ -6,7 +6,7 @@ import AnswerBox from '../components/AnswerBox';
 import ProgressBar from '../components/ProgressBar';
 import Rules from '../components/Rules';
 import { useAuth } from '../contexts/AuthContext';
-import useQuiz from '../hooks/useQuiz';
+import { useQuiz } from '../hooks';
 import PageNotFound from './PageNotFound';
 
 const initialState = null;
@@ -101,9 +101,9 @@ function Quiz() {
           <Rules />
           <div className='question frame-BG mb-40 flex flex-col justify-center rounded-md p-3'>
             <div className='flex flex-col items-center justify-center text-xl font-bold text-darkText dark:text-lightText sm:text-3xl'>
-              {qna[currentQuestion].title}
+              Q. {qna[currentQuestion].title}
             </div>
-            <hr className='mt-1 mb-8 h-px border-0 bg-gray-400 dark:bg-gray-600' />
+            <hr className='mt-3 mb-8 h-px border-0 bg-gray-400 dark:bg-gray-600' />
 
             <AnswerBox
               input

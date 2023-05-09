@@ -1,5 +1,5 @@
-import scoreCardImg from '../assets/images/Score-Card.webp';
-import ScoreCard from './ScoreCard';
+import { scoreCardImg } from '../assets';
+import { ScoreCard } from './';
 
 function ResultSummary({ correctAnswers, noq, userAnswers = [] }) {
   function getIncorrectAnswers(userAnswersLocal = []) {

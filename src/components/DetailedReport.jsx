@@ -1,4 +1,4 @@
-import AnswerBox from './AnswerBox';
+import { AnswerBox } from './';
 
 function DetailedReport({ userAnswers = [] }) {
   return (

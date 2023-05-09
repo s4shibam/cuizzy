@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import getCertificate from './Certificate';
+
 function ScoreCard({ correctAnswers, incorrectAnswers, unattempted, noq }) {
   const { id } = useParams();
   const { currentUser } = useAuth();

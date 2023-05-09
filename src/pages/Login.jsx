@@ -1,4 +1,4 @@
-import loginImage from '../assets/images/Login.webp';
+import { login } from '../assets';
 import DesignComponent from '../components/DesignComponent';
 import LoginForm from '../components/forms/LoginForm';
 
@@ -10,8 +10,8 @@ function Login() {
         <div className='signup-image hidden items-center justify-center lg:flex '>
           <img
             className='w-full justify-self-center lg:max-w-[75%]'
-            src={loginImage}
-            alt='Sign Up'
+            src={ login }
+            alt='Log In'
           />
         </div>
         <div className='frame-BG'>

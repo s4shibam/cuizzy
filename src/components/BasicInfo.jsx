@@ -18,6 +18,7 @@ const reasons = [
       'We provide the option to obtain a verified certificate upon completion of a quiz. This certificate validates your knowledge and demonstrates your commitment to learning and self-improvement. This can be used in CVs, resumes to highlight your skills.'
   }
 ];
+
 function BasicInfo() {
   return (
     <>

@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import NavButton from './elements/NavButton';
+import { NavButton } from './';
 
 function SubNavigationBar({ className }) {
   return (

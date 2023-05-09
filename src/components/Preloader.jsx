@@ -1,4 +1,4 @@
-import logo from '../assets/images/Logo.webp';
+import { logo } from '../assets';
 
 function Preloader() {
   return (

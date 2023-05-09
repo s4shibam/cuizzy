@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import DesignComponent from '../components/DesignComponent';
 import Thumbnail from '../components/Thumbnail';
-import useData from '../hooks/useData';
+import { useData } from '../hooks';
 
 function Quizzes() {
   const { loading, error, data } = useData('topics');

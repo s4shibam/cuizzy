@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import {
-  createBrowserRouter,
-  createRoutesFromElements,
   Route,
-  RouterProvider
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements
 } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import MainNavigationBar from './components/MainNavigationBar';
@@ -13,18 +13,21 @@ import PublicOutlet from './components/react-router/PublicOutlet';
 import { AuthProvider } from './contexts/AuthContext';
 
 // Website Pages
-import About from './pages/About';
-import Home from './pages/Home';
-import Learn from './pages/Learn';
-import Login from './pages/Login';
-import PageNotFound from './pages/PageNotFound';
-import Profile from './pages/Profile';
-import Quiz from './pages/Quiz';
-import Quizzes from './pages/Quizzes';
-import Reset from './pages/Reset';
-import Result from './pages/Result';
-import SignUp from './pages/SignUp';
-import Video from './pages/Video';
+import {
+  About,
+  Home,
+  Learn,
+  Login,
+  PageNotFound,
+  Profile,
+  Quiz,
+  Quizzes,
+  Reset,
+  Result,
+  SignUp,
+  Video
+} from './pages';
+
 
 function App() {
   // Website theme

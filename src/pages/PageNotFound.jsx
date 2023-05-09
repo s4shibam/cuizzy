@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import error from '../assets/images/Error.webp';
+import { error } from '../assets';
 import Footer from '../components/Footer';
 function Error() {
   return (

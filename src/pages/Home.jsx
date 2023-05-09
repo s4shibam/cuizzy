@@ -1,5 +1,4 @@
-import codingImg from '../assets/images/Coding.webp';
-import heroImg from '../assets/images/Hero.webp';
+import { coding, hero } from '../assets';
 import BasicInfo from '../components/BasicInfo';
 import ContactUs from '../components/ContactUs';
 import DesignComponent from '../components/DesignComponent';
@@ -11,12 +10,14 @@ function Home() {
       <div className='home-image mx-4 flex max-w-xl items-center justify-center 2xl:max-w-3xl'>
         <img
           className='absolute top-36 w-12 animate-flip rounded-md drop-shadow-md md:w-20 md:rounded-2xl'
-          src={codingImg}
+          src={coding}
           alt='Coding'
         />
         <img
           className='object-cover drop-shadow-xl'
-          src={heroImg}
+          width={720}
+          height={450}
+          src={hero}
           alt='About Us'
         />
       </div>
