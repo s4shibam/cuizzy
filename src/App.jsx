@@ -6,10 +6,12 @@ import {
   createRoutesFromElements
 } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import MainNavigationBar from './components/MainNavigationBar';
-import Preloader from './components/Preloader';
-import PrivateOutlet from './components/react-router/PrivateOutlet';
-import PublicOutlet from './components/react-router/PublicOutlet';
+import {
+  MainNavigationBar,
+  Preloader,
+  PrivateOutlet,
+  PublicOutlet
+} from './components';
 import { AuthProvider } from './contexts/AuthContext';
 
 // Website Pages
@@ -27,7 +29,6 @@ import {
   SignUp,
   Video
 } from './pages';
-
 
 function App() {
   // Website theme
