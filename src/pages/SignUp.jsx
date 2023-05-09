@@ -1,4 +1,4 @@
-import signupImg from '../assets/images/Signup.png';
+import signupImg from '../assets/images/Signup.webp';
 import DesignComponent from '../components/DesignComponent';
 import SignUpForm from '../components/forms/SignUpForm';
 

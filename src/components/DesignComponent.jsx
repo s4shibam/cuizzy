@@ -1,5 +1,4 @@
-// import gradientImage from '../assets/images/Background-Gradient.svg';
-import gradientImage from '../assets/images/Background-Gradient.png';
+import gradientImage from '../assets/images/Background-Gradient.webp';
 
 function DesignComponent() {
   return (

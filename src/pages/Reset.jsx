@@ -1,4 +1,4 @@
-import resetImg from '../assets/images/Reset.png';
+import resetImg from '../assets/images/Reset.webp';
 import DesignComponent from '../components/DesignComponent';
 import ResetPasswordForm from '../components/forms/ResetPasswordForm';
 

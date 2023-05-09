@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import contact from '../assets/images/Contact.png';
 import showAlert from './AlertList';
 import Form from './elements/Form';
 import TextInput from './elements/TextInput';
@@ -26,17 +25,8 @@ function ContactUs() {
       <p className='mb-14 text-center text-4xl font-semibold uppercase lg:text-5xl'>
         Contact Us!
       </p>
-      <Form
-        className='frame-BG mx-auto grid items-center md:grid-cols-2'
-        onSubmit={(e) => handleSubmit(e)}
-      >
-        <img
-          className='mx-auto hidden drop-shadow-lg md:block'
-          src={contact}
-          alt='Contact'
-        />
-
-        <div className='grid grid-rows-4 gap-2'>
+      <Form className='frame-BG mx-auto' onSubmit={(e) => handleSubmit(e)}>
+        <div className='flex flex-col gap-4'>
           <TextInput
             type='text'
             required
@@ -73,7 +63,7 @@ function ContactUs() {
               chat
             </span>
           </div>
-          <button className='user-login fill-button mt-8' type='submit'>
+          <button className='user-login fill-button mt-1' type='submit'>
             Send
           </button>
         </div>

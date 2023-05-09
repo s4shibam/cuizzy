@@ -1,4 +1,4 @@
-import scoreCardImg from '../assets/images/Score-Card.png';
+import scoreCardImg from '../assets/images/Score-Card.webp';
 import ScoreCard from './ScoreCard';
 
 function ResultSummary({ correctAnswers, noq, userAnswers = [] }) {

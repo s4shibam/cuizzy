@@ -1,16 +1,22 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import logo from '../assets/images/Logo.webp';
+
 function Thumbnail({ title, id, noq, type }) {
   let link = null;
 
   if (type === 'video')
     link = `http://img.youtube.com/vi/${id}/maxresdefault.jpg`;
   else
-    link = `https://raw.githubusercontent.com/s4shibam/Quizzy-Quiz-Application/master/thumbnails/${id}.jpg`;
+    link = `https://raw.githubusercontent.com/s4shibam/Quizzy-Quiz-Application/master/thumbnails/${id}.webp`;
 
   return (
     <div className='topic frame-BG mb-5 cursor-pointer rounded-xl pb-2 hover:shadow-sm hover:shadow-dullWhite'>
-      <img
-        className='topic-thumbnail w-full rounded-xl object-cover'
+      <LazyLoadImage
+        className='topic-thumbnail w-full rounded-xl'
+        width={360}
+        height={200}
         src={link}
+        PlaceholderSrc={logo}
         alt={title}
       />
 

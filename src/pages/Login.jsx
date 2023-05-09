@@ -1,4 +1,4 @@
-import loginImage from '../assets/images/Login.png';
+import loginImage from '../assets/images/Login.webp';
 import DesignComponent from '../components/DesignComponent';
 import LoginForm from '../components/forms/LoginForm';
 

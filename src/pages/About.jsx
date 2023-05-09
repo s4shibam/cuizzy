@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import aboutImg1 from '../assets/images/About-1.png';
-import aboutImg2 from '../assets/images/About-2.png';
+import aboutImg1 from '../assets/images/About-1.webp';
+import aboutImg2 from '../assets/images/About-2.webp';
 import DesignComponent from '../components/DesignComponent';
 
 const aboutDetails = [

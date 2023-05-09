@@ -1,11 +1,10 @@
-import codingImg from '../assets/images/Coding.png';
-import heroImg from '../assets/images/Hero.png';
+import codingImg from '../assets/images/Coding.webp';
+import heroImg from '../assets/images/Hero.webp';
 import BasicInfo from '../components/BasicInfo';
 import ContactUs from '../components/ContactUs';
 import DesignComponent from '../components/DesignComponent';
 import Footer from '../components/Footer';
 
-// import landingImage2 from "../../assets/images/Landing-Image-2.jpg"
 function Home() {
   return (
     <div className='home-page mt-44 flex animate-reveal flex-col items-center justify-center xl:mt-24'>

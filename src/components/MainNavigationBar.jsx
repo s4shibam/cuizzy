@@ -1,5 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
-import logo from '../assets/images/Logo.png';
+import logo from '../assets/images/Logo.webp';
 import AuthenticationComponent from './AuthenticationComponent';
 import SubNavigationBar from './SubNavigationBar';
 import SwitchTheme from './SwitchTheme';
