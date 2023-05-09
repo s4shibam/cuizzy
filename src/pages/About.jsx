@@ -1,109 +1,32 @@
-import { Fragment } from 'react';
-import aboutImg1 from '../assets/images/About-1.webp';
-import aboutImg2 from '../assets/images/About-2.webp';
 import DesignComponent from '../components/DesignComponent';
 
 const aboutDetails = [
-  {
-    img: aboutImg1,
-    paras: [
-      `Welcome to Quizzy, the premier destination for free coding quizzes! Our goal is to provide
-    you with a fun and challenging way to test your coding knowledge and skills. We offer a
-    wide range of quizzes covering various programming languages, algorithms, data structures,
-    and more. `,
+  `Welcome to Quizzy, the premier destination for free coding quizzes! Our goal is to provide you with a fun and challenging way to test your coding knowledge and skills. We offer a wide range of quizzes covering various programming languages, algorithms, data structures, and more. `,
 
-      `At Quizzy, we believe that learning to code should be accessible to
-    everyone, which is why we offer all of our quizzes for free. Whether
-    you're a beginner or an experienced programmer, our quizzes are
-    designed to help you improve your skills and stay up-to-date with the
-    latest trends in the coding domain.`
-    ]
-  },
+  `At Quizzy, we believe that learning to code should be accessible to everyone, which is why we offer all of our quizzes for free. Whether you're a beginner or an experienced programmer, our quizzes are designed to help you improve your skills and stay up-to-date with the latest trends in the coding domain.`,
 
-  {
-    img: aboutImg2,
-    paras: [
-      `We offer a variety of quizzes that are designed to challenge you at
-    every level. From multiple-choice questions to coding challenges, our
-    quizzes are designed to test your knowledge in a fun and engaging way.
-    We also offer timed quizzes and leader-boards, so you can compete with
-    other coders and see how you stack up against the best.`,
+  `We offer a variety of quizzes that are designed to challenge you at every level. From multiple-choice questions to coding challenges, our quizzes are designed to test your knowledge in a fun and engaging way. Quizzy provide immediate feedback on users answers, helping them to learn and improve their knowledge. For that reason Quizzy can be used for educational purposes or just for entertainment. And most interestingly all of these features are accessible for free. In addition to providing free coding quizzes, Quizzy also offers a wealth of resources for coders of all levels. Our website features helpful tutorials, tips and tricks, and guides to help you improve your coding skills. We believe that everyone should have access to quality coding education, regardless of their experience or financial situation.`,
 
-      `At Quizzy, we're passionate about coding and we believe that
-    everyone should have the opportunity to learn how to code. We strive
-    to create an inclusive and welcoming environment for everyone who
-    visits our site. Thank you for choosing Quizzy as your go-to source
-    for free coding quizzes!`,
+  `Our team of expert coders and educators work tirelessly to create and curate high-quality quizzes and resources that are both challenging and informative. Our quizzes are updated regularly to reflect the latest trends and technologies in the coding domain, so you can be sure that you're learning the most up-to-date information.`,
 
-      `Quizzy provide immediate feedback on users answers, helping them to
-    learn and improve their knowledge. For that reason Quizzy can be used
-    for educational purposes or just for entertainment. And most
-    interestingly all of these features are accessible for free.`
-    ]
-  },
-
-  {
-    img: aboutImg1,
-    paras: [
-      `In addition to providing free coding quizzes, Quizzy also offers a
-    wealth of resources for coders of all levels. Our website features
-    helpful tutorials, tips and tricks, and guides to help you improve
-    your coding skills. We believe that everyone should have access to
-    quality coding education, regardless of their experience or financial
-    situation.`,
-
-      `Our team of expert coders and educators work tirelessly to create and
-    curate high-quality quizzes and resources that are both challenging
-    and informative. We strive to create a user-friendly experience that
-    makes learning to code both fun and accessible. Our quizzes are
-    updated regularly to reflect the latest trends and technologies in the
-    coding domain, so you can be sure that you're learning the most
-    up-to-date information.
-    `
-    ]
-  },
-
-  {
-    img: aboutImg2,
-    paras: [
-      `We value our community of users and we're committed to creating
-    an inclusive and welcoming environment for everyone. We encourage you
-    to join our community, share your knowledge, and connect with other
-    coders from around the world. Whether you're a beginner or an
-    experienced coder, we're here to support you every step of the
-    way.`,
-
-      `Thank you for choosing Quizzy as your go-to source for free coding 
-    quizzes and resources. We hope you enjoy learning and growing with us!
-    `
-    ]
-  }
+  `Thank you for choosing Quizzy as your go-to source for free coding quizzes and resources. We hope you enjoy learning and growing with us!`
 ];
 
 function About() {
   return (
     <div className='about-page mx-auto flex w-[85%] animate-reveal flex-col items-center justify-center'>
-      <h1 className='page-heading'>About Quizzy!</h1>
+      <h1 className='page-heading'>About Quizzy</h1>
 
-      {aboutDetails.map((aboutDetail, index1) => (
-        <Fragment key={index1}>
-          <img
-            src={aboutDetail.img}
-            alt='About'
-            className='mt-12 mb-8 w-[80%] max-w-md object-cover'
-          />
-          <div className='details frame-BG rounded-3xl px-6 py-0 text-lg font-medium text-darkText dark:text-dullWhite sm:text-xl'>
-            {aboutDetail.paras.map((para, index2) => (
-              <p className='my-6 indent-6' key={index2}>
-                {para.toString()}
-              </p>
-            ))}
-          </div>
-        </Fragment>
-      ))}
+      <div className='details text-justify font-medium text-darkText dark:text-dullWhite sm:w-[80%] sm:text-xl'>
+        {aboutDetails.map((para, index2) => (
+          <p className='my-6 indent-6' key={index2}>
+            {para}
+          </p>
+        ))}
+      </div>
 
       {/* Horizontal Line */}
-      <div className=' mt-16 inline-flex w-full items-center justify-center'>
+      <div className=' mt-8 inline-flex w-full items-center justify-center'>
         <hr className='my-8 h-1 w-64 rounded border-0 bg-darkViolet dark:bg-brightViolet' />
         <div className='absolute left-1/2 -translate-x-1/2 bg-lightBG px-4 dark:bg-darkBG'>
           <svg
