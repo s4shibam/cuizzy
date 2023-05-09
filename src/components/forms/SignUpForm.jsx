@@ -14,6 +14,8 @@ function SignUpForm() {
   const [consent, setConsent] = useState('');
   const [loading, setLoading] = useState('');
 
+  const [show, setShow] = useState(false);
+
   const { signUp } = useAuth();
   const navigate = useNavigate();
 
@@ -57,19 +59,31 @@ function SignUpForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <TextInput
-        type='password'
-        required
-        placeholder='Enter Password'
-        icon='lock'
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
+
+      <div className='text-input flex h-14 w-full items-center rounded-md border border-dullWhite bg-white p-2 outline-none dark:border-gray-600 dark:bg-darkText/60'>
+        <input
+          className='ml-1 w-full rounded-lg border-none bg-transparent font-medium tracking-wide text-darkText outline-none dark:text-lightText lg:text-xl'
+          type={show ? 'text' : 'password'}
+          required
+          placeholder='Enter Password'
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button
+          className='material-icons-outlined mx-1 flex cursor-pointer items-center justify-center text-darkText dark:text-lightText md:text-3xl'
+          onClick={() => {
+            setShow(!show);
+          }}
+        >
+          {show ? 'visibility_off' : 'visibility'}
+        </button>
+      </div>
+
       <TextInput
         type='password'
         required
         placeholder='Confirm Password'
-        icon='enhanced_encryption'
+        icon='lock'
         value={confirmPassword}
         onChange={(e) => setConfirmPassword(e.target.value)}
       />

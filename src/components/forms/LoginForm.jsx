@@ -10,6 +10,8 @@ function LoginForm() {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState('');
 
+  const [show, setShow] = useState(false);
+
   const { logIn } = useAuth();
   const navigate = useNavigate();
 
@@ -41,14 +43,24 @@ function LoginForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <TextInput
-        type='password'
-        required
-        placeholder='Enter The Password'
-        icon='lock'
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
+      <div className='text-input flex h-14 w-full items-center rounded-md border border-dullWhite bg-white p-2 outline-none dark:border-gray-600 dark:bg-darkText/60'>
+        <input
+          className='ml-1 w-full rounded-lg border-none bg-transparent font-medium tracking-wide text-darkText outline-none dark:text-lightText lg:text-xl'
+          type={show ? 'text' : 'password'}
+          required
+          placeholder='Enter Password'
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button
+          className='material-icons-outlined mx-1 flex cursor-pointer items-center justify-center text-darkText dark:text-lightText md:text-3xl'
+          onClick={() => {
+            setShow(!show);
+          }}
+        >
+          {show ? 'visibility_off' : 'visibility'}
+        </button>
+      </div>
 
       <div className='ml-auto'>
         <Link
@@ -67,7 +79,7 @@ function LoginForm() {
         Log In
       </button>
 
-      <div className='user-signup text-center text-sm md:text-base font-medium tracking-wide text-darkText dark:text-slate-300'>
+      <div className='user-signup text-center text-sm font-medium tracking-wide text-darkText dark:text-slate-300 md:text-base'>
         Don&apos;t have an account?
         <Link to='/signup'>
           <span className='link-text'> Sign Up </span>
