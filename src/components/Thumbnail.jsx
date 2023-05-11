@@ -12,12 +12,12 @@ function Thumbnail({ title, id, noq, type }) {
   return (
     <div className='topic frame-BG mb-5 cursor-pointer rounded-xl pb-2 hover:shadow-sm hover:shadow-dullWhite'>
       <LazyLoadImage
-        className='topic-thumbnail w-full rounded-xl'
+        src={link}
+        alt={title}
         width={360}
         height={200}
-        src={link}
-        PlaceholderSrc={logo}
-        alt={title}
+        placeholderSrc={logo}
+        className='topic-thumbnail w-full rounded-xl'
       />
 
       <p className='topic-title my-2 overflow-hidden text-center font-semibold uppercase tracking-wide text-darkText line-clamp-2 dark:text-slate-300 sm:text-lg'>
