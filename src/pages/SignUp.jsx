@@ -10,7 +10,9 @@ function SignUp() {
         <div className='signup-image hidden items-center justify-center lg:flex'>
           <img
             className='w-full justify-self-center lg:max-w-[80%]'
-            src={ signup }
+            height={600}
+            width={600}
+            src={signup}
             alt='Sign Up'
           />
         </div>

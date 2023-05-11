@@ -10,7 +10,9 @@ function Login() {
         <div className='signup-image hidden items-center justify-center lg:flex '>
           <img
             className='w-full justify-self-center lg:max-w-[75%]'
-            src={ login }
+            height={500}
+            width={500}
+            src={login}
             alt='Log In'
           />
         </div>
