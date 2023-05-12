@@ -27,7 +27,7 @@ import ScoreCard from './ScoreCard';
 import SubNavigationBar from './SubNavigationBar';
 import SwitchTheme from './SwitchTheme';
 import Thumbnail from './Thumbnail';
-import UserName from './UserName';
+import UserDetail from './UserDetail';
 
 export {
   CheckBox,
@@ -56,5 +56,5 @@ export {
   SubNavigationBar,
   SwitchTheme,
   Thumbnail,
-  UserName
+  UserDetail,
 };

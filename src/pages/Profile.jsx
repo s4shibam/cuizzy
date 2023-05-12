@@ -1,11 +1,11 @@
 import { useState } from 'react';
+import { DesignComponent, UserDetail } from '../components';
 import showAlert from '../components/AlertList';
-import DesignComponent from '../components/DesignComponent';
-import UserName from '../components/UserName';
 import { useAuth } from '../contexts/AuthContext';
 
 function Profile() {
-  const { currentUser, resetPassword } = useAuth();
+  const { currentUser, updateProfileImage, updateUserName, resetPassword } =
+    useAuth();
   const [resetLoading, setResetLoading] = useState(false);
 
   async function sendResetMail() {
@@ -25,13 +25,19 @@ function Profile() {
     <div className='profile-page mx-auto flex w-[85%] animate-reveal flex-col items-center justify-center sm:text-xl'>
       <h1 className='page-heading'>Profile Details!</h1>
 
-      <div className='profile-section frame-BG mx-10 my-8 flex flex-col items-center justify-center rounded-3xl px-10 sm:gap-8'>
-        <span className='icon material-icons-outlined mb-5 text-8xl'>
-          account_circle
-        </span>
+      <div className='profile-section frame-BG mx-10 my-8 flex flex-col items-center justify-center space-y-6 rounded-3xl px-10'>
+        <UserDetail
+          data='photoURL'
+          currentUser={currentUser}
+          updateDetail={updateProfileImage}
+        />
 
         <div className='user-details flex flex-col gap-5 sm:gap-10'>
-          <UserName />
+          <UserDetail
+            data='displayName'
+            currentUser={currentUser}
+            updateDetail={updateUserName}
+          />
 
           <div className='email-id flex flex-col justify-start sm:flex-row'>
             <span className='mr-4 text-brightViolet'>Email:</span>

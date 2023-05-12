@@ -7,6 +7,7 @@ import {
   signOut,
   updateProfile
 } from 'firebase/auth';
+import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage';
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import '../firebase';
 
@@ -47,11 +48,20 @@ export function AuthProvider({ children }) {
   }
 
   // Update User Name Function
-  async function updateUserName(userName) {
+  async function updateUserName(displayName) {
     const auth = getAuth();
-    await updateProfile(auth.currentUser, {
-      displayName: userName
-    });
+    await updateProfile(auth.currentUser, { displayName });
+  }
+
+  // Update Profile Image Function
+  async function updateProfileImage(imageFile) {
+    const auth = getAuth();
+    const storage = getStorage();
+    const fileRef = ref(storage, auth.currentUser.uid);
+    const snapshot = await uploadBytes(fileRef, imageFile);
+    const photoURL = await getDownloadURL(fileRef);
+
+    await updateProfile(auth.currentUser, { photoURL });
   }
 
   // Log In Function
@@ -79,7 +89,8 @@ export function AuthProvider({ children }) {
       logIn,
       logOut,
       resetPassword,
-      updateUserName
+      updateUserName,
+      updateProfileImage
     }),
     [currentUser]
   );
