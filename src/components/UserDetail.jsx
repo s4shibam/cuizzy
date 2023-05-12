@@ -40,13 +40,16 @@ function UserDetail({ data, currentUser, updateDetail }) {
         >
           {underEdit ? (
             <input
-              className='border-b border-b-brightViolet bg-transparent text-darkText outline-none dark:text-white '
-              data='text'
+              className='max-w-[200px] border-b border-b-brightViolet bg-transparent text-darkText outline-none dark:text-white'
+              type='text'
               onChange={(e) => setUserDetail(e.target.value)}
               value={userDetail}
             />
           ) : (
-            <span className='max-w-[200px] truncate text-darkText dark:text-white'>
+            <span
+              className='max-w-[200px] truncate text-darkText dark:text-white cursor-pointer'
+              title={currentUser[data]}
+            >
               {currentUser[data]}
             </span>
           )}
@@ -81,7 +84,7 @@ function UserDetail({ data, currentUser, updateDetail }) {
   if (data === 'photoURL') {
     return (
       <div
-        className='xmb-5 relative grid aspect-square w-36 cursor-pointer place-content-center rounded-full bg-dullWhite shadow-xl'
+        className='relative my-2 grid aspect-square w-36 cursor-pointer place-content-center rounded-full bg-dullWhite shadow-xl'
         title='Preferred Ratio: 1:1'
       >
         {currentUser[data] && !underEdit !== null ? (
@@ -92,8 +95,8 @@ function UserDetail({ data, currentUser, updateDetail }) {
             style={{ clipPath: 'circle()' }}
           />
         ) : !underEdit ? (
-          <span className='icon material-icons-outlined text-7xl text-lightText'>
-            person
+          <span className='icon material-icons-outlined text-9xl text-darkText'>
+            sentiment_very_satisfied
           </span>
         ) : null}
 

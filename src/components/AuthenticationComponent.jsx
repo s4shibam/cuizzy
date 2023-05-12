@@ -18,7 +18,7 @@ function AuthenticationComponent() {
         <>
           <button
             type='button'
-            className='peer mx-2 my-1 aspect-square w-9 rounded-full bg-dullWhite xl:w-11'
+            className='peer mx-2 my-1 grid aspect-square w-9 place-content-center rounded-full bg-dullWhite xl:w-11'
             title={currentUser.displayName}
           >
             {currentUser?.photoURL ? (
@@ -29,36 +29,34 @@ function AuthenticationComponent() {
                 style={{ clipPath: 'circle()' }}
               />
             ) : (
-              <span className='icon material-icons-outlined text-2xl xl:text-xl'>
-                account_circle
+              <span className='icon material-icons-outlined text-3xl text-darkText xl:text-4xl'>
+                sentiment_very_satisfied
               </span>
             )}
           </button>
 
           <div className='absolute top-10 mr-2 hidden flex-col py-4 hover:flex peer-hover:flex xl:top-12'>
             <div className='h-1 bg-transparent'></div>
+            <hr className='h-px border-0 bg-gray-300 dark:bg-gray-500' />
             <div className='bg-brightViolet'>
               <Link to='/profile'>
-                <button className='flex w-full items-center px-3 py-2 font-medium  tracking-wider hover:bg-gray-900/30 dark:hover:bg-gray-900/30 md:text-xl'>
-                  <span className='icon material-icons-outlined text-2xl text-white dark:text-white xl:text-xl'>
+                <button className='flex w-full items-center px-3 py-2 font-medium tracking-wider transition-all duration-300 hover:bg-gray-100/40 dark:hover:bg-gray-900/30 md:text-xl'>
+                  <span className='icon material-icons-outlined text-2xl'>
                     account_circle
                   </span>
-                  <span className='text ml-2 text-white dark:text-white'>
-                    My Profile
-                  </span>
+                  <span className='text ml-2'>My Profile</span>
                 </button>
               </Link>
+              <hr />
               <Link to='/'>
                 <button
-                  className='flex w-full items-center px-3 py-2 font-medium  tracking-wider hover:bg-gray-900/30 dark:hover:bg-gray-900/30 md:text-xl'
+                  className='flex w-full items-center px-3 py-2 font-medium tracking-wider transition-all duration-300 hover:bg-gray-100/40 dark:hover:bg-gray-900/30 md:text-xl'
                   onClick={handleLogOut}
                 >
-                  <span className='icon material-icons-outlined ml-0.5 text-2xl text-white dark:text-white xl:text-xl'>
+                  <span className='icon material-icons-outlined ml-0.5 text-2xl'>
                     logout
                   </span>
-                  <span className='text ml-2 text-white dark:text-white'>
-                    Log Out
-                  </span>
+                  <span className='text ml-2'>Log Out</span>
                 </button>
               </Link>
             </div>
@@ -68,8 +66,7 @@ function AuthenticationComponent() {
         <>
           <Link to='/login'>
             <button type='button' className='border-button' title='Log in'>
-              <span className='icon material-icons-outlined text-2xl xl:text-xl'>
-                {' '}
+              <span className='icon material-icons-outlined text-2xl'>
                 login
               </span>
               <span className='text ml-2 hidden uppercase xl:block'>
@@ -81,10 +78,9 @@ function AuthenticationComponent() {
           <Link to='/signup'>
             <button type='button' className='border-button' title='Sign up'>
               <span className='text mr-2 hidden uppercase xl:block'>
-                {' '}
                 Sign Up
               </span>
-              <span className='icon material-icons-outlined text-2xl xl:text-xl'>
+              <span className='icon material-icons-outlined text-2xl'>
                 person_add
               </span>
             </button>
