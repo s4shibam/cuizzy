@@ -6,7 +6,8 @@ const successList = {
   'logout-success': 'Logged out successfully!',
   'account-created': 'Account created successfully!',
   'mail-sent': 'Mail sent!',
-  'username-updated': 'Name updated!'
+  'username-updated': 'Name updated!',
+  'profile-image-updated': 'Profile image updated!'
 };
 
 const errorList = {
