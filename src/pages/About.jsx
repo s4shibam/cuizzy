@@ -1,4 +1,4 @@
-import DesignComponent from '../components/DesignComponent';
+import { DesignComponent } from '../components';
 
 const aboutDetails = [
   `Welcome to Quizzy, the premier destination for free coding quizzes! Our goal is to provide you with a fun and challenging way to test your coding knowledge and skills. We offer a wide range of quizzes covering various programming languages, algorithms, data structures, and more. `,

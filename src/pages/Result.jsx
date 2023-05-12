@@ -1,10 +1,8 @@
 import _ from 'lodash';
 import { useState } from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
-import DesignComponent from '../components/DesignComponent';
-import DetailedReport from '../components/DetailedReport';
-import ResultSummary from '../components/ResultSummary';
-import {useAnswers} from '../hooks';
+import { DesignComponent, DetailedReport, ResultSummary } from '../components';
+import { useAnswers } from '../hooks';
 
 function Result() {
   const { id } = useParams();

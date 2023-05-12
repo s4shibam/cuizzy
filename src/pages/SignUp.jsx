@@ -1,6 +1,5 @@
 import { signup } from '../assets';
-import DesignComponent from '../components/DesignComponent';
-import SignUpForm from '../components/forms/SignUpForm';
+import { DesignComponent, SignUpForm } from '../components';
 
 function SignUp() {
   return (

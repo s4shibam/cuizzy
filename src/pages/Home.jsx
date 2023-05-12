@@ -1,8 +1,5 @@
 import { coding, hero } from '../assets';
-import BasicInfo from '../components/BasicInfo';
-import ContactUs from '../components/ContactUs';
-import DesignComponent from '../components/DesignComponent';
-import Footer from '../components/Footer';
+import { BasicInfo, ContactUs, DesignComponent, Footer } from '../components';
 
 function Home() {
   return (

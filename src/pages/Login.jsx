@@ -1,6 +1,5 @@
 import { login } from '../assets';
-import DesignComponent from '../components/DesignComponent';
-import LoginForm from '../components/forms/LoginForm';
+import { DesignComponent, LoginForm } from '../components';
 
 function Login() {
   return (

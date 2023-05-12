@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import DesignComponent from '../components/DesignComponent';
-import Thumbnail from '../components/Thumbnail';
+import { DesignComponent, Thumbnail } from '../components';
 import { useData } from '../hooks';
 
 function Quizzes() {

@@ -1,6 +1,5 @@
 import { reset } from '../assets';
-import DesignComponent from '../components/DesignComponent';
-import ResetPasswordForm from '../components/forms/ResetPasswordForm';
+import { DesignComponent, ResetPasswordForm } from '../components';
 
 function Reset() {
   return (
@@ -11,6 +10,8 @@ function Reset() {
           <img
             className='mt-5 w-full justify-self-center lg:max-w-[75%]'
             src={reset}
+            height={500}
+            width={500}
             alt='Sign Up'
           />
         </div>
