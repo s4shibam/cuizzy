@@ -14,38 +14,55 @@ function AuthenticationComponent() {
 
   return (
     <div className='authentication flex items-center justify-end xl:gap-4'>
-      {currentUser ? (
+      {currentUser !== null ? (
         <>
-          <Link to='/profile'>
-            <button
-              type='button'
-              className='border-button'
-              title={currentUser.displayName}
-            >
+          <button
+            type='button'
+            className='peer mx-2 my-1 aspect-square w-9 rounded-full bg-dullWhite xl:w-11'
+            title={currentUser.displayName}
+          >
+            {currentUser?.photoURL ? (
+              <img
+                src={currentUser.photoURL}
+                alt={currentUser.displayName}
+                className='aspect-square'
+                style={{ clipPath: 'circle()' }}
+              />
+            ) : (
               <span className='icon material-icons-outlined text-2xl xl:text-xl'>
                 account_circle
               </span>
-              <span className='text ml-2 hidden max-w-[200px] truncate uppercase xl:block'>
-                Hi! {currentUser?.displayName?.split(' ')[0]}
-              </span>
-            </button>
-          </Link>
+            )}
+          </button>
 
-          <Link to='/'>
-            <button
-              type='button'
-              className='border-button'
-              title='Log out'
-              onClick={handleLogOut}
-            >
-              <span className='text mr-2 hidden uppercase xl:block'>
-                Log Out
-              </span>
-              <span className='icon material-icons-outlined text-2xl xl:text-xl'>
-                logout
-              </span>
-            </button>
-          </Link>
+          <div className='absolute top-10 mr-2 hidden flex-col py-4 hover:flex peer-hover:flex xl:top-12'>
+            <div className='h-1 bg-transparent'></div>
+            <div className='bg-brightViolet'>
+              <Link to='/profile'>
+                <button className='flex w-full items-center px-3 py-2 font-medium  tracking-wider hover:bg-gray-900/30 dark:hover:bg-gray-900/30 md:text-xl'>
+                  <span className='icon material-icons-outlined text-2xl text-white dark:text-white xl:text-xl'>
+                    account_circle
+                  </span>
+                  <span className='text ml-2 text-white dark:text-white'>
+                    My Profile
+                  </span>
+                </button>
+              </Link>
+              <Link to='/'>
+                <button
+                  className='flex w-full items-center px-3 py-2 font-medium  tracking-wider hover:bg-gray-900/30 dark:hover:bg-gray-900/30 md:text-xl'
+                  onClick={handleLogOut}
+                >
+                  <span className='icon material-icons-outlined ml-0.5 text-2xl text-white dark:text-white xl:text-xl'>
+                    logout
+                  </span>
+                  <span className='text ml-2 text-white dark:text-white'>
+                    Log Out
+                  </span>
+                </button>
+              </Link>
+            </div>
+          </div>
         </>
       ) : (
         <>

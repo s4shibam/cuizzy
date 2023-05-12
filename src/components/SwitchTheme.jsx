@@ -32,7 +32,7 @@ function SwitchTheme() {
   return (
     <button
       type='button'
-      className='switch-theme ml-2 flex items-center'
+      className='switch-theme ml-1 flex items-center'
       title='Log out'
       onClick={toggleTheme}
     >
