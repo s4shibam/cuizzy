@@ -5,10 +5,13 @@ import { Footer } from '../components';
 function Error() {
   return (
     <>
-      <div class='error mx-auto mt-32 flex w-[85%] flex-col items-center justify-center xl:mt-20'>
+      <div className='error mx-auto mt-32 flex w-[85%] flex-col items-center justify-center xl:mt-20'>
         <img
           className='mx-auto w-[90%] max-w-2xl'
           src={error}
+          height={500}
+          width={500}
+          loading='lazy'
           alt='Error 404'
         />
         <p className='text-center text-xl font-semibold uppercase'>
