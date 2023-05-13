@@ -1,6 +1,7 @@
 import { AnswerBox } from './';
 
-function DetailedReport({ userAnswers = [] }) {
+function DetailedReport({ qnaSet = [] }) {
+
   return (
     <div className='result-analytics mx-auto my-8'>
       <hr className='my-12 h-px border-0 bg-dullWhite dark:bg-gray-600' />
@@ -8,7 +9,7 @@ function DetailedReport({ userAnswers = [] }) {
         Your Answers!!
       </h1>
 
-      {userAnswers.map((answer, index) => (
+      {qnaSet.map((answer, index) => (
         <div
           className='question-set frame-BG pointer-events-none mb-10 select-none rounded-md p-3'
           key={index}
