@@ -2,11 +2,17 @@ import { useParams } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import getCertificate from './Certificate';
 
-function ScoreCard({ correctAnswers, incorrectAnswers, unattempted, noq }) {
+function ScoreCard({
+  location,
+  noq,
+  correctAnswersCount,
+  incorrectAnswersCount,
+  unattemptedCount,
+  obtainedPoints,
+  obtainedPercentage
+}) {
   const { id } = useParams();
   const { currentUser } = useAuth();
-  const obtainedPoints = correctAnswers * 10 - incorrectAnswers * 2;
-  const obtainedPercentage = obtainedPoints / (0.1 * noq);
 
   return (
     <>
@@ -28,19 +34,19 @@ function ScoreCard({ correctAnswers, incorrectAnswers, unattempted, noq }) {
 
           <div className='score-row [&>*]:text-activeGreen'>
             <p className='text-left'>Correct</p>
-            <p>{correctAnswers}</p>
-            <p>+{correctAnswers * 10}</p>
+            <p>{correctAnswersCount}</p>
+            <p>+{correctAnswersCount * 10}</p>
           </div>
 
           <div className='score-row [&>*]:text-failureRed'>
             <p className='text-left'>Incorrect</p>
-            <p>{incorrectAnswers}</p>
-            <p>-{incorrectAnswers * 2}</p>
+            <p>{incorrectAnswersCount}</p>
+            <p>-{incorrectAnswersCount * 2}</p>
           </div>
           <div className='score-row [&>*]:text-slate-700 [&>*]:dark:text-slate-400'>
             <p className='text-left'>Unattempted</p>
-            <p>{unattempted}</p>
-            <p>+0</p>
+            <p>{unattemptedCount}</p>
+            <p>NA</p>
           </div>
         </div>
         <hr className='mt-4 mb-3 h-px border-0 bg-gray-400 dark:bg-gray-600' />
@@ -53,7 +59,7 @@ function ScoreCard({ correctAnswers, incorrectAnswers, unattempted, noq }) {
         <span className='mr-9 flex justify-between text-lg font-semibold uppercase lg:text-2xl'>
           Total Points <span>{noq * 10}</span>
         </span>
-        {obtainedPercentage >= 60 ? (
+        {location === 'result' && obtainedPercentage >= 60 ? (
           <button
             type='button'
             className='border-button mt-6 rounded-2xl border border-darkViolet px-4 py-2'
