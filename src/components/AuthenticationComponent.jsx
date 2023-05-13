@@ -35,7 +35,7 @@ function AuthenticationComponent() {
             )}
           </button>
 
-          <div className='absolute top-10 mr-2 flex flex-col py-4 opacity-0 transition-opacity duration-300 hover:opacity-100 peer-hover:opacity-100 xl:top-12'>
+          <div className='absolute top-8 mr-2 flex flex-col py-4 opacity-0 transition-opacity duration-300 hover:opacity-100 peer-hover:opacity-100 xl:top-10'>
             <div className='h-1 bg-transparent'></div>
             <hr className='h-px border-0 bg-gray-300 dark:bg-gray-500' />
             <div className='bg-brightViolet'>
