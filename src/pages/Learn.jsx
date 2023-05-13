@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { DesignComponent, Thumbnail } from '../components';
-import useData from '../hooks';
+import { useData } from '../hooks';
 
 function Learn() {
   const { loading, error, data } = useData('videos');
