@@ -1,29 +1,30 @@
-import { getDatabase, ref, set } from 'firebase/database';
+import { child, getDatabase, push, ref, update } from 'firebase/database';
 import _ from 'lodash';
 import { useCallback, useEffect, useReducer, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { AnswerBox, ProgressBar, Rules } from '../components';
 import { useAuth } from '../contexts/AuthContext';
 import { useQuiz } from '../hooks';
-import PageNotFound from './PageNotFound';
+import { PageNotFound } from './';
 
 const initialState = null;
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'questions': {
-      action.value.forEach((question) => {
+    case 'quiz': {
+      const qnaSet = _.cloneDeep(action.value);
+      qnaSet.forEach((question) => {
         question.options.forEach((option) => {
           option.checked = false;
         });
       });
-      return action.value;
+      return qnaSet;
     }
     case 'answer': {
-      const questions = _.cloneDeep(state);
-      questions[action.questionID].options[action.optionIndex].checked =
+      const question = _.cloneDeep(state);
+      question[action.questionID].options[action.optionIndex].checked =
         action.value;
-      return questions;
+      return question;
     }
 
     default:
@@ -33,18 +34,18 @@ const reducer = (state, action) => {
 
 function Quiz() {
   const { id } = useParams();
+  const { loading, error, quiz } = useQuiz(id);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const { loading, error, questions } = useQuiz(id);
-  const [qna, dispatch] = useReducer(reducer, initialState);
+  const [qnaSet, dispatch] = useReducer(reducer, initialState);
   const { currentUser } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
     dispatch({
-      type: 'questions',
-      value: questions
+      type: 'quiz',
+      value: quiz
     });
-  }, [questions]);
+  }, [quiz]);
 
   // Answer option selection
   const handleAnswerChange = useCallback(
@@ -61,51 +62,103 @@ function Quiz() {
 
   // Get next question
   const nextQuestion = useCallback(() => {
-    if (currentQuestion < questions.length - 1)
+    if (currentQuestion < qnaSet.length - 1)
       setCurrentQuestion((curr) => curr + 1);
-  }, [currentQuestion, questions]);
+  }, [currentQuestion, qnaSet]);
 
   // Get previous question
   const previousQuestion = useCallback(() => {
-    if (currentQuestion >= 1 && currentQuestion <= questions.length)
+    if (currentQuestion >= 1 && currentQuestion <= qnaSet.length)
       setCurrentQuestion((curr) => curr - 1);
-  }, [currentQuestion, questions]);
+  }, [currentQuestion, qnaSet]);
 
   // Progress percentage
-  const percentage =
-    questions.length > 0 ? ((currentQuestion + 1) * 100) / questions.length : 0;
+  const progressPercentage =
+    qnaSet?.length > 0 ? ((currentQuestion + 1) * 100) / qnaSet.length : 0;
 
-  // Submit Quiz
-  const submit = useCallback(async () => {
-    const { uid } = currentUser;
-    const db = getDatabase();
-    const resultRef = ref(db, `result/${uid}`);
+  function getMarkSheet() {
+    let correctAnswersCount = 0;
+    let incorrectAnswersCount = 0;
+    let unattemptedCount = 0;
 
-    await set(resultRef, {
-      [id]: qna
+    qnaSet?.forEach((question, index1) => {
+      const correctIndexes = [];
+      const checkedIndexes = [];
+
+      question.options.forEach((option, index2) => {
+        if (option.correct) correctIndexes.push(index2);
+        if (option.checked) checkedIndexes.push(index2);
+      });
+
+      if (checkedIndexes.length === 0) unattemptedCount += 1;
+      else if (_.isEqual(correctIndexes, checkedIndexes))
+        correctAnswersCount += 1;
+      else incorrectAnswersCount += 1;
     });
 
-    navigate(`/result/${id}`, { state: { qna } });
-  }, [currentUser, id, navigate, qna]);
+    const noq = qnaSet?.length;
+    const obtainedPoints = correctAnswersCount * 10 - incorrectAnswersCount * 2;
+    const obtainedPercentage = obtainedPoints / (0.1 * noq);
+
+    return [
+      noq,
+      correctAnswersCount,
+      incorrectAnswersCount,
+      unattemptedCount,
+      obtainedPoints,
+      obtainedPercentage
+    ];
+  }
+
+  const [
+    noq,
+    correctAnswersCount,
+    incorrectAnswersCount,
+    unattemptedCount,
+    obtainedPoints,
+    obtainedPercentage
+  ] = getMarkSheet();
+
+  const markSheetObject = {
+    topicId: id,
+    date: new Date().toLocaleDateString('en-IN'),
+    noq: noq,
+    correctAnswersCount: correctAnswersCount,
+    incorrectAnswersCount: incorrectAnswersCount,
+    unattemptedCount: unattemptedCount,
+    obtainedPoints: obtainedPoints,
+    obtainedPercentage: obtainedPercentage
+  };
+
+  // Submit Quiz and store result in the database
+  const submitQuiz = useCallback(async () => {
+    const { uid } = currentUser;
+    const db = getDatabase();
+    const key = push(child(ref(db), `submissions/${uid}`)).key;
+    const data = {};
+    data[`submissions/${uid}/${key}`] = markSheetObject;
+    await update(ref(db), data);
+    navigate(`/result/${id}`, { state: { qnaSet, markSheetObject } });
+  }, [currentUser, id, navigate, qnaSet, markSheetObject]);
 
   return (
     <>
       {loading && <p className='page-heading text-lg'>Loading ...</p>}
       {error && <PageNotFound />}
-      {!loading && !error && qna && qna.length === 0 && <PageNotFound />}
-      {!loading && !error && qna && qna.length > 0 && (
+      {!loading && !error && qnaSet && qnaSet?.length === 0 && <PageNotFound />}
+      {!loading && !error && qnaSet && qnaSet?.length > 0 && (
         <div className='quiz mx-auto w-[85%] animate-reveal'>
           <h1 className='page-heading'>{id.split('-').join(' ')} Quiz!</h1>
           <Rules />
           <div className='question frame-BG mb-40 flex flex-col justify-center rounded-md p-3'>
             <div className='flex flex-col items-center justify-center text-xl font-bold text-darkText dark:text-lightText sm:text-3xl'>
-              Q. {qna[currentQuestion].title}
+              Q. {qnaSet[currentQuestion].title}
             </div>
             <hr className='mt-3 mb-8 h-px border-0 bg-gray-400 dark:bg-gray-600' />
 
             <AnswerBox
               input
-              options={qna[currentQuestion].options}
+              options={qnaSet[currentQuestion].options}
               handleChange={handleAnswerChange}
             />
           </div>
@@ -113,8 +166,8 @@ function Quiz() {
           <ProgressBar
             nextQ={nextQuestion}
             prevQ={previousQuestion}
-            progress={percentage}
-            submit={submit}
+            progress={progressPercentage}
+            submit={submitQuiz}
           />
         </div>
       )}
