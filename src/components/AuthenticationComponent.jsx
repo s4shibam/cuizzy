@@ -18,7 +18,7 @@ function AuthenticationComponent() {
         <>
           <button
             type='button'
-            className='peer mx-2 my-1 grid aspect-square w-9 place-content-center rounded-full bg-dullWhite xl:w-11'
+            className='peer mx-2 grid aspect-square w-8 place-content-center rounded-full bg-dullWhite xl:w-10'
             title={currentUser.displayName}
           >
             {currentUser?.photoURL ? (
