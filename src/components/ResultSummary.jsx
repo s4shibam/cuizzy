@@ -1,35 +1,14 @@
 import { scoreCardImg } from '../assets';
 import { ScoreCard } from './';
 
-function ResultSummary({ correctAnswers, noq, userAnswers = [] }) {
-  function getIncorrectAnswers(userAnswersLocal = []) {
-    let incorrectAnswersCount = 0;
-    userAnswersLocal.forEach((answer) => {
-      let correctOptionCount = 0;
-      let attemptedOptionCount = 0;
-      let isIncorrect = false;
-      answer.options.forEach((option) => {
-        if (!option.correct && option.checked) {
-          incorrectAnswersCount += 1;
-          isIncorrect = true;
-          return;
-        }
-        if (option.correct) correctOptionCount += 1;
-        if (option.checked) attemptedOptionCount += 1;
-      });
-
-      if (!isIncorrect && attemptedOptionCount !== 0) {
-        if (correctOptionCount !== attemptedOptionCount)
-          incorrectAnswersCount += 1;
-      }
-    });
-
-    return incorrectAnswersCount;
-  }
-
-  const incorrectAnswers = getIncorrectAnswers(userAnswers);
-  const unattempted = noq - (correctAnswers + incorrectAnswers);
-
+function ResultSummary({
+  noq,
+  correctAnswersCount,
+  incorrectAnswersCount,
+  unattemptedCount,
+  obtainedPoints,
+  obtainedPercentage
+}) {
   return (
     <div className='summary mx-auto my-0 flex w-10/12 flex-col items-center justify-center gap-20 md:flex-row'>
       <img
@@ -40,9 +19,12 @@ function ResultSummary({ correctAnswers, noq, userAnswers = [] }) {
 
       <div className='flex flex-col items-center justify-center'>
         <ScoreCard
-          correctAnswers={correctAnswers}
-          incorrectAnswers={incorrectAnswers}
-          unattempted={unattempted}
+          location='result'
+          correctAnswersCount={correctAnswersCount}
+          incorrectAnswersCount={incorrectAnswersCount}
+          unattemptedCount={unattemptedCount}
+          obtainedPoints={obtainedPoints}
+          obtainedPercentage={obtainedPercentage}
           noq={noq}
         />
       </div>
