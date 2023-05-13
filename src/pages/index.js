@@ -9,6 +9,7 @@ import Quizzes from './Quizzes';
 import Reset from './Reset';
 import Result from './Result';
 import SignUp from './SignUp';
+import Submissions from './Submissions';
 import Video from './Video';
 
 export {
@@ -23,5 +24,6 @@ export {
   Reset,
   Result,
   SignUp,
+  Submissions,
   Video
 };

@@ -1,29 +1,32 @@
-import { get, getDatabase, orderByKey, query, ref } from 'firebase/database';
+import { get, getDatabase, query, ref } from 'firebase/database';
 import { useEffect, useState } from 'react';
+import { useAuth } from '../contexts/AuthContext';
 
-export default function useAnswers(topicID) {
+export default function useSubmissions() {
+  const { currentUser } = useAuth();
+  const { uid } = currentUser;
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [answers, setAnswers] = useState([]);
+  const [submissions, setSubmissions] = useState([]);
 
   useEffect(() => {
     // Fetch answers from database to check result
     async function fetchAnswers() {
       const db = getDatabase();
-      const answersRef = ref(db, `answers/${topicID}/questions`);
-      const answersQuery = query(answersRef, orderByKey());
+      const submissionsRef = ref(db, `submissions/${uid}`);
+      const submissionsQuery = query(submissionsRef);
 
       try {
         setError(false);
         setLoading(true);
 
         // Request to firebase database
-        const snapshot = await get(answersQuery);
+        const snapshot = await get(submissionsQuery);
         setLoading(false);
 
         if (snapshot.exists())
-          setAnswers((prevAnswers) => [
-            ...prevAnswers,
+          setSubmissions((prevSubmissions) => [
+            ...prevSubmissions,
             ...Object.values(snapshot.val())
           ]);
       } catch (err) {
@@ -33,7 +36,7 @@ export default function useAnswers(topicID) {
     }
 
     fetchAnswers();
-  }, [topicID]);
+  }, []);
 
-  return { loading, error, answers };
+  return { loading, error, submissions };
 }

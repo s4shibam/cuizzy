@@ -1,5 +1,5 @@
-import useAnswers from './useAnswers';
 import useData from './useData';
 import useQuiz from './useQuiz';
+import useSubmissions from './useSubmissions';
 
-export { useAnswers, useData, useQuiz };
+export { useData, useQuiz, useSubmissions };

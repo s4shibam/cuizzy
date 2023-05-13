@@ -27,6 +27,7 @@ import {
   Reset,
   Result,
   SignUp,
+  Submissions,
   Video
 } from './pages';
 
@@ -72,6 +73,7 @@ function App() {
           />
           <Route path='video/:id' element={<Video />} />
           <Route path='profile' element={<Profile />} />
+          <Route path='submissions' element={<Submissions />} />
           <Route
             path='result/:id'
             element={<Result />}
