@@ -35,16 +35,25 @@ function AuthenticationComponent() {
             )}
           </button>
 
-          <div className='absolute top-10 mr-2 hidden flex-col py-4 hover:flex peer-hover:flex xl:top-12'>
+          <div className='absolute top-10 mr-2 flex flex-col py-4 opacity-0 transition-opacity duration-300 hover:opacity-100 peer-hover:opacity-100 xl:top-12'>
             <div className='h-1 bg-transparent'></div>
             <hr className='h-px border-0 bg-gray-300 dark:bg-gray-500' />
             <div className='bg-brightViolet'>
               <Link to='/profile'>
                 <button className='flex w-full items-center px-3 py-2 font-medium tracking-wider transition-all duration-300 hover:bg-gray-100/40 dark:hover:bg-gray-900/30 md:text-xl'>
                   <span className='icon material-icons-outlined text-2xl'>
-                    account_circle
+                    person
                   </span>
                   <span className='text ml-2'>My Profile</span>
+                </button>
+              </Link>
+              <hr />
+              <Link to='/submissions'>
+                <button className='flex w-full items-center px-3 py-2 font-medium tracking-wider transition-all duration-300 hover:bg-gray-100/40 dark:hover:bg-gray-900/30 md:text-xl'>
+                  <span className='icon material-icons-outlined text-2xl'>
+                    history
+                  </span>
+                  <span className='text ml-2'>Submissions</span>
                 </button>
               </Link>
               <hr />
@@ -53,7 +62,7 @@ function AuthenticationComponent() {
                   className='flex w-full items-center px-3 py-2 font-medium tracking-wider transition-all duration-300 hover:bg-gray-100/40 dark:hover:bg-gray-900/30 md:text-xl'
                   onClick={handleLogOut}
                 >
-                  <span className='icon material-icons-outlined ml-0.5 text-2xl'>
+                  <span className='icon material-icons-outlined text-2xl'>
                     logout
                   </span>
                   <span className='text ml-2'>Log Out</span>
