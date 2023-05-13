@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 export default function useQuiz(topicID) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [questions, setQuestions] = useState([]);
+  const [quiz, setQuiz] = useState([]);
 
   useEffect(() => {
     // Fetch question-answer sets from database
@@ -22,7 +22,7 @@ export default function useQuiz(topicID) {
         setLoading(false);
 
         if (snapshot.exists())
-          setQuestions((prevQuestions) => [
+          setQuiz((prevQuestions) => [
             ...prevQuestions,
             ...Object.values(snapshot.val())
           ]);
@@ -33,7 +33,8 @@ export default function useQuiz(topicID) {
     }
 
     fetchQuestions();
+
   }, [topicID]);
 
-  return { loading, error, questions };
+  return { loading, error, quiz };
 }
