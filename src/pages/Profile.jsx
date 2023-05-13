@@ -9,6 +9,7 @@ function Profile() {
   const [resetLoading, setResetLoading] = useState(false);
 
   async function sendResetMail() {
+    if (!confirm('Are you sure you want to reset?')) return;
     try {
       setResetLoading(true);
       document.body.style.cursor = 'wait';
