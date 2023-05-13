@@ -34,7 +34,7 @@
         },
 
         gridTemplateColumns: {
-          quizzes: 'repeat(auto-fit, minmax(330px, 1fr))',
+          quizzes: 'repeat(auto-fit, minmax(380px, 1fr))',
           options: 'repeat(auto-fit, minmax(300px, 1fr))'
         },
 
