@@ -3,7 +3,7 @@ import { DesignComponent, SignUpForm } from '../components';
 
 function SignUp() {
   return (
-    <div className='signup mx-auto w-[85%] animate-reveal'>
+    <div className='signup mx-auto mb-20 w-[85%] animate-reveal'>
       <h1 className='page-heading'>Create an account!</h1>
       <div className='responsive gap-16'>
         <div className='signup-image hidden items-center justify-center lg:flex'>

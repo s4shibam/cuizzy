@@ -14,6 +14,15 @@
     @apply bg-lightBG dark:bg-darkBG;
   }
 
+  /* Autofill color disable */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 2147483647s ease-in-out 0s;
+    -webkit-text-fill-color: #2dbf64;
+  }
+
   /* Active site page */
   .active-page {
     @apply underline decoration-brightViolet underline-offset-[6px];
