@@ -76,70 +76,72 @@ function Quiz() {
   const progressPercentage =
     qnaSet?.length > 0 ? ((currentQuestion + 1) * 100) / qnaSet.length : 0;
 
-  function getMarkSheet() {
-    let correctAnswersCount = 0;
-    let incorrectAnswersCount = 0;
-    let unattemptedCount = 0;
+  // Submit Quiz and store result in the database
+  const submitQuiz = useCallback(async () => {
+    function getMarkSheet() {
+      let correctAnswersCount = 0;
+      let incorrectAnswersCount = 0;
+      let unattemptedCount = 0;
 
-    qnaSet?.forEach((question, index1) => {
-      const correctIndexes = [];
-      const checkedIndexes = [];
+      qnaSet?.forEach((question, index1) => {
+        const correctIndexes = [];
+        const checkedIndexes = [];
 
-      question.options.forEach((option, index2) => {
-        if (option.correct) correctIndexes.push(index2);
-        if (option.checked) checkedIndexes.push(index2);
+        question.options.forEach((option, index2) => {
+          if (option.correct) correctIndexes.push(index2);
+          if (option.checked) checkedIndexes.push(index2);
+        });
+
+        if (checkedIndexes.length === 0) unattemptedCount += 1;
+        else if (_.isEqual(correctIndexes, checkedIndexes))
+          correctAnswersCount += 1;
+        else incorrectAnswersCount += 1;
       });
 
-      if (checkedIndexes.length === 0) unattemptedCount += 1;
-      else if (_.isEqual(correctIndexes, checkedIndexes))
-        correctAnswersCount += 1;
-      else incorrectAnswersCount += 1;
-    });
+      const noq = qnaSet?.length;
+      const obtainedPoints =
+        correctAnswersCount * 10 - incorrectAnswersCount * 2;
+      const obtainedPercentage = obtainedPoints / (0.1 * noq);
 
-    const noq = qnaSet?.length;
-    const obtainedPoints = correctAnswersCount * 10 - incorrectAnswersCount * 2;
-    const obtainedPercentage = obtainedPoints / (0.1 * noq);
+      return [
+        noq,
+        correctAnswersCount,
+        incorrectAnswersCount,
+        unattemptedCount,
+        obtainedPoints,
+        obtainedPercentage
+      ];
+    }
 
-    return [
+    const [
       noq,
       correctAnswersCount,
       incorrectAnswersCount,
       unattemptedCount,
       obtainedPoints,
       obtainedPercentage
-    ];
-  }
+    ] = getMarkSheet();
 
-  const [
-    noq,
-    correctAnswersCount,
-    incorrectAnswersCount,
-    unattemptedCount,
-    obtainedPoints,
-    obtainedPercentage
-  ] = getMarkSheet();
-
-  const markSheetObject = {
-    topicId: id,
-    date: new Date().toLocaleDateString('en-IN'),
-    noq: noq,
-    correctAnswersCount: correctAnswersCount,
-    incorrectAnswersCount: incorrectAnswersCount,
-    unattemptedCount: unattemptedCount,
-    obtainedPoints: obtainedPoints,
-    obtainedPercentage: obtainedPercentage
-  };
-
-  // Submit Quiz and store result in the database
-  const submitQuiz = useCallback(async () => {
+    const markSheetObject = {
+      topicId: id,
+      date: new Date().toLocaleDateString('en-IN'),
+      noq: noq,
+      correctAnswersCount: correctAnswersCount,
+      incorrectAnswersCount: incorrectAnswersCount,
+      unattemptedCount: unattemptedCount,
+      obtainedPoints: obtainedPoints,
+      obtainedPercentage: obtainedPercentage
+    };
+    
     const { uid } = currentUser;
     const db = getDatabase();
     const key = push(child(ref(db), `submissions/${uid}`)).key;
     const data = {};
+
     data[`submissions/${uid}/${key}`] = markSheetObject;
     await update(ref(db), data);
     navigate(`/result/${id}`, { state: { qnaSet, markSheetObject } });
-  }, [currentUser, id, navigate, qnaSet, markSheetObject]);
+  }, [currentUser, id, navigate, qnaSet]);
 
   return (
     <>
