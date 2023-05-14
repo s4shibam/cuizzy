@@ -54,6 +54,7 @@ function LoginForm() {
         />
         <button
           className='material-icons-outlined mx-1 flex cursor-pointer items-center justify-center text-darkText dark:text-lightText md:text-3xl'
+          type='button'
           onClick={() => {
             setShow(!show);
           }}
