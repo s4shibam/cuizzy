@@ -1,9 +1,11 @@
 import {
+  GoogleAuthProvider,
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
   updateProfile
 } from 'firebase/auth';
@@ -45,6 +47,14 @@ export function AuthProvider({ children }) {
     setCurrentUser({
       ...user
     });
+  }
+
+  // Sign In With Google
+  async function signInWithGoogle() {
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+
+    await signInWithPopup(auth, provider);
   }
 
   // Update User Name Function
@@ -90,6 +100,7 @@ export function AuthProvider({ children }) {
       logOut,
       resetPassword,
       updateUserName,
+      signInWithGoogle,
       updateProfileImage
     }),
     [currentUser]
