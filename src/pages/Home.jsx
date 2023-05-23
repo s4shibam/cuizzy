@@ -3,7 +3,7 @@ import { BasicInfo, ContactUs, DesignComponent, Footer } from '../components';
 
 function Home() {
   return (
-    <div className='home-page mt-44 flex animate-reveal flex-col items-center justify-center xl:mt-24'>
+    <div className='home-page mt-44 flex flex-col items-center justify-center xl:mt-24'>
       <div className='home-image mx-4 flex max-w-xl items-center justify-center 2xl:max-w-3xl'>
         <img
           className='absolute top-36 w-12 animate-flip rounded-md drop-shadow-md md:w-20 md:rounded-2xl'
@@ -15,7 +15,7 @@ function Home() {
           width={720}
           height={450}
           src={hero}
-          alt='About Us'
+          alt='Quizzy'
         />
       </div>
 
