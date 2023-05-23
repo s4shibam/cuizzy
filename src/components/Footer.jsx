@@ -80,15 +80,27 @@ function Footer() {
         </div>
       </div>
       <hr className='my-6 border-darkText dark:border-lightText sm:mx-auto lg:my-8' />
-      <div className='sm:flex sm:items-center sm:justify-between md:mx-10'>
-        <span className='text-sm text-darkText dark:text-lightText sm:text-center'>
-          © 2023{' '}
-          <Link to='/' className='hover:underline'>
-            Quizzy
-          </Link>
-          .&ensp; All Rights Reserved.
-        </span>
-        <div className='mt-4 flex space-x-6 sm:mt-0 sm:justify-center'>
+      <div className='flex flex-col justify-center text-sm md:mr-10 md:flex-row md:items-center md:justify-between'>
+        <div className='text-center md:text-left'>
+          <span className='mb-1 block'>
+            Developed with ❤️ by &nbsp;
+            <a
+              href='https://shibamsaha.netlify.app/'
+              target='_blank'
+              className='cursor-pointer hover:underline'
+            >
+              Shibam Saha.
+            </a>
+          </span>
+          <span>
+            © 2023{' '}
+            <Link to='/' className='hover:underline'>
+              Quizzy.
+            </Link>
+            &ensp;All Rights Reserved.
+          </span>
+        </div>
+        <div className='mx-auto mt-4 flex w-fit space-x-6 sm:justify-center md:mx-0 md:mt-0'>
           <a href='#' className='text-darkText dark:text-lightText'>
             <svg
               className='h-5 w-5 dark:fill-lightText'
