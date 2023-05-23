@@ -1,8 +1,7 @@
 import { useState } from 'react';
+import { Form, TextInput } from '../';
 import { useAuth } from '../../contexts/AuthContext';
 import showAlert from '../AlertList';
-import Form from '../elements/Form';
-import TextInput from '../elements/TextInput';
 
 function ResetPasswordForm() {
   const [email, setEmail] = useState('');

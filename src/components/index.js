@@ -24,6 +24,7 @@ import ProgressBar from './ProgressBar';
 import ResultSummary from './ResultSummary';
 import Rules from './Rules';
 import ScoreCard from './ScoreCard';
+import SignInWithGoogleButton from './SignInWithGoogleButton';
 import SubNavigationBar from './SubNavigationBar';
 import SwitchTheme from './SwitchTheme';
 import Thumbnail from './Thumbnail';
@@ -53,8 +54,9 @@ export {
   ResultSummary,
   Rules,
   ScoreCard,
+  SignInWithGoogleButton,
   SubNavigationBar,
   SwitchTheme,
   Thumbnail,
-  UserDetail,
+  UserDetail
 };
