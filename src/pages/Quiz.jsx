@@ -39,6 +39,7 @@ function Quiz() {
   const [qnaSet, dispatch] = useReducer(reducer, initialState);
   const { currentUser } = useAuth();
   const navigate = useNavigate();
+  const date = new Date();
 
   useEffect(() => {
     dispatch({
@@ -124,22 +125,27 @@ function Quiz() {
 
     const markSheetObject = {
       topicId: id,
-      date: new Date().toLocaleDateString('en-IN'),
+      date: date.toLocaleDateString('en-IN'),
+      time: `${date.getHours() % 12 || 12}:${date
+        .getMinutes()
+        .toString()
+        .padStart(2, '0')} ${date.getHours() < 12 ? 'AM' : 'PM'}`,
       noq: noq,
       correctAnswersCount: correctAnswersCount,
       incorrectAnswersCount: incorrectAnswersCount,
       unattemptedCount: unattemptedCount,
       obtainedPoints: obtainedPoints,
-      obtainedPercentage: obtainedPercentage
+      obtainedPercentage: obtainedPercentage,
+      qnaSet: { ...qnaSet }
     };
-    
+
     const { uid } = currentUser;
     const db = getDatabase();
-    const key = push(child(ref(db), `submissions/${uid}`)).key;
-    const data = {};
+    const submissionsKey = push(child(ref(db), `submissions/${uid}`)).key;
+    const submissionsData = {};
 
-    data[`submissions/${uid}/${key}`] = markSheetObject;
-    await update(ref(db), data);
+    submissionsData[`submissions/${uid}/${submissionsKey}`] = markSheetObject;
+    await update(ref(db), submissionsData);
     navigate(`/result/${id}`, { state: { qnaSet, markSheetObject } });
   }, [currentUser, id, navigate, qnaSet]);
 

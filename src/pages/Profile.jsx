@@ -23,7 +23,7 @@ function Profile() {
     }
   }
   return (
-    <div className='profile-page mx-auto flex w-[85%] animate-reveal flex-col items-center justify-center sm:text-xl'>
+    <div className='profile-page mx-auto flex animate-reveal flex-col items-center justify-center sm:text-xl'>
       <h1 className='page-heading'>Profile Details!</h1>
 
       <div className='profile-section frame-BG mx-10 my-8 flex flex-col items-center justify-center space-y-6 rounded-3xl px-10'>
@@ -73,7 +73,7 @@ function Profile() {
               <span className='icon material-icons-outlined text-4xl text-darkText dark:text-darkText xl:text-2xl'>
                 lock_reset
               </span>
-              <span className='text text ml-2 uppercase dark:text-darkText'>
+              <span className='ml-2 text-sm uppercase dark:text-darkText sm:text-base'>
                 Reset Password
               </span>
             </button>

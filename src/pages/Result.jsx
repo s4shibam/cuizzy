@@ -14,7 +14,8 @@ function Result() {
     incorrectAnswersCount,
     unattemptedCount,
     obtainedPoints,
-    obtainedPercentage
+    obtainedPercentage,
+    date
   } = markSheetObject;
 
   return (
@@ -22,7 +23,9 @@ function Result() {
       {qnaSet?.length > 0 && (
         <>
           <ResultSummary
+            topicId={topicId}
             noq={noq}
+            date={date}
             correctAnswersCount={correctAnswersCount}
             incorrectAnswersCount={incorrectAnswersCount}
             unattemptedCount={unattemptedCount}

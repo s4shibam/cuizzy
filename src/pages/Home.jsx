@@ -26,11 +26,7 @@ function Home() {
             {' '}
             Quiz Competition{' '}
           </span>
-          Platform you have ever
-          <span className='animate-pulse text-darkText dark:text-lightText'>
-            {' '}
-            seen!
-          </span>
+          Platform you have ever seen!
         </p>
         <p className='quote text-center font-bold uppercase text-slate-700 dark:text-slate-400 md:text-xl'>
           &quot; Quizzes are like a mental workout, except you don&apos;t need

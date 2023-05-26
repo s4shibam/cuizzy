@@ -36,7 +36,7 @@ function Video() {
 
       <div
         role='status'
-        className='absolute top-0 left-0 -z-20 flex h-full w-full animate-pulse items-center justify-center rounded-lg bg-gray-300 dark:bg-gray-700'
+        className='absolute top-0 left-0 -z-20 flex h-full w-full animate-pulse items-center justify-center bg-gray-300 dark:bg-gray-700'
       >
         <svg
           className='w-8 text-gray-200 dark:text-gray-600 lg:w-32'
