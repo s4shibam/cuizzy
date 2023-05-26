@@ -101,14 +101,13 @@ function UserDetail({ data, currentUser, updateDetail }) {
   if (data === 'photoURL') {
     return (
       <div
-        className='relative my-2 grid h-36 w-36 cursor-pointer place-content-center rounded-full bg-dullWhite shadow-xl'
+        className='relative my-2 grid h-36 w-36 overflow-hidden cursor-pointer place-content-center rounded-full bg-dullWhite shadow-xl'
         title='Preferred Ratio: 1:1'
       >
         {currentUser[data] && !underEdit !== null ? (
           <img
             src={currentUser[data]}
-            className='h-36 w-36'
-            style={{ clipPath: 'circle()' }}
+            className='object-cover w-full h-full'
           />
         ) : !underEdit ? (
           <span className='icon material-icons-outlined text-9xl text-darkText'>
