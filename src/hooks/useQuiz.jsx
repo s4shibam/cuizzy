@@ -10,7 +10,7 @@ export default function useQuiz(topicID) {
     // Fetch question-answer sets from database
     async function fetchQuestions() {
       const db = getDatabase();
-      const quizRef = ref(db, `quiz/${topicID}/questions`);
+      const quizRef = ref(db, `quizzes/${topicID}/questions`);
       const quizQuery = query(quizRef, orderByKey());
 
       try {
