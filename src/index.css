@@ -64,7 +64,7 @@
 
   /* Button: hover fill change left to right */
   .fill-button {
-    background: linear-gradient(to left, #66c887 50%, #a972cb 50%) right;
+    background: linear-gradient(to left, #a972cb 50%, #66c887 50%) right;
     background-size: 200%;
     @apply flex items-center justify-center rounded-lg px-4 py-2 text-2xl font-bold uppercase tracking-wider text-darkText transition-all duration-700 ease-in-out hover:bg-left;
   }
@@ -93,7 +93,7 @@
 
   /* Page heading */
   .page-heading {
-    @apply mt-36 mb-10 text-center text-2xl font-bold uppercase tracking-wider text-darkViolet dark:text-slate-300 sm:text-5xl xl:mt-24;
+    @apply mt-36 mb-10 text-center text-2xl font-bold uppercase tracking-wider text-darkViolet dark:text-brightViolet sm:text-5xl xl:mt-24;
   }
 
   /* Responsive display */
