@@ -19,7 +19,7 @@ function Thumbnail({ title, id, noq, type }) {
         alt={title}
         width='100%'
         placeholderSrc={placeholder}
-        className='topic-thumbnail aspect-video w-full rounded-xl'
+        className='topic-thumbnail aspect-video rounded-xl'
       />
 
       <p className='topic-title my-2 overflow-hidden text-center font-semibold uppercase tracking-wide text-darkText line-clamp-2 dark:text-slate-300 sm:text-lg'>

@@ -18,14 +18,13 @@ function AuthenticationComponent() {
         <>
           <button
             type='button'
-            className='peer mx-2 grid aspect-square w-8 place-content-center rounded-full bg-dullWhite xl:w-10'
+            className='peer mx-2 grid h-8 w-8 place-content-center rounded-full bg-dullWhite xl:h-10 xl:w-10'
             title={currentUser.displayName}
           >
             {currentUser?.photoURL ? (
               <img
                 src={currentUser.photoURL}
-                alt={currentUser.displayName}
-                className='aspect-square'
+                className='object-cover'
                 style={{ clipPath: 'circle()' }}
               />
             ) : (

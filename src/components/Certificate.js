@@ -42,13 +42,9 @@ async function generateCertificate(name, description, date) {
   );
 }
 
-export default function getCertificate(name, topic, percentage) {
+export default function getCertificate(name, topic, percentage, date) {
   const description = `For securing ${percentage}% marks in ${topic
     .split('-')
     .join(' ')} Quiz.`;
-  generateCertificate(
-    name,
-    description,
-    new Date().toLocaleDateString('en-GB').split('/').join(' / ')
-  );
+  generateCertificate(name, description, date);
 }

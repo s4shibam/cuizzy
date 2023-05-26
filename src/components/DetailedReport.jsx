@@ -1,7 +1,6 @@
 import { AnswerBox } from './';
 
 function DetailedReport({ qnaSet = [] }) {
-
   return (
     <div className='result-analytics mx-auto my-8'>
       <hr className='my-12 h-px border-0 bg-dullWhite dark:bg-gray-600' />

@@ -20,7 +20,7 @@ function MainNavigationBar() {
         <AuthenticationComponent />
         <SwitchTheme />
       </nav>
-      <SubNavigationBar className='navigation-bar mobile-page-menu absolute mt-14 flex justify-center py-2 pt-3 xl:hidden' />
+      <SubNavigationBar className='navigation-bar mobile-page-menu absolute mt-12 flex justify-center py-2.5 pt-3 xl:hidden' />
       <Outlet />
     </>
   );

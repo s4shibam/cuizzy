@@ -30,24 +30,31 @@ function UserDetail({ data, currentUser, updateDetail }) {
     navigate('/profile');
   }
 
+  function handleCancel(e) {
+    e.preventDefault();
+    setUserDetail(currentUser[data]);
+    setSave((prevState) => !prevState);
+    setUnderEdit((prevState) => !prevState);
+  }
+
   if (data === 'displayName') {
     return (
       <div className='user-name flex max-w-sm flex-col content-center justify-start sm:flex-row'>
         <div className='mr-4 flex items-center text-brightViolet'>Name:</div>
         <form
           onSubmit={handleEditDetail}
-          className='name-display flex w-full items-center justify-between'
+          className='name-display flex w-[250px] items-center justify-between'
         >
           {underEdit ? (
             <input
-              className='max-w-[200px] border-b border-b-brightViolet bg-transparent text-darkText outline-none dark:text-white'
+              className='h-8 w-[200px] border-b border-b-brightViolet bg-transparent text-darkText outline-none dark:text-white'
               type='text'
               onChange={(e) => setUserDetail(e.target.value)}
               value={userDetail}
             />
           ) : (
             <span
-              className='max-w-[200px] truncate text-darkText dark:text-white cursor-pointer'
+              className='h-8 w-[200px] cursor-pointer truncate pt-1 text-darkText dark:text-white sm:pt-0.5'
               title={currentUser[data]}
             >
               {currentUser[data]}
@@ -67,14 +74,24 @@ function UserDetail({ data, currentUser, updateDetail }) {
               edit
             </button>
           ) : (
-            <button
-              className='icon material-icons-outlined text-2xl'
-              onClick={handleEditDetail}
-              type='submit'
-              title='Save'
-            >
-              save
-            </button>
+            <>
+              <button
+                className='icon material-icons-outlined mx-1 text-2xl text-successGreen'
+                onClick={handleEditDetail}
+                type='submit'
+                title='Save'
+              >
+                save
+              </button>
+              <button
+                className='icon material-icons-outlined text-2xl text-failureRed'
+                onClick={handleCancel}
+                type='button'
+                title='Cancel'
+              >
+                cancel
+              </button>
+            </>
           )}
         </form>
       </div>
@@ -84,14 +101,13 @@ function UserDetail({ data, currentUser, updateDetail }) {
   if (data === 'photoURL') {
     return (
       <div
-        className='relative my-2 grid aspect-square w-36 cursor-pointer place-content-center rounded-full bg-dullWhite shadow-xl'
+        className='relative my-2 grid h-36 w-36 cursor-pointer place-content-center rounded-full bg-dullWhite shadow-xl'
         title='Preferred Ratio: 1:1'
       >
         {currentUser[data] && !underEdit !== null ? (
           <img
             src={currentUser[data]}
-            alt='Profile Image'
-            className='aspect-square'
+            className='h-36 w-36'
             style={{ clipPath: 'circle()' }}
           />
         ) : !underEdit ? (
@@ -101,7 +117,7 @@ function UserDetail({ data, currentUser, updateDetail }) {
         ) : null}
 
         <label
-          className={`group absolute flex aspect-square w-36 cursor-pointer items-center justify-center rounded-full transition duration-500 ${
+          className={`group absolute flex h-36 w-36 cursor-pointer items-center justify-center rounded-full transition duration-500 ${
             !underEdit && 'hover:bg-gray-900/60'
           }`}
           id='upload-file'
@@ -128,11 +144,11 @@ function UserDetail({ data, currentUser, updateDetail }) {
               <div className='rounded-full bg-dullWhite'>
                 <img
                   src={URL.createObjectURL(userDetail)}
-                  className='aspect-square'
+                  className='h-36 w-36'
                   style={{ clipPath: 'circle()' }}
                 />
               </div>
-              <div className='absolute hidden aspect-square w-36 items-center justify-center gap-5 rounded-full hover:bg-gray-900/60 group-hover:flex'>
+              <div className='absolute hidden h-36 w-36 items-center justify-center gap-5 rounded-full hover:bg-gray-900/60 group-hover:flex'>
                 <button
                   className='icon material-icons-outlined rounded-full text-5xl text-successGreen transition duration-300 hover:scale-110 hover:bg-successGreen hover:text-darkText'
                   onClick={handleEditDetail}
@@ -142,7 +158,7 @@ function UserDetail({ data, currentUser, updateDetail }) {
                 </button>
                 <button
                   className='icon material-icons-outlined rounded-full text-5xl text-failureRed transition duration-300 hover:scale-110 hover:bg-failureRed hover:text-darkText'
-                  onClick={() => location.reload()}
+                  onClick={handleCancel}
                   title='Cancel'
                 >
                   close
