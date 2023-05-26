@@ -1,4 +1,5 @@
 import About from './About';
+import DetailedSubmission from './DetailedSubmission';
 import Home from './Home';
 import Learn from './Learn';
 import Login from './Login';
@@ -14,6 +15,7 @@ import Video from './Video';
 
 export {
   About,
+  DetailedSubmission,
   Home,
   Learn,
   Login,
