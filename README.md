@@ -11,13 +11,21 @@
 
 **Features**
 
-- Signup or login to access quizzes as well as to attempt them, `Firebase authentication` has been used to do so.
-- User can change their display name on demand, as well as `Forgot Password` option is available to reset the password of the particular account.
-- Dedicated profile section.
-- Users can select their preferred theme (light/dark) for the web application.
-- Watch video content on the platform itself.
-- After solving a particular quiz, user can see their performance as well as the correct answers to that quiz problem.
-- Download the certificate of achievement.
+- Sign up or login to view quizzes and attempt them; `Firebase authentication` has been used.
+- The user can modify their display name at any time, and a `Forgot Password` option is available to reset the password of the specific account.
+- A dedicated profile section.
+- Users can choose a theme (light/dark) for the web application.
+- View video content on the platform.
+- After completing a quiz, the user can view their performance as well as the correct solutions to the quiz problem.
+- Download the achievement certificate.
+
+<br/>
+
+**New Features**
+
+- The `Sign In with Google` functionality has been added to make sign up/log in easier.
+- Added a `Submissions History` page, in addition to a detailed submission section.
+- Users can now update their profile image and name on the platform.
 
 <br/>
 
