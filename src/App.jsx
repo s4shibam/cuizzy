@@ -17,6 +17,7 @@ import { AuthProvider } from './contexts/AuthContext';
 // Website Pages
 import {
   About,
+  DetailedSubmission,
   Home,
   Learn,
   Login,
@@ -71,9 +72,18 @@ function App() {
             element={<Quiz />}
             errorElement={<PageNotFound />}
           />
-          <Route path='video/:id' element={<Video />} />
+          <Route
+            path='video/:id'
+            element={<Video />}
+            errorElement={<PageNotFound />}
+          />
           <Route path='profile' element={<Profile />} />
           <Route path='submissions' element={<Submissions />} />
+          <Route
+            path='detailed-submission'
+            element={<DetailedSubmission />}
+            errorElement={<PageNotFound />}
+          />
           <Route
             path='result/:id'
             element={<Result />}
