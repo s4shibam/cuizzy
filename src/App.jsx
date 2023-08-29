@@ -5,7 +5,6 @@ import {
   createBrowserRouter,
   createRoutesFromElements
 } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
 import {
   DesignComponent,
   MainNavigationBar,
@@ -16,6 +15,7 @@ import {
 import { AuthProvider } from './contexts/AuthContext';
 
 // Website Pages
+import { Toaster } from 'react-hot-toast';
 import {
   About,
   DetailedSubmission,
@@ -104,7 +104,17 @@ function App() {
         <AuthProvider>
           <DesignComponent />
           <RouterProvider router={router} />
-          <ToastContainer />
+          <Toaster
+            position='top-center'
+            toastOptions={{
+              style: {
+                color: '#000',
+                fontWeight: 600,
+                background: '#4ee4ce'
+              },
+              duration: 3000
+            }}
+          />
         </AuthProvider>
       )}
     </div>

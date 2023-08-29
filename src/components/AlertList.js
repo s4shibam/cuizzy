@@ -1,5 +1,4 @@
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-hot-toast';
 
 const successList = {
   'login-success': 'Successfully logged in!',
