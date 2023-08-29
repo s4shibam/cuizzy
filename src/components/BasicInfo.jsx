@@ -1,3 +1,5 @@
+import CountUpAnimation from './CountUpAnimation';
+
 const reasons = [
   {
     image: 'help',
@@ -31,17 +33,20 @@ function BasicInfo() {
       <div className='stats my-32 w-full overflow-x-hidden border-t-2 border-b-2 border-black bg-primary py-10 drop-shadow-lg dark:border-white'>
         <div className='mx-auto grid w-[calc(100vw-25%)] grid-cols-2 gap-10 md:grid-cols-4'>
           <p className='stat'>
-            200+
+            <CountUpAnimation end={200} />
             <span className='block text-base md:text-lg'>Questions</span>
           </p>
           <p className='stat'>
-            100+ <span className='block text-base md:text-lg'>Quizzes</span>
+            <CountUpAnimation end={100} />
+           <span className='block text-base md:text-lg'>Quizzes</span>
           </p>
           <p className='stat'>
-            150+ <span className='block text-base md:text-lg'>Lectures</span>
+            <CountUpAnimation end={150} />
+           <span className='block text-base md:text-lg'>Lectures</span>
           </p>
           <p className='stat'>
-            400+ <span className='block text-base md:text-lg'>Learners</span>
+            <CountUpAnimation end={500} />
+           <span className='block text-base md:text-lg'>Learners</span>
           </p>
         </div>
       </div>

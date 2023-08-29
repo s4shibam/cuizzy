@@ -14,6 +14,7 @@ export { default as AnswerBox } from './AnswerBox';
 export { default as AuthenticationComponent } from './AuthenticationComponent';
 export { default as BasicInfo } from './BasicInfo';
 export { default as ContactUs } from './ContactUs';
+export { default as CountUpAnimation } from './CountUpAnimation';
 export { default as DesignComponent } from './DesignComponent';
 export { default as DetailedReport } from './DetailedReport';
 export { default as FileSaver } from './FileSaver';
