@@ -11,7 +11,7 @@ function Thumbnail({ title, id, noq, type }) {
 
   return (
     <div
-      className='topic frame-BG mb-5 max-w-lg cursor-pointer rounded-xl pb-2 hover:shadow-sm hover:shadow-dullWhite'
+      className='topic card mb-5 max-w-lg cursor-pointer rounded-lg border-2 transition-all duration-300 hover:border-primary '
       title={title}
     >
       <LazyLoadImage
@@ -19,23 +19,24 @@ function Thumbnail({ title, id, noq, type }) {
         alt={title}
         width='100%'
         placeholderSrc={placeholder}
-        className='topic-thumbnail aspect-video rounded-xl'
+        className='topic-thumbnail card aspect-video rounded-lg p-0'
       />
+      <div
+        className={`${
+          type === 'quiz' ? 'flex h-28 flex-col justify-between gap-1' : 'h-14'
+        }`}
+      >
+        <p className='topic-title mt-1 overflow-hidden text-center font-semibold uppercase tracking-wide text-black line-clamp-2 dark:text-slate-300 sm:text-lg'>
+          {title}
+        </p>
 
-      <p className='topic-title my-2 overflow-hidden text-center font-semibold uppercase tracking-wide text-darkText line-clamp-2 dark:text-slate-300 sm:text-lg'>
-        {title}
-      </p>
-
-      {type === 'quiz' && (
-        <>
-          <hr className='mb-3 h-px border-0 bg-dullWhite dark:bg-gray-600' />
-
-          <div className='topic-meta mb-1 flex justify-between px-2 text-sm font-medium text-darkText dark:text-slate-300 sm:text-base'>
-            <p>{noq} Questions</p>
-            <p>Total Points: {noq * 10}</p>
+        {type === 'quiz' && (
+          <div className='topic-meta flex justify-between rounded-lg border-2 border-black/10 py-1 px-3 text-sm font-medium text-black drop-shadow-md dark:border-white/10 dark:text-slate-300 sm:text-base'>
+            <p>{noq}x Questions</p>
+            <p>{noq * 10} Points</p>
           </div>
-        </>
-      )}
+        )}
+      </div>
     </div>
   );
 }

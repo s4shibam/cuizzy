@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import {
+  DesignComponent,
   MainNavigationBar,
   Preloader,
   PrivateOutlet,
@@ -101,6 +102,7 @@ function App() {
 
       {!preloading && (
         <AuthProvider>
+          <DesignComponent />
           <RouterProvider router={router} />
           <ToastContainer />
         </AuthProvider>

@@ -44,7 +44,7 @@ function ResetPasswordForm() {
         Send Mail
       </button>
 
-      <div className='user-signup text-center text-base font-medium tracking-wide text-darkText dark:text-slate-300'>
+      <div className='user-signup text-center text-base font-medium tracking-wide text-black dark:text-slate-300'>
         Password reset link will be sent to the mail
       </div>
     </Form>

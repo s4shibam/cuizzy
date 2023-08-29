@@ -1,25 +1,15 @@
-import { login } from '../assets';
-import { DesignComponent, LoginForm } from '../components';
+import { LoginForm, SignInWithGoogleButton } from '../components';
 
 function Login() {
   return (
-    <div className='login-page mx-auto w-[85%] animate-reveal'>
-      <h1 className='page-heading'>Log in to Quizzy!</h1>
-      <div className='responsive gap-16'>
-        <div className='signup-image hidden items-center justify-center lg:flex '>
-          <img
-            className='w-full justify-self-center lg:max-w-[75%]'
-            height={500}
-            width={500}
-            src={login}
-            alt='Log In'
-          />
-        </div>
-        <div className='frame-BG'>
-          <LoginForm />
-        </div>
+    <div className='login-page mx-auto flex min-h-screen w-[85%] animate-reveal flex-col items-center'>
+      <h1 className='page-heading'>Log in to Quizzy</h1>
+      <div className='card mx-auto w-full max-w-xl'>
+        <LoginForm />
       </div>
-      <DesignComponent />
+      <div className='mx-auto w-full max-w-xl'>
+        <SignInWithGoogleButton title='Log In' />
+      </div>
     </div>
   );
 }

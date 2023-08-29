@@ -42,9 +42,9 @@ function LoginForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <div className='text-input flex h-14 w-full items-center rounded-md border border-dullWhite bg-white p-2 outline-none dark:border-gray-600 dark:bg-darkText/60'>
+        <div className='text-input flex h-[52px] w-full items-center rounded-md border border-black/30 bg-white p-2 outline-none dark:border-white/30 dark:bg-black/50'>
           <input
-            className='ml-1 w-full rounded-lg border-none bg-transparent font-medium tracking-wide text-darkText outline-none dark:text-lightText lg:text-xl'
+            className='ml-1 w-full rounded-lg border-none bg-transparent font-medium tracking-wide text-black outline-none dark:text-white lg:text-xl'
             type={show ? 'text' : 'password'}
             required
             placeholder='Enter Password'
@@ -52,7 +52,7 @@ function LoginForm() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <button
-            className='material-icons-outlined mx-1 flex cursor-pointer items-center justify-center text-darkText dark:text-lightText md:text-3xl'
+            className='material-symbols-outlined mx-1 flex cursor-pointer items-center justify-center text-black dark:text-white md:text-3xl'
             type='button'
             onClick={() => {
               setShow(!show);
@@ -79,7 +79,7 @@ function LoginForm() {
           Log In
         </button>
 
-        <div className='user-signup text-center text-sm font-medium tracking-wide text-darkText dark:text-slate-300 md:text-base'>
+        <div className='user-signup text-center text-sm font-medium tracking-wide text-black dark:text-slate-300 md:text-base'>
           Don&apos;t have an account?
           <Link to='/signup'>
             <span className='link-text'> Sign Up </span>
@@ -87,7 +87,7 @@ function LoginForm() {
           instead.
         </div>
       </Form>
-      <SignInWithGoogleButton />
+      {/* <SignInWithGoogleButton /> */}
     </>
   );
 }

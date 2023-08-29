@@ -1,5 +1,3 @@
-import { DesignComponent } from '../components';
-
 const aboutDetails = [
   `Welcome to Quizzy, the premier destination for free coding quizzes! Our goal is to provide you with a fun and challenging way to test your coding knowledge and skills. We offer a wide range of quizzes covering various programming languages, algorithms, data structures, and more. `,
 
@@ -17,18 +15,31 @@ function About() {
     <div className='about-page mx-auto flex w-[85%] animate-reveal flex-col items-center justify-center'>
       <h1 className='page-heading'>About Quizzy</h1>
 
-      <div className='details text-justify font-medium text-darkText dark:text-dullWhite sm:w-[80%] sm:text-xl'>
+      <div className='details card flex max-w-4xl flex-col gap-10 p-6 text-justify font-medium dark:text-red-300 sm:w-3/5 sm:text-xl'>
         {aboutDetails.map((para, index2) => (
-          <p className='my-6 indent-6' key={index2}>
+          <p
+            className='indent-10 first-letter:text-xl dark:text-gray-300 sm:first-letter:text-2xl'
+            key={index2}
+          >
             {para}
           </p>
         ))}
       </div>
 
-      {/* Horizontal Line */}
+      <span className='mt-14 block font-semibold tracking-wide'>
+        Developed with 💚 by &nbsp;
+        <a
+          href='https://www.shibamsaha.dev'
+          target='_blank'
+          className='cursor-pointer hover:underline'
+        >
+          Shibam Saha.
+        </a>
+      </span>
+
       <div className=' mt-8 inline-flex w-full items-center justify-center'>
-        <hr className='my-8 h-1 w-64 rounded border-0 bg-darkViolet dark:bg-brightViolet' />
-        <div className='absolute left-1/2 -translate-x-1/2 bg-lightBG px-4 dark:bg-darkBG'>
+        <hr className='my-8 h-1 w-64 rounded border-0 bg-primary dark:bg-secondary' />
+        <div className='absolute left-1/2 -translate-x-1/2 bg-light px-4 dark:bg-dark'>
           <svg
             aria-hidden='true'
             className='h-5 w-5 text-gray-700 dark:text-gray-300'
@@ -43,7 +54,6 @@ function About() {
           </svg>
         </div>
       </div>
-      <DesignComponent />
     </div>
   );
 }

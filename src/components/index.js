@@ -1,62 +1,31 @@
-import CheckBox from './elements/CheckBox';
-import Form from './elements/Form';
-import NavButton from './elements/NavButton';
-import TextInput from './elements/TextInput';
+export { default as CheckBox } from './elements/CheckBox';
+export { default as Form } from './elements/Form';
+export { default as NavButton } from './elements/NavButton';
+export { default as TextInput } from './elements/TextInput';
 
-import LoginForm from './forms/LoginForm';
-import ResetPasswordForm from './forms/ResetPasswordForm';
-import SignUpForm from './forms/SignUpForm';
+export { default as LoginForm } from './forms/LoginForm';
+export { default as ResetPasswordForm } from './forms/ResetPasswordForm';
+export { default as SignUpForm } from './forms/SignUpForm';
 
-import PrivateOutlet from './react-router/PrivateOutlet';
-import PublicOutlet from './react-router/PublicOutlet';
+export { default as PrivateOutlet } from './react-router/PrivateOutlet';
+export { default as PublicOutlet } from './react-router/PublicOutlet';
 
-import AnswerBox from './AnswerBox';
-import AuthenticationComponent from './AuthenticationComponent';
-import BasicInfo from './BasicInfo';
-import ContactUs from './ContactUs';
-import DesignComponent from './DesignComponent';
-import DetailedReport from './DetailedReport';
-import FileSaver from './FileSaver';
-import Footer from './Footer';
-import MainNavigationBar from './MainNavigationBar';
-import Preloader from './Preloader';
-import ProgressBar from './ProgressBar';
-import ResultSummary from './ResultSummary';
-import Rules from './Rules';
-import ScoreCard from './ScoreCard';
-import SignInWithGoogleButton from './SignInWithGoogleButton';
-import SubNavigationBar from './SubNavigationBar';
-import SwitchTheme from './SwitchTheme';
-import Thumbnail from './Thumbnail';
-import UserDetail from './UserDetail';
-
-export {
-  CheckBox,
-  Form,
-  NavButton,
-  TextInput,
-  LoginForm,
-  ResetPasswordForm,
-  SignUpForm,
-  PrivateOutlet,
-  PublicOutlet,
-  AnswerBox,
-  AuthenticationComponent,
-  BasicInfo,
-  ContactUs,
-  DesignComponent,
-  DetailedReport,
-  FileSaver,
-  Footer,
-  MainNavigationBar,
-  Preloader,
-  ProgressBar,
-  ResultSummary,
-  Rules,
-  ScoreCard,
-  SignInWithGoogleButton,
-  SubNavigationBar,
-  SwitchTheme,
-  Thumbnail,
-  UserDetail
-};
+export { default as AnswerBox } from './AnswerBox';
+export { default as AuthenticationComponent } from './AuthenticationComponent';
+export { default as BasicInfo } from './BasicInfo';
+export { default as ContactUs } from './ContactUs';
+export { default as DesignComponent } from './DesignComponent';
+export { default as DetailedReport } from './DetailedReport';
+export { default as FileSaver } from './FileSaver';
+export { default as Footer } from './Footer';
+export { default as MainNavigationBar } from './MainNavigationBar';
+export { default as Preloader } from './Preloader';
+export { default as ProgressBar } from './ProgressBar';
+export { default as ResultSummary } from './ResultSummary';
+export { default as Rules } from './Rules';
+export { default as ScoreCard } from './ScoreCard';
+export { default as SignInWithGoogleButton } from './SignInWithGoogleButton';
+export { default as SubNavigationBar } from './SubNavigationBar';
+export { default as SwitchTheme } from './SwitchTheme';
+export { default as Thumbnail } from './Thumbnail';
+export { default as UserDetail } from './UserDetail';

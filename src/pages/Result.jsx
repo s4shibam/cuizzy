@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { DesignComponent, DetailedReport, ResultSummary } from '../components';
+import { DetailedReport, ResultSummary } from '../components';
 
 function Result() {
   const location = useLocation();
@@ -19,7 +19,7 @@ function Result() {
   } = markSheetObject;
 
   return (
-    <div className='result mx-auto mt-44 mb-20 w-[85%] animate-reveal 2xl:mt-32'>
+    <div className='result mx-auto mb-20 w-[90%] animate-reveal'>
       {qnaSet?.length > 0 && (
         <>
           <ResultSummary
@@ -38,7 +38,7 @@ function Result() {
               <button
                 type='button'
                 onClick={() => setShowAnswers(true)}
-                className='border-button border border-darkViolet px-4 py-2 uppercase'
+                className='border-button rounded-md border-2 border-primary px-4 py-2 font-medium uppercase'
                 title='See Answers'
               >
                 See Answers
@@ -48,7 +48,7 @@ function Result() {
             <Link to={`/quiz/${topicId}`}>
               <button
                 type='button'
-                className='border-button border border-darkViolet px-4 py-2 uppercase'
+                className='border-button rounded-md border-2 border-primary px-4 py-2 font-medium uppercase'
                 title='Retry Quiz'
               >
                 Retry Quiz
@@ -59,8 +59,6 @@ function Result() {
           {showAnswers && <DetailedReport qnaSet={qnaSet} />}
         </>
       )}
-
-      <DesignComponent />
     </div>
   );
 }

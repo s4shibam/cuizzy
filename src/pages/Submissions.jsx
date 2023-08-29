@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { DesignComponent } from '../components';
 import { useSubmissions } from '../hooks';
 
 function Submissions() {
@@ -20,20 +19,20 @@ function Submissions() {
       <div className='submission-list flex w-full flex-col-reverse text-center'>
         {submissions.map((submission, index) => (
           <button
-            className='frame-BG mx-auto my-4 flex w-full max-w-4xl cursor-pointer flex-col justify-between gap-2 border-2 border-dullWhite transition-all duration-300 hover:border-brightViolet sm:flex-row'
+            className='card mx-auto my-4 flex w-full max-w-4xl cursor-pointer flex-col justify-between gap-2 border-2 border-white/50 transition-all duration-300 hover:border-secondary sm:flex-row'
             key={index}
             type='button'
             onClick={() => showDetailedSubmission(index)}
           >
-            <div className='flex w-full flex-col border-r-brightViolet sm:border-r-[1px]'>
-              <p className='text-2xl font-medium tracking-wide text-darkViolet dark:text-brightViolet sm:mr-auto'>
+            <div className='flex w-full flex-col border-r-secondary sm:border-r-[1px]'>
+              <p className='text-2xl font-medium tracking-wide text-primary dark:text-secondary sm:mr-auto'>
                 {submission.topicId.split('-').join(' ')} Quiz
               </p>
               <p className='text-lg font-medium tracking-wide sm:mr-auto sm:text-xl'>
                 Percentage: {submission.obtainedPercentage}%
               </p>
             </div>
-            <hr className='h-px w-full border-0 bg-brightViolet sm:hidden' />
+            <hr className='h-px w-full border-0 bg-primary sm:hidden' />
             <div className='flex w-full flex-col justify-center sm:w-6/12'>
               <p className='font-medium tracking-wide sm:ml-auto sm:text-lg'>
                 Date: {submission.date ? submission.date : 'NA'}
@@ -50,7 +49,6 @@ function Submissions() {
         {error && <>There was an error!</>}
         {loading && <>Loading ...</>}
       </div>
-      <DesignComponent />
     </div>
   );
 }

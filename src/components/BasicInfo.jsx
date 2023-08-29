@@ -1,28 +1,34 @@
 const reasons = [
   {
-    image: 'quiz',
+    image: 'help',
     heading: 'Wide Range of Topics',
     description:
       'We provide a diverse selection of quizzes on a wide range of topics. Whatever computer science topics you are looking for, want to improve your general knowledge, or have a particular interest, you can find quizzes that cater to your needs.'
   },
   {
-    image: 'laptop_mac',
+    image: 'smart_display',
     heading: 'Video Content',
     description:
       'We also provide video content to help you learn topics. As video is an effective way to enhance your learning experience and gain a deeper understanding of topics. Our videos are informative, and easy to follow, allowing you to learn at your own pace.'
   },
   {
-    image: 'badge',
+    image: 'verified_user',
     heading: 'Verified Certificate',
     description:
       'We provide the option to obtain a verified certificate upon completion of a quiz. This certificate validates your knowledge and demonstrates your commitment to learning and self-improvement. This can be used in CVs, resumes to highlight your skills.'
+  },
+  {
+    image: 'schedule',
+    heading: 'Flexible Learning Paths',
+    description:
+      'Create your own learning schedule with our flexible learning paths. Whether you want to take a deep dive into a specific topic or prefer a broader learning approach, our platform allows you to customize your learning journey according to your pace and preferences.'
   }
 ];
 
 function BasicInfo() {
   return (
     <>
-      <div className='stats my-20 w-full overflow-x-hidden bg-darkViolet py-10'>
+      <div className='stats my-32 w-full overflow-x-hidden border-t-2 border-b-2 border-black bg-primary py-10 drop-shadow-lg dark:border-white'>
         <div className='mx-auto grid w-[calc(100vw-25%)] grid-cols-2 gap-10 md:grid-cols-4'>
           <p className='stat'>
             200+
@@ -40,17 +46,17 @@ function BasicInfo() {
         </div>
       </div>
       <div className='reason mb-20 w-[85%]'>
-        <p className='mb-14 text-center text-4xl font-semibold uppercase lg:text-5xl'>
+        <p className='mb-20 text-center text-4xl font-bold uppercase tracking-wide lg:text-5xl'>
           Why Quizzy?
         </p>
-        <div className='grid grid-cols-1 place-content-center gap-x-10 gap-y-14 lg:grid-cols-3'>
+        <div className='grid grid-cols-1 place-content-center gap-x-10 gap-y-14 xl:grid-cols-2 2xl:grid-cols-4'>
           {reasons.map((reason, index) => (
             <div
-              className='frame-BG mx-auto flex max-w-sm flex-col content-center gap-y-4 border-b-4 border-b-brightViolet p-8 text-center'
+              className='card mx-auto flex max-w-[500px] flex-col content-center gap-y-4 border-0 border-b-4 !border-b-primary p-8 text-center transition-transform hover:scale-105 hover:shadow-xl'
               key={index}
             >
-              <div className='icon-wrapper mx-auto grid h-fit w-fit place-content-center rounded-full bg-brightViolet/80 p-4'>
-                <span className='icon material-icons-outlined text-5xl text-lightText'>
+              <div className='icon-wrapper mx-auto mb-4 grid h-fit w-fit place-content-center rounded-full border-2 border-primary bg-secondary p-4 drop-shadow-md'>
+                <span className='icon material-symbols-outlined text-5xl text-white'>
                   {reason.image}
                 </span>
               </div>

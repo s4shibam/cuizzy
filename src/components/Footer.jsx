@@ -3,26 +3,24 @@ import { logo } from '../assets';
 
 function Footer() {
   return (
-    <footer className='w-full bg-brightViolet/50 p-4 dark:bg-darkViolet/50 sm:px-14 sm:py-6'>
+    <footer className='w-full bg-white p-4  dark:bg-black sm:px-14 sm:py-6'>
       <div className='md:mr-10 md:flex md:justify-between'>
         <div className='mb-6 md:mb-0'>
           <Link to='/' className='flex items-center'>
             <img
               src={logo}
-              className='mr-2 h-8 rounded-full bg-white'
+              className='mr-1 h-9 rounded-full'
               alt='Quizzy Logo'
             />
-            <span className='self-center whitespace-nowrap text-2xl font-semibold text-darkText dark:text-lightText'>
+            <span className='self-center whitespace-nowrap text-2xl font-semibold text-primary'>
               Quizzy
             </span>
           </Link>
         </div>
         <div className='grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6'>
           <div>
-            <h2 className='mb-6 text-sm font-semibold uppercase text-darkText dark:text-lightText'>
-              Resources
-            </h2>
-            <ul className='text-darkText dark:text-lightText'>
+            <h2 className='mb-6 text-sm font-semibold uppercase'>Resources</h2>
+            <ul>
               <li className='mb-4'>
                 <Link to='quizzes' className='hover:underline'>
                   Quizzes
@@ -36,15 +34,13 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <h2 className='mb-6 text-sm font-semibold uppercase text-darkText dark:text-lightText'>
-              Follow us
-            </h2>
-            <ul className='text-darkText dark:text-lightText'>
+            <h2 className='mb-6 text-sm font-semibold uppercase'>Follow us</h2>
+            <ul>
               <li className='mb-4'>
                 <a
                   href='https://github.com/s4shibam'
                   target='_blank'
-                  className='hover:underline '
+                  className='dark: hover:underline '
                 >
                   Github
                 </a>
@@ -61,10 +57,8 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <h2 className='mb-6 text-sm font-semibold uppercase text-darkText dark:text-lightText'>
-              Legal
-            </h2>
-            <ul className='text-darkText dark:text-lightText'>
+            <h2 className='mb-6 text-sm font-semibold uppercase'>Legal</h2>
+            <ul>
               <li className='mb-4'>
                 <a href='#' className='hover:underline'>
                   Privacy Policy
@@ -79,13 +73,13 @@ function Footer() {
           </div>
         </div>
       </div>
-      <hr className='my-6 border-darkText dark:border-lightText sm:mx-auto lg:my-8' />
+      <hr className='my-6 border-black dark:border-white sm:mx-auto lg:my-8' />
       <div className='flex flex-col justify-center text-sm md:mr-10 md:flex-row md:items-center md:justify-between'>
         <div className='text-center md:text-left'>
-          <span className='mb-1 block'>
-            Developed with ❤️ by &nbsp;
+          <span className='mb-1 block '>
+            Developed with 💚 by &nbsp;
             <a
-              href='https://shibamsaha.netlify.app/'
+              href='https://www.shibamsaha.dev'
               target='_blank'
               className='cursor-pointer hover:underline'
             >
@@ -101,9 +95,9 @@ function Footer() {
           </span>
         </div>
         <div className='mx-auto mt-4 flex w-fit space-x-6 sm:justify-center md:mx-0 md:mt-0'>
-          <a href='#' className='text-darkText dark:text-lightText'>
+          <a href='https://www.facebook.com/s4shibam'>
             <svg
-              className='h-5 w-5 dark:fill-lightText'
+              className='h-5 w-5 dark:fill-white'
               viewBox='0 0 24 24'
               aria-hidden='true'
             >
@@ -115,9 +109,9 @@ function Footer() {
             </svg>
             <span className='sr-only'>Facebook page</span>
           </a>
-          <a href='#' className='text-darkText dark:text-lightText'>
+          <a href='https://www.instagram.com/s4shibam/'>
             <svg
-              className='h-5 w-5 dark:fill-lightText'
+              className='h-5 w-5 dark:fill-white'
               viewBox='0 0 24 24'
               aria-hidden='true'
             >
@@ -129,9 +123,9 @@ function Footer() {
             </svg>
             <span className='sr-only'>Instagram page</span>
           </a>
-          <a href='#' className='text-darkText dark:text-lightText'>
+          <a href='https://twitter.com/s4shibam'>
             <svg
-              className='h-5 w-5 dark:fill-lightText'
+              className='h-5 w-5 dark:fill-white'
               viewBox='0 0 24 24'
               aria-hidden='true'
             >
@@ -139,13 +133,9 @@ function Footer() {
             </svg>
             <span className='sr-only'>Twitter page</span>
           </a>
-          <a
-            href='https://github.com/s4shibam'
-            target='_blank'
-            className='text-darkText dark:text-lightText'
-          >
+          <a href='https://github.com/s4shibam' target='_blank'>
             <svg
-              className='h-5 w-5 dark:fill-lightText'
+              className='h-5 w-5 dark:fill-white'
               viewBox='0 0 24 24'
               aria-hidden='true'
             >

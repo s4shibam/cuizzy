@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { DesignComponent, Thumbnail } from '../components';
+import { Thumbnail } from '../components';
 import { useData } from '../hooks';
 
 function Learn() {
@@ -7,7 +7,7 @@ function Learn() {
 
   return (
     <div className='learn-page mx-auto flex w-[85%] animate-reveal flex-col justify-center'>
-      <h1 className='page-heading'>Learn from us!</h1>
+      <h1 className='page-heading'>Learn from us</h1>
 
       <div className='quizzes mx-auto grid w-full grid-cols-quizzes justify-items-center gap-5'>
         {data.map((video, index) => (
@@ -22,8 +22,6 @@ function Learn() {
         {error && <>There was an error! </>}
         {loading && <>Loading ...</>}
       </div>
-
-      <DesignComponent />
       <br />
     </div>
   );

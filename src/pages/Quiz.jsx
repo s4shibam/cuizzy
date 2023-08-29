@@ -158,11 +158,12 @@ function Quiz() {
         <div className='quiz mx-auto w-[85%] animate-reveal'>
           <h1 className='page-heading'>{id.split('-').join(' ')} Quiz!</h1>
           <Rules />
-          <div className='question frame-BG mb-40 flex flex-col justify-center rounded-md p-3'>
-            <div className='flex flex-col items-center justify-center text-xl font-bold text-darkText dark:text-lightText sm:text-3xl'>
+          <div className='question card mb-40 flex flex-col justify-center rounded-md p-3'>
+            <div className='flex flex-col items-center justify-center text-xl font-bold text-black dark:text-white sm:text-3xl'>
               Q. {qnaSet[currentQuestion].title}
             </div>
-            <hr className='mt-3 mb-8 h-px border-0 bg-gray-400 dark:bg-gray-600' />
+
+            <hr className='mt-3 mb-8 h-px border-0 bg-primary' />
 
             <AnswerBox
               input

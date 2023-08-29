@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { DesignComponent, Thumbnail } from '../components';
+import { Thumbnail } from '../components';
 import { useData } from '../hooks';
 
 function Quizzes() {
@@ -7,9 +7,9 @@ function Quizzes() {
 
   return (
     <div className='quizzes-page mx-auto flex w-[85%] animate-reveal flex-col justify-center'>
-      <h1 className='page-heading'>Attempt Quizzes!</h1>
+      <h1 className='page-heading'>Attempt Quizzes</h1>
       {data.length > 0 && (
-        <div className='quizzes mx-auto grid w-full grid-cols-quizzes justify-items-center gap-5'>
+        <div className='quizzes mx-auto grid h-full w-full grid-cols-quizzes justify-items-center gap-5'>
           {data.map((topic, index) =>
             topic.noq > 0 ? (
               <Link to={`/quiz/${topic.topicID}`} key={topic.topicID}>
@@ -39,7 +39,6 @@ function Quizzes() {
         {loading && <>Loading ...</>}
       </div>
 
-      <DesignComponent />
       <br />
     </div>
   );

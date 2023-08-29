@@ -32,20 +32,20 @@ function SwitchTheme() {
   return (
     <button
       type='button'
-      className='switch-theme ml-1 flex items-center'
+      className='switch-theme flex items-center'
       title='Log out'
       onClick={toggleTheme}
     >
       {theme === 'dark' ? (
         <span
-          className='icon material-icons-outlined text-2xl xl:ml-2 xl:text-4xl'
+          className='icon material-symbols-outlined text-2xl xl:ml-2 xl:text-4xl'
           title='Light Mode'
         >
           light_mode
         </span>
       ) : (
         <span
-          className='icon material-icons-outlined text-2xl text-darkViolet xl:ml-2 xl:text-4xl'
+          className='icon material-symbols-outlined text-2xl text-primary xl:ml-2 xl:text-4xl'
           title='Dark Mode'
         >
           dark_mode

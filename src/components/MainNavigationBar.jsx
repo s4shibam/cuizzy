@@ -10,17 +10,17 @@ function MainNavigationBar() {
           <li>
             <Link to='/' className='branding flex items-center justify-center'>
               <img className='mr-2 w-9 xl:w-11' src={logo} alt='Quizzy' />
-              <h3 className='block text-xl font-bold uppercase leading-5 tracking-wider text-darkViolet dark:text-brightViolet sm:text-2xl'>
+              <h3 className='block text-xl font-bold uppercase leading-5 tracking-wider text-primary sm:text-2xl'>
                 Quizzy
               </h3>
             </Link>
           </li>
         </ul>
-        <SubNavigationBar className='pc-page-menu mr-4 hidden justify-end xl:flex' />
+        <SubNavigationBar className='pc-page-menu mr-7 hidden justify-end xl:flex' />
         <AuthenticationComponent />
         <SwitchTheme />
       </nav>
-      <SubNavigationBar className='navigation-bar mobile-page-menu absolute mt-12 flex justify-center py-2.5 pt-3 xl:hidden' />
+      <SubNavigationBar className='navigation-bar mobile-page-menu absolute mt-[52px] flex justify-center py-2.5 pt-3 xl:hidden' />
       <Outlet />
     </>
   );

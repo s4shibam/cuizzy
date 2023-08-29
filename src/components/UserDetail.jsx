@@ -40,21 +40,21 @@ function UserDetail({ data, currentUser, updateDetail }) {
   if (data === 'displayName') {
     return (
       <div className='user-name flex max-w-sm flex-col content-center justify-start sm:flex-row'>
-        <div className='mr-4 flex items-center text-brightViolet'>Name:</div>
+        <div className='mr-4 flex items-center text-secondary'>Name:</div>
         <form
           onSubmit={handleEditDetail}
           className='name-display flex w-[250px] items-center justify-between'
         >
           {underEdit ? (
             <input
-              className='h-8 w-[200px] border-b border-b-brightViolet bg-transparent text-darkText outline-none dark:text-white'
+              className='h-8 w-[200px] border-b border-b-secondary bg-transparent font-medium text-black outline-none dark:text-white'
               type='text'
               onChange={(e) => setUserDetail(e.target.value)}
               value={userDetail}
             />
           ) : (
             <span
-              className='h-8 w-[200px] cursor-pointer truncate pt-1 text-darkText dark:text-white sm:pt-0.5'
+              className='h-8 w-[200px] cursor-pointer truncate pt-1 font-medium text-black dark:text-white sm:pt-0.5'
               title={currentUser[data]}
             >
               {currentUser[data]}
@@ -62,7 +62,7 @@ function UserDetail({ data, currentUser, updateDetail }) {
           )}
           {save ? (
             <button
-              className='icon material-icons-outlined ml-2 -mt-1 text-xl'
+              className='icon material-symbols-outlined ml-2 -mt-1 text-xl'
               onClick={(e) => {
                 e.preventDefault();
                 setSave((prevState) => !prevState);
@@ -76,7 +76,7 @@ function UserDetail({ data, currentUser, updateDetail }) {
           ) : (
             <>
               <button
-                className='icon material-icons-outlined mx-1 text-2xl text-successGreen'
+                className='icon material-symbols-outlined mx-1 text-2xl text-green-500'
                 onClick={handleEditDetail}
                 type='submit'
                 title='Save'
@@ -84,7 +84,7 @@ function UserDetail({ data, currentUser, updateDetail }) {
                 save
               </button>
               <button
-                className='icon material-icons-outlined text-2xl text-failureRed'
+                className='icon material-symbols-outlined text-2xl text-red-500'
                 onClick={handleCancel}
                 type='button'
                 title='Cancel'
@@ -101,16 +101,13 @@ function UserDetail({ data, currentUser, updateDetail }) {
   if (data === 'photoURL') {
     return (
       <div
-        className='relative my-2 grid h-36 w-36 overflow-hidden cursor-pointer place-content-center rounded-full bg-dullWhite shadow-xl'
+        className='relative my-2 grid h-36 w-36 cursor-pointer place-content-center overflow-hidden rounded-full bg-secondary shadow-xl'
         title='Preferred Ratio: 1:1'
       >
         {currentUser[data] && !underEdit !== null ? (
-          <img
-            src={currentUser[data]}
-            className='object-cover w-full h-full'
-          />
+          <img src={currentUser[data]} className='h-full w-full object-cover' />
         ) : !underEdit ? (
-          <span className='icon material-icons-outlined text-9xl text-darkText'>
+          <span className='icon material-symbols-outlined text-9xl text-black'>
             sentiment_very_satisfied
           </span>
         ) : null}
@@ -122,7 +119,7 @@ function UserDetail({ data, currentUser, updateDetail }) {
           id='upload-file'
         >
           <span
-            className={`icon material-icons-outlined hidden text-6xl text-lightText ${
+            className={`icon material-symbols-outlined hidden text-6xl text-white ${
               !underEdit && 'group-hover:block'
             }`}
           >
@@ -140,7 +137,7 @@ function UserDetail({ data, currentUser, updateDetail }) {
           />
           {underEdit && (
             <>
-              <div className='rounded-full bg-dullWhite'>
+              <div className='rounded-full bg-white/50'>
                 <img
                   src={URL.createObjectURL(userDetail)}
                   className='h-36 w-36'
@@ -149,14 +146,14 @@ function UserDetail({ data, currentUser, updateDetail }) {
               </div>
               <div className='absolute hidden h-36 w-36 items-center justify-center gap-5 rounded-full hover:bg-gray-900/60 group-hover:flex'>
                 <button
-                  className='icon material-icons-outlined rounded-full text-5xl text-successGreen transition duration-300 hover:scale-110 hover:bg-successGreen hover:text-darkText'
+                  className='icon material-symbols-outlined rounded-full text-5xl text-green-500 transition duration-300 hover:scale-110 hover:bg-green-500 hover:text-black'
                   onClick={handleEditDetail}
                   title='Save'
                 >
                   done
                 </button>
                 <button
-                  className='icon material-icons-outlined rounded-full text-5xl text-failureRed transition duration-300 hover:scale-110 hover:bg-failureRed hover:text-darkText'
+                  className='icon material-symbols-outlined rounded-full text-5xl text-red-500 transition duration-300 hover:scale-110 hover:bg-red-500 hover:text-black'
                   onClick={handleCancel}
                   title='Cancel'
                 >

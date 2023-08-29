@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @tailwind base;
@@ -7,11 +7,24 @@
 
 @layer components {
   * {
-    @apply m-0 box-border scroll-smooth p-0 font-montserrat text-darkText dark:text-lightText;
+    @apply m-0 box-border scroll-smooth p-0 font-montserrat text-black selection:bg-secondary/30 dark:text-white;
   }
 
   body {
-    @apply bg-lightBG dark:bg-darkBG;
+    @apply overflow-x-hidden overflow-y-scroll bg-light dark:bg-dark;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    @apply h-1 w-1;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-300;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-darker;
   }
 
   /* Autofill color disable */
@@ -20,65 +33,52 @@
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active {
     transition: background-color 2147483647s ease-in-out 0s;
-    -webkit-text-fill-color: #2dbf64;
+    -webkit-text-fill-color: #18a08b;
   }
 
   /* Active site page */
   .active-page {
-    @apply underline decoration-brightViolet underline-offset-[6px];
+    @apply underline decoration-secondary underline-offset-[7px];
   }
 
   /* Answer option box */
   .answer-option {
-    @apply flex w-full cursor-pointer items-center rounded-md border border-dullWhite bg-lightText px-3 py-3 text-lg font-medium outline-none transition-all duration-500 hover:bg-dullWhite dark:border-gray-600 dark:bg-slate-900 dark:bg-darkText/60 dark:hover:bg-gray-700 sm:px-5 sm:py-4;
+    @apply flex w-full cursor-pointer items-center rounded-md border border-black/50 bg-black/5 px-3 py-3 text-lg font-medium outline-none transition-all duration-500 hover:bg-white/50 dark:border-white/50 dark:bg-slate-900 dark:bg-white/5 dark:hover:bg-black/50 sm:px-5 sm:py-4;
   }
 
   /* Answer result */
   .answer-correct {
-    @apply bg-successGreen font-semibold dark:bg-successGreen;
+    @apply bg-green-400 font-semibold dark:bg-green-400;
   }
 
   .answer-wrong {
-    @apply bg-failureRed font-semibold dark:bg-failureRed;
+    @apply bg-red-400 font-semibold dark:bg-red-400;
   }
 
   .answer-correct > span,
   .answer-wrong > span {
-    @apply text-darkText dark:text-darkText;
+    @apply text-black dark:text-black;
   }
 
-  /* Button: normal border, hover fill left to right */
+  /* Button */
   .border-button {
-    background: linear-gradient(to left, #00000000 50%, #a972cb 50%) right;
+    background: linear-gradient(to left, #00000000 50%, #42b5a4 50%) right;
     background-size: 210%;
-    @apply flex items-center justify-center border-darkViolet py-1 px-2 tracking-wider transition-all duration-500 ease-in-out hover:bg-left dark:border-brightViolet md:text-lg xl:border;
+    @apply flex items-center justify-center border-primary py-1 px-2 tracking-wider transition-all duration-500 ease-in-out hover:bg-left dark:border-secondary dark:text-white md:text-lg xl:border;
   }
 
   .border-button span {
-    @apply text-darkText dark:text-white;
+    @apply text-black dark:text-white;
   }
 
-  .reset-button span {
-    @apply dark:text-darkText;
+  /* Card */
+  .card {
+    @apply rounded-md border-2 border-black/20 bg-[#F2F2F2] p-4 shadow-lg shadow-black/5 backdrop-blur-lg dark:border-white/20 dark:bg-[#0D0D0D] dark:shadow-white/5;
   }
 
   /* Button: hover fill change left to right */
   .fill-button {
-    background: linear-gradient(to left, #a972cb 50%, #66c887 50%) right;
-    background-size: 200%;
-    @apply flex items-center justify-center rounded-lg px-4 py-2 text-2xl font-bold uppercase tracking-wider text-darkText transition-all duration-700 ease-in-out hover:bg-left;
-  }
-
-  /* Button: hover fill change right to left */
-  .back-button {
-    background: linear-gradient(to right, #ff7f82 50%, #a972cb 50%) left;
-    background-size: 200%;
-    @apply hover:bg-right;
-  }
-
-  /* Form background glassmorphism interface */
-  .frame-BG {
-    @apply rounded-md border border-dullWhite bg-white/70 p-4 shadow-lg backdrop-blur-lg dark:border-white/10 dark:bg-white/5 dark:shadow-gray-800;
+    @apply flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-2xl font-semibold uppercase tracking-wider text-black transition-all duration-300 ease-in-out hover:bg-secondary;
   }
 
   /* Link bound text */
@@ -86,28 +86,41 @@
     @apply font-medium tracking-wider text-blue-500 underline-offset-4 hover:underline;
   }
 
+  /* Marks */
+  .marks {
+    @apply grid grid-cols-[1fr_70px] place-items-center text-lg font-semibold uppercase lg:grid-cols-[1fr_100px] lg:text-2xl;
+  }
+
   /* Navigation bar */
   .navigation-bar {
-    @apply left-0 right-0 top-0 border-b border-b-gray-300 bg-white shadow-darkViolet drop-shadow-lg backdrop-blur-lg dark:border-b-gray-500 dark:bg-slate-900/90;
+    @apply left-0 right-0 top-0 border-b border-primary bg-white dark:border-secondary dark:bg-black;
+  }
+
+  /* Navigation menu */
+  .nav-menu {
+    @apply relative flex h-full items-center uppercase text-black transition-all duration-300 dark:text-white md:text-lg;
+  }
+
+  .nav-menu:after {
+    @apply absolute bottom-[5%] block h-0.5 w-0 transition-all duration-300 ease-in content-[""];
+  }
+
+  .nav-menu:hover::after {
+    @apply h-0.5 w-full bg-secondary;
   }
 
   /* Page heading */
   .page-heading {
-    @apply mt-36 mb-10 text-center text-2xl font-bold uppercase tracking-wider text-darkViolet dark:text-brightViolet sm:text-5xl xl:mt-24;
-  }
-
-  /* Responsive display */
-  .responsive {
-    @apply grid grid-cols-1 items-center justify-center gap-4 lg:grid-cols-2;
+    @apply mt-40 mb-10 text-center text-3xl font-bold uppercase tracking-wider text-primary dark:text-secondary sm:text-5xl xl:mt-28;
   }
 
   /* Score row */
   .score-row {
-    @apply mb-2 grid grid-cols-[1fr_70px_100px] gap-1 [&>*]:text-center [&>*]:font-semibold [&>*]:uppercase;
+    @apply mb-2 grid grid-cols-[1fr_70px_70px] gap-1 lg:grid-cols-[1fr_70px_100px] [&>*]:text-center [&>*]:font-semibold [&>*]:uppercase;
   }
 
   /* Stat */
   .stat {
-    @apply text-center text-5xl font-semibold uppercase text-lightText md:text-6xl [&>*]:text-lightText;
+    @apply text-center text-5xl font-semibold uppercase text-black md:text-6xl [&>*]:text-black;
   }
 }

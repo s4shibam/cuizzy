@@ -3,7 +3,7 @@ import { NavButton } from './';
 
 function SubNavigationBar({ className }) {
   return (
-    <ul className={`items-center gap-1 ${className}`}>
+    <ul className={`items-center gap-8 ${className}`}>
       <NavLink
         to='/'
         className={({ isActive }) => (isActive ? 'active-page' : null)}

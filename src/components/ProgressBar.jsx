@@ -1,25 +1,27 @@
 function ProgressBar({ nextQ, prevQ, progress, submit }) {
   return (
-    <div className='progress-bar frame-BG fixed left-0 right-0 bottom-6 mx-auto grid w-[calc(100vw-50px)] grid-cols-[auto_1fr_auto] items-center justify-between gap-5 p-2 sm:p-4 lg:w-[calc(100vw-150px)]'>
+    <div className='progress-bar card fixed left-0 right-0 bottom-6 mx-auto grid w-[calc(100vw-30px)] grid-cols-[auto_1fr_auto] items-center justify-between gap-2 p-2 sm:p-4 lg:w-[calc(100vw-150px)] lg:gap-5'>
       <button
-        className='next-button fill-button back-button py-2 px-3 font-medium'
+        className='fill-button flex gap-2 border-red-700 bg-red-400 py-2 px-3 font-medium'
         type='button'
         onClick={prevQ}
       >
-        <span className='material-icons-outlined text-2xl text-darkText'>
-          {' '}
-          arrow_back_ios{' '}
+        <span className='material-symbols-outlined text-3xl text-black'>
+          arrow_circle_left
         </span>
-        <span className='ml-1 hidden text-xl text-darkText lg:block'>
-          {' '}
-          Go Back{' '}
-        </span>
+        <span className='hidden text-xl text-black lg:block'>Back</span>
       </button>
 
-      <div className='w-full rounded-full bg-dullWhite dark:bg-gray-600'>
+      <div className='w-full rounded-full bg-black/10 dark:bg-white/10'>
         <div
-          className='rounded-full bg-activeGreen text-center text-xs font-medium leading-none tracking-wider text-darkText transition-all duration-700 ease-in
-          lg:text-sm'
+          className={`rounded-full text-center text-xs font-medium leading-none tracking-wider text-black transition-all duration-700 ease-in
+          lg:text-sm ${
+            progress === 100
+              ? 'bg-green-400'
+              : progress >= 60
+              ? 'bg-amber-400'
+              : 'bg-red-400'
+          }`}
           title={`${progress.toFixed(0)}%`}
           style={{ width: `${progress.toFixed(0)}%` }}
         >
@@ -28,15 +30,15 @@ function ProgressBar({ nextQ, prevQ, progress, submit }) {
       </div>
 
       <button
-        className='next-button fill-button py-2 px-3 font-medium'
+        className='fill-button flex gap-2 border-green-700 bg-green-400 py-2 px-3 font-medium'
         type='button'
         onClick={progress === 100 ? submit : nextQ}
       >
-        <span className='mr-1 hidden text-xl text-darkText lg:block'>
-          {progress === 100 ? 'Submit Quiz' : 'Next Question'}
+        <span className='hidden text-xl text-black lg:block'>
+          {progress === 100 ? 'Submit' : 'Next'}
         </span>
-        <span className='material-icons-outlined text-2xl text-darkText'>
-          {progress === 100 ? 'check_circle' : 'arrow_forward_ios'}
+        <span className='material-symbols-outlined text-3xl text-black'>
+          {progress === 100 ? 'check_circle' : 'arrow_circle_right'}
         </span>
       </button>
     </div>

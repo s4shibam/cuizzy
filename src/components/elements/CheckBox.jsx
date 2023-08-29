@@ -8,7 +8,7 @@ function CheckBox({ className, text, ...rest }) {
         {...rest}
       />
 
-      <span className='w-full select-none text-darkText dark:text-lightText'>
+      <span className='w-full select-none text-black dark:text-white'>
         {text}
       </span>
     </label>
