@@ -21,7 +21,7 @@ function AuthenticationComponent() {
             className='peer mx-2 grid h-8 w-8 place-content-center overflow-hidden rounded-full bg-secondary xl:h-10 xl:w-10'
             title={currentUser.displayName}
           >
-            {!currentUser?.photoURL ? (
+            {currentUser?.photoURL ? (
               <img
                 src={currentUser.photoURL}
                 className='h-full w-full object-cover'
