@@ -1,5 +1,7 @@
 import { PDFDocument, StandardFonts } from 'pdf-lib';
+
 import { certificateTemplate } from '../assets';
+
 import saveAs from './FileSaver.js';
 
 // Draw the text on the page - Certificate Modification
@@ -15,9 +17,7 @@ function modifyCertificate(pdfPage, text, xVal, yVal, fontSize, fontName) {
 // Generate Certificate
 async function generateCertificate(name, description, date) {
   // Get the available PDFDocument and convert it into arrayBuffer
-  const existingPdfBytes = await fetch(certificateTemplate).then((res) =>
-    res.arrayBuffer()
-  );
+  const existingPdfBytes = await fetch(certificateTemplate).then((res) => res.arrayBuffer());
 
   // Load a PDFDocument from the existing PDF bytes
   const pdfDoc = await PDFDocument.load(existingPdfBytes);
@@ -43,8 +43,6 @@ async function generateCertificate(name, description, date) {
 }
 
 export default function getCertificate(name, topic, percentage, date) {
-  const description = `For securing ${percentage}% marks in ${topic
-    .split('-')
-    .join(' ')} Quiz.`;
+  const description = `For securing ${percentage}% marks in ${topic.split('-').join(' ')} Quiz.`;
   generateCertificate(name, description, date);
 }

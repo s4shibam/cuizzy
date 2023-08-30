@@ -4,9 +4,9 @@ import VisibilitySensor from 'react-visibility-sensor';
 function CountUpAnimation({ end }) {
   return (
     <>
-      <CountUp end={end} redraw={true} delay={0.1}>
+      <CountUp delay={0.1} end={end} redraw={true}>
         {({ countUpRef, start }) => (
-          <VisibilitySensor onChange={start} delayedCall>
+          <VisibilitySensor delayedCall onChange={start}>
             <span ref={countUpRef} />
           </VisibilitySensor>
         )}

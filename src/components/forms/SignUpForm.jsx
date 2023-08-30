@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+
 import { CheckBox, Form, TextInput } from '../';
 import { useAuth } from '../../contexts/AuthContext';
 import showAlert from '../AlertList';
@@ -39,36 +40,36 @@ function SignUpForm() {
   }
 
   return (
-    <Form className='signup gap-4' onSubmit={handleSubmit}>
+    <Form className="gap-4" onSubmit={handleSubmit}>
       <TextInput
-        type='text'
         required
-        placeholder='Enter Your Name'
-        icon='person'
+        icon="person"
+        placeholder="Enter Your Name"
+        type="text"
         value={userName}
         onChange={(e) => setUserName(e.target.value)}
       />
       <TextInput
-        type='email'
         required
-        placeholder='Enter Email ID'
-        icon='mail'
+        icon="mail"
+        placeholder="Enter Email ID"
+        type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
 
-      <div className='text-input flex h-[52px] w-full items-center rounded-md border border-black/30 bg-white p-2 outline-none dark:border-white/30 dark:bg-black/50'>
+      <div className="flex h-[52px] w-full items-center rounded-md border border-black/30 bg-white p-2 outline-none dark:border-white/30 dark:bg-black/50">
         <input
-          className='ml-1 w-full rounded-lg border-none bg-transparent font-medium tracking-wide text-black outline-none dark:text-white lg:text-xl'
-          type={show ? 'text' : 'password'}
           required
-          placeholder='Enter Password'
+          className="ml-1 w-full rounded-lg border-none bg-transparent font-medium tracking-wide text-black outline-none dark:text-white lg:text-xl"
+          placeholder="Enter Password"
+          type={show ? 'text' : 'password'}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         <button
-          className='material-symbols-outlined mx-1 flex cursor-pointer items-center justify-center text-black dark:text-white md:text-3xl'
-          type='button'
+          className="material-symbols-outlined mx-1 flex cursor-pointer items-center justify-center text-black dark:text-white md:text-3xl"
+          type="button"
           onClick={() => {
             setShow(!show);
           }}
@@ -78,35 +79,31 @@ function SignUpForm() {
       </div>
 
       <TextInput
-        type='password'
         required
-        placeholder='Confirm Password'
-        icon='lock'
+        icon="lock"
+        placeholder="Confirm Password"
+        type="password"
         value={confirmPassword}
         onChange={(e) => setConfirmPassword(e.target.value)}
       />
       <CheckBox
-        className='my-2 mx-auto flex items-center justify-center text-sm font-medium tracking-wide text-black dark:text-white sm:text-base'
-        text='I agree to the Terms &amp; Conditions'
         required
+        className="mx-auto my-2 flex items-center justify-center text-sm font-medium tracking-wide text-black dark:text-white sm:text-base"
+        text="I agree to the Terms &amp; Conditions"
         value={consent}
         onChange={(e) => setConsent(e.target.value)}
       />
 
-      <button
-        className='signup fill-button mt-2'
-        type='submit'
-        disabled={loading}
-      >
+      <button className="fill-button mt-2" disabled={loading} type="submit">
         Sign Up
       </button>
 
-      <div className='user-login -mt-1 text-center text-sm font-medium tracking-wide text-black dark:text-slate-300 md:text-base'>
+      <div className="-mt-1 text-center text-sm font-medium tracking-wide text-black dark:text-slate-300 md:text-base">
         Already have an account?{' '}
-        <span className='inline-block'>
-          <Link to='/login'>
-            <span className='link-text'>Login</span>
-          </Link>
+        <span className="inline-block">
+          <Link to="/login">
+            <span className="link-text">Login</span>
+          </Link>{' '}
           instead.
         </span>
       </div>

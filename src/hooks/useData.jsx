@@ -22,10 +22,7 @@ export default function useData(address) {
         setLoading(false);
 
         if (snapshot.exists()) {
-          setData((prevData) => [
-            ...prevData,
-            ...Object.values(snapshot.val())
-          ]);
+          setData((prevData) => [...prevData, ...Object.values(snapshot.val())]);
         }
       } catch (err) {
         setLoading(false);
@@ -34,7 +31,7 @@ export default function useData(address) {
     }
 
     fetchTopics();
-  }, []);
+  }, [address]);
 
   return { loading, error, data };
 }

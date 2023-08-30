@@ -1,5 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
+
 import { useAuth } from '../contexts/AuthContext';
+
 import showAlert from './AlertList';
 
 function AuthenticationComponent() {
@@ -13,57 +15,48 @@ function AuthenticationComponent() {
   }
 
   return (
-    <div className='authentication mr-2 flex items-center justify-end xl:gap-2'>
+    <div className="mr-2 flex items-center justify-end xl:gap-2">
       {currentUser !== null ? (
         <>
           <button
-            type='button'
-            className='peer mx-2 grid h-8 w-8 place-content-center overflow-hidden rounded-full bg-secondary xl:h-10 xl:w-10'
+            className="peer mx-2 grid h-8 w-8 place-content-center overflow-hidden rounded-full bg-secondary xl:h-10 xl:w-10"
             title={currentUser.displayName}
+            type="button"
           >
             {currentUser?.photoURL ? (
-              <img
-                src={currentUser.photoURL}
-                className='h-full w-full object-cover'
-              />
+              <img alt="" className="h-full w-full object-cover" src={currentUser.photoURL} />
             ) : (
-              <span className='icon material-symbols-outlined text-3xl text-black xl:text-4xl'>
+              <span className="material-symbols-outlined text-3xl text-black xl:text-4xl">
                 account_circle
               </span>
             )}
           </button>
 
-          <div className='pointer-events-none absolute top-8 mr-2 flex flex-col py-4 opacity-0 transition-opacity duration-300 hover:pointer-events-auto hover:opacity-100 peer-hover:pointer-events-auto peer-hover:opacity-100 xl:top-10'>
-            <div className='h-1 bg-transparent'></div>
-            <hr className='h-px border-0 bg-primary' />
-            <div className='bg-primary'>
-              <Link to='/profile'>
-                <button className='flex w-full items-center gap-3 px-4 py-2 font-medium tracking-wider transition-all duration-300 hover:bg-gray-100/40 dark:hover:bg-gray-900/30 md:text-xl'>
-                  <span className='icon material-symbols-outlined text-2xl'>
-                    person
-                  </span>
-                  <span className='text ml-2'>My Profile</span>
+          <div className="pointer-events-none absolute top-8 mr-2 flex flex-col py-4 opacity-0 transition-opacity duration-300 hover:pointer-events-auto hover:opacity-100 peer-hover:pointer-events-auto peer-hover:opacity-100 xl:top-10">
+            <div className="h-1 bg-transparent"></div>
+            <hr className="h-px border-0 bg-primary" />
+            <div className="bg-primary">
+              <Link to="/profile">
+                <button className="flex w-full items-center gap-3 px-4 py-2 font-medium tracking-wider transition-all duration-300 hover:bg-gray-100/40 dark:hover:bg-gray-900/30 md:text-xl">
+                  <span className="material-symbols-outlined text-2xl">person</span>
+                  <span className="ml-2">My Profile</span>
                 </button>
               </Link>
               <hr />
-              <Link to='/submissions'>
-                <button className='flex w-full items-center gap-3 px-4 py-2 font-medium tracking-wider transition-all duration-300 hover:bg-gray-100/40 dark:hover:bg-gray-900/30 md:text-xl'>
-                  <span className='icon material-symbols-outlined text-2xl'>
-                    history
-                  </span>
-                  <span className='text ml-2'>Submissions</span>
+              <Link to="/submissions">
+                <button className="flex w-full items-center gap-3 px-4 py-2 font-medium tracking-wider transition-all duration-300 hover:bg-gray-100/40 dark:hover:bg-gray-900/30 md:text-xl">
+                  <span className="material-symbols-outlined text-2xl">history</span>
+                  <span className="ml-2">Submissions</span>
                 </button>
               </Link>
               <hr />
-              <Link to='/'>
+              <Link to="/">
                 <button
-                  className='flex w-full items-center gap-3 px-4 py-2 font-medium tracking-wider transition-all duration-300 hover:bg-gray-100/40 dark:hover:bg-gray-900/30 md:text-xl'
+                  className="flex w-full items-center gap-3 px-4 py-2 font-medium tracking-wider transition-all duration-300 hover:bg-gray-100/40 dark:hover:bg-gray-900/30 md:text-xl"
                   onClick={handleLogOut}
                 >
-                  <span className='icon material-symbols-outlined text-2xl'>
-                    logout
-                  </span>
-                  <span className='text ml-2'>Log Out</span>
+                  <span className="material-symbols-outlined text-2xl">logout</span>
+                  <span className="ml-2">Log Out</span>
                 </button>
               </Link>
             </div>
@@ -71,25 +64,17 @@ function AuthenticationComponent() {
         </>
       ) : (
         <>
-          <Link to='/login'>
-            <button type='button' className='border-button mr-2' title='Log in'>
-              <span className='icon material-symbols-outlined text-2xl'>
-                login
-              </span>
-              <span className='text ml-2 hidden uppercase xl:block'>
-                Log In
-              </span>
+          <Link to="/login">
+            <button className="border-button mr-2" title="Log in" type="button">
+              <span className="material-symbols-outlined text-2xl">login</span>
+              <span className="ml-2 hidden uppercase xl:block">Log In</span>
             </button>
           </Link>
 
-          <Link to='/signup'>
-            <button type='button' className='border-button' title='Sign up'>
-              <span className='text mr-2 hidden uppercase xl:block'>
-                Sign Up
-              </span>
-              <span className='icon material-symbols-outlined text-2xl'>
-                person_add
-              </span>
+          <Link to="/signup">
+            <button className="border-button" title="Sign up" type="button">
+              <span className="mr-2 hidden uppercase xl:block">Sign Up</span>
+              <span className="material-symbols-outlined text-2xl">person_add</span>
             </button>
           </Link>
         </>

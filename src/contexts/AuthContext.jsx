@@ -68,7 +68,7 @@ export function AuthProvider({ children }) {
     const auth = getAuth();
     const storage = getStorage();
     const fileRef = ref(storage, auth.currentUser.uid);
-    const snapshot = await uploadBytes(fileRef, imageFile);
+    await uploadBytes(fileRef, imageFile);
     const photoURL = await getDownloadURL(fileRef);
 
     await updateProfile(auth.currentUser, { photoURL });
@@ -105,9 +105,5 @@ export function AuthProvider({ children }) {
     }),
     [currentUser]
   );
-  return (
-    <AuthContext.Provider value={memoValue}>
-      {!loading && children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={memoValue}>{!loading && children}</AuthContext.Provider>;
 }

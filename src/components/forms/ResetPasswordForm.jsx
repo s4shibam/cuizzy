@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import { Form, TextInput } from '../';
 import { useAuth } from '../../contexts/AuthContext';
 import showAlert from '../AlertList';
@@ -25,26 +26,21 @@ function ResetPasswordForm() {
     }
   }
   return (
-    // eslint-disable-next-line react/jsx-no-bind
-    <Form className='signup gap-4 py-0' onSubmit={sendResetMail}>
+    <Form className="gap-4 py-0" onSubmit={sendResetMail}>
       <TextInput
-        type='email'
         required
-        placeholder='Enter Your Email ID'
-        icon='mail'
+        icon="mail"
+        placeholder="Enter Your Email ID"
+        type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
 
-      <button
-        className='user-login fill-button mt-4'
-        type='submit'
-        disabled={loading}
-      >
+      <button className="fill-button mt-4" disabled={loading} type="submit">
         Send Mail
       </button>
 
-      <div className='user-signup text-center text-base font-medium tracking-wide text-black dark:text-slate-300'>
+      <div className="text-center text-base font-medium tracking-wide text-black dark:text-slate-300">
         Password reset link will be sent to the mail
       </div>
     </Form>

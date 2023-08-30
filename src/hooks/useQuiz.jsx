@@ -22,10 +22,7 @@ export default function useQuiz(topicID) {
         setLoading(false);
 
         if (snapshot.exists())
-          setQuiz((prevQuestions) => [
-            ...prevQuestions,
-            ...Object.values(snapshot.val())
-          ]);
+          setQuiz((prevQuestions) => [...prevQuestions, ...Object.values(snapshot.val())]);
       } catch (err) {
         setLoading(false);
         setError(true);
@@ -33,7 +30,6 @@ export default function useQuiz(topicID) {
     }
 
     fetchQuestions();
-
   }, [topicID]);
 
   return { loading, error, quiz };

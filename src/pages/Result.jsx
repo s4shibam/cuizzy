@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+
 import { DetailedReport, ResultSummary } from '../components';
 
 function Result() {
@@ -19,28 +20,28 @@ function Result() {
   } = markSheetObject;
 
   return (
-    <div className='result mx-auto mb-20 w-[90%] animate-reveal'>
+    <div className="mx-auto mb-20 w-[90%] animate-reveal">
       {qnaSet?.length > 0 && (
         <>
           <ResultSummary
             showTopicID
-            topicId={topicId}
-            noq={noq}
-            date={date}
             correctAnswersCount={correctAnswersCount}
+            date={date}
             incorrectAnswersCount={incorrectAnswersCount}
-            unattemptedCount={unattemptedCount}
-            obtainedPoints={obtainedPoints}
+            noq={noq}
             obtainedPercentage={obtainedPercentage}
+            obtainedPoints={obtainedPoints}
+            topicId={topicId}
+            unattemptedCount={unattemptedCount}
           />
 
-          <div className='mt-16 flex w-full items-center justify-center gap-6'>
+          <div className="mt-16 flex w-full items-center justify-center gap-6">
             {!showAnswers && (
               <button
-                type='button'
+                className="border-button rounded-md border-2 border-primary px-4 py-2 font-medium uppercase"
+                title="See Answers"
+                type="button"
                 onClick={() => setShowAnswers(true)}
-                className='border-button rounded-md border-2 border-primary px-4 py-2 font-medium uppercase'
-                title='See Answers'
               >
                 See Answers
               </button>
@@ -48,9 +49,9 @@ function Result() {
 
             <Link to={`/quiz/${topicId}`}>
               <button
-                type='button'
-                className='border-button rounded-md border-2 border-primary px-4 py-2 font-medium uppercase'
-                title='Retry Quiz'
+                className="border-button rounded-md border-2 border-primary px-4 py-2 font-medium uppercase"
+                title="Retry Quiz"
+                type="button"
               >
                 Retry Quiz
               </button>

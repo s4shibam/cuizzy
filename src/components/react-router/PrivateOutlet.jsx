@@ -1,4 +1,5 @@
 import { Navigate, Outlet } from 'react-router-dom';
+
 import { useAuth } from '../../contexts/AuthContext';
 import showAlert from '../AlertList';
 
@@ -7,7 +8,7 @@ function PrivateOutlet() {
 
   if (!currentUser) {
     showAlert('error', 'login-needed');
-    return <Navigate to='/login' />;
+    return <Navigate to="/login" />;
   }
   return <Outlet />;
 }

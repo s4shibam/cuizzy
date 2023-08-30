@@ -31,8 +31,7 @@ const errorList = {
   'auth/user-not-found': 'User not found!',
   'auth/weak-password': 'The password should contain at least 6 characters!',
   'auth/timeout': 'The operation has timed out.',
-  'auth/user-disabled':
-    'The user account has been disabled by the administrator.',
+  'auth/user-disabled': 'The user account has been disabled by the administrator.',
   'auth/user-mismatch': 'User not matching!',
 
   // Custom error

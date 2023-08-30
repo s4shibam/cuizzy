@@ -30,9 +30,7 @@ function bom(blob, opts) {
   // note: your browser will automatically convert UTF-16 U+FEFF to EF BB BF
   if (
     opts.autoBom &&
-    /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(
-      blob.type
-    )
+    /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(blob.type)
   ) {
     return new Blob([String.fromCharCode(0xfeff), blob], { type: blob.type });
   }
@@ -58,7 +56,9 @@ function corsEnabled(url) {
   xhr.open('HEAD', url, false);
   try {
     xhr.send();
-  } catch (e) {}
+  } catch (e) {
+    /* empty */
+  }
   return xhr.status >= 200 && xhr.status <= 299;
 }
 
@@ -123,9 +123,7 @@ var saveAs =
           // Support regular links
           a.href = blob;
           if (a.origin !== location.origin) {
-            corsEnabled(a.href)
-              ? download(blob, name, opts)
-              : click(a, (a.target = '_blank'));
+            corsEnabled(a.href) ? download(blob, name, opts) : click(a, (a.target = '_blank'));
           } else {
             click(a);
           }
@@ -166,15 +164,13 @@ var saveAs =
         // Mostly only available on user interaction and the fileReader is async so...
         popup = popup || open('', '_blank');
         if (popup) {
-          popup.document.title = popup.document.body.innerText =
-            'downloading...';
+          popup.document.title = popup.document.body.innerText = 'downloading...';
         }
 
         if (typeof blob === 'string') return download(blob, name, opts);
 
         var force = blob.type === 'application/octet-stream';
-        var isSafari =
-          /constructor/i.test(_global.HTMLElement) || _global.safari;
+        var isSafari = /constructor/i.test(_global.HTMLElement) || _global.safari;
         var isChromeIOS = /CriOS\/[\d]+/.test(navigator.userAgent);
 
         if (
@@ -185,9 +181,7 @@ var saveAs =
           var reader = new FileReader();
           reader.onloadend = function () {
             var url = reader.result;
-            url = isChromeIOS
-              ? url
-              : url.replace(/^data:[^;]*;/, 'data:attachment/file;');
+            url = isChromeIOS ? url : url.replace(/^data:[^;]*;/, 'data:attachment/file;');
             if (popup) popup.location.href = url;
             else location = url;
             popup = null; // reverse-tabnabbing #460

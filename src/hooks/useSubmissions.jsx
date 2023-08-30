@@ -1,5 +1,6 @@
 import { get, getDatabase, query, ref } from 'firebase/database';
 import { useEffect, useState } from 'react';
+
 import { useAuth } from '../contexts/AuthContext';
 
 export default function useSubmissions() {
@@ -36,7 +37,7 @@ export default function useSubmissions() {
     }
 
     fetchAnswers();
-  }, []);
+  }, [uid]);
 
   return { loading, error, submissions };
 }

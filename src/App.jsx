@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
+import { Toaster } from 'react-hot-toast';
 import {
   Route,
   RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements
+  Routes,
+  ScrollRestoration,
+  createBrowserRouter
 } from 'react-router-dom';
+
 import {
   DesignComponent,
   MainNavigationBar,
@@ -12,10 +15,10 @@ import {
   PrivateOutlet,
   PublicOutlet
 } from './components';
+// eslint-disable-next-line import/order
 import { AuthProvider } from './contexts/AuthContext';
 
 // Website Pages
-import { Toaster } from 'react-hot-toast';
 import {
   About,
   DetailedSubmission,
@@ -33,12 +36,47 @@ import {
   Video
 } from './pages';
 
+function Root() {
+  return (
+    <>
+      <ScrollRestoration />
+      <Routes>
+        <Route element={<MainNavigationBar />}>
+          <Route element={<Home />} path="/" />
+          <Route element={<Quizzes />} path="/quizzes" />
+          <Route element={<About />} path="/about" />
+          <Route element={<Reset />} path="/reset" />
+          <Route element={<Learn />} path="/learn" />
+          <Route element={<PublicOutlet />} path="/">
+            <Route element={<SignUp />} path="signup" />
+            <Route element={<Login />} path="login" />
+          </Route>
+          <Route element={<PrivateOutlet />} path="/">
+            <Route element={<Quiz />} errorElement={<PageNotFound />} path="quiz/:id" />
+            <Route element={<Video />} errorElement={<PageNotFound />} path="video/:id" />
+            <Route element={<Profile />} path="profile" />
+            <Route element={<Submissions />} path="submissions" />
+            <Route
+              element={<DetailedSubmission />}
+              errorElement={<PageNotFound />}
+              path="detailed-submission"
+            />
+            <Route element={<Result />} errorElement={<PageNotFound />} path="result/:id" />
+          </Route>
+          <Route element={<PageNotFound />} path="*" />
+        </Route>
+      </Routes>
+    </>
+  );
+}
+
+const router = createBrowserRouter([{ path: '*', Component: Root }]);
+
 function App() {
   // Website theme
   if (
     localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches)
+    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
   ) {
     document.documentElement.classList.add('dark');
   } else {
@@ -55,49 +93,8 @@ function App() {
     }, 1000);
   }, []);
 
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path='/' element={<MainNavigationBar />}>
-        <Route index element={<Home />} />
-        <Route path='/' element={<PublicOutlet />}>
-          <Route path='signup' element={<SignUp />} />
-          <Route path='login' element={<Login />} />
-        </Route>
-        <Route path='quizzes' element={<Quizzes />} />
-        <Route path='about' element={<About />} />
-        <Route path='reset' element={<Reset />} />
-        <Route path='learn' element={<Learn />} />
-        <Route path='/' element={<PrivateOutlet />}>
-          <Route
-            path='quiz/:id'
-            element={<Quiz />}
-            errorElement={<PageNotFound />}
-          />
-          <Route
-            path='video/:id'
-            element={<Video />}
-            errorElement={<PageNotFound />}
-          />
-          <Route path='profile' element={<Profile />} />
-          <Route path='submissions' element={<Submissions />} />
-          <Route
-            path='detailed-submission'
-            element={<DetailedSubmission />}
-            errorElement={<PageNotFound />}
-          />
-          <Route
-            path='result/:id'
-            element={<Result />}
-            errorElement={<PageNotFound />}
-          />
-        </Route>
-        <Route path='*' element={<PageNotFound />} />
-      </Route>
-    )
-  );
-
   return (
-    <div className='App'>
+    <div>
       {preloading && <Preloader />}
 
       {!preloading && (
@@ -105,12 +102,12 @@ function App() {
           <DesignComponent />
           <RouterProvider router={router} />
           <Toaster
-            position='top-center'
+            position="top-center"
             toastOptions={{
               style: {
                 color: '#000',
                 fontWeight: 600,
-                background: '#4ee4ce'
+                background: '#44BBA9'
               },
               duration: 3000
             }}

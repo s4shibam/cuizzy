@@ -43,16 +43,16 @@
 
   /* Answer option box */
   .answer-option {
-    @apply flex w-full cursor-pointer items-center rounded-md border border-black/50 bg-black/5 px-3 py-3 text-lg font-medium outline-none transition-all duration-500 hover:bg-white/50 dark:border-white/50 dark:bg-slate-900 dark:bg-white/5 dark:hover:bg-black/50 sm:px-5 sm:py-4;
+    @apply flex w-full cursor-pointer items-center rounded-md border-2 border-black/50 bg-black/5 px-3 py-3 text-lg font-medium outline-none transition-all duration-500 hover:bg-white/50 dark:border-white/50 dark:bg-slate-900 dark:bg-white/5 dark:hover:bg-black/50 sm:px-5 sm:py-4;
   }
 
   /* Answer result */
   .answer-correct {
-    @apply bg-green-400 font-semibold dark:bg-green-400;
+    @apply bg-green-400 font-semibold dark:bg-green-400 !border-green-500;
   }
 
   .answer-wrong {
-    @apply bg-red-400 font-semibold dark:bg-red-400;
+    @apply bg-red-400 font-semibold dark:bg-red-400 !border-red-500;
   }
 
   .answer-correct > span,
@@ -122,5 +122,9 @@
   /* Stat */
   .stat {
     @apply text-center text-5xl font-semibold uppercase text-black md:text-6xl [&>*]:text-black;
+  }
+
+  .go2072408551{
+    @apply dark:!bg-red-700 bg-yellow-700;
   }
 }

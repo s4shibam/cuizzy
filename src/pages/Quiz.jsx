@@ -1,11 +1,13 @@
 import { child, getDatabase, push, ref, update } from 'firebase/database';
 import _ from 'lodash';
-import { useCallback, useEffect, useReducer, useState } from 'react';
+import { useCallback, useEffect, useMemo, useReducer, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+
+import { PageNotFound } from './';
+
 import { AnswerBox, ProgressBar, Rules } from '../components';
 import { useAuth } from '../contexts/AuthContext';
 import { useQuiz } from '../hooks';
-import { PageNotFound } from './';
 
 const initialState = null;
 
@@ -22,8 +24,7 @@ const reducer = (state, action) => {
     }
     case 'answer': {
       const question = _.cloneDeep(state);
-      question[action.questionID].options[action.optionIndex].checked =
-        action.value;
+      question[action.questionID].options[action.optionIndex].checked = action.value;
       return question;
     }
 
@@ -39,7 +40,7 @@ function Quiz() {
   const [qnaSet, dispatch] = useReducer(reducer, initialState);
   const { currentUser } = useAuth();
   const navigate = useNavigate();
-  const date = new Date();
+  const date = useMemo(() => new Date(), []);
 
   useEffect(() => {
     dispatch({
@@ -63,8 +64,7 @@ function Quiz() {
 
   // Get next question
   const nextQuestion = useCallback(() => {
-    if (currentQuestion < qnaSet.length - 1)
-      setCurrentQuestion((curr) => curr + 1);
+    if (currentQuestion < qnaSet.length - 1) setCurrentQuestion((curr) => curr + 1);
   }, [currentQuestion, qnaSet]);
 
   // Get previous question
@@ -74,8 +74,7 @@ function Quiz() {
   }, [currentQuestion, qnaSet]);
 
   // Progress percentage
-  const progressPercentage =
-    qnaSet?.length > 0 ? ((currentQuestion + 1) * 100) / qnaSet.length : 0;
+  const progressPercentage = qnaSet?.length > 0 ? ((currentQuestion + 1) * 100) / qnaSet.length : 0;
 
   // Submit Quiz and store result in the database
   const submitQuiz = useCallback(async () => {
@@ -84,7 +83,7 @@ function Quiz() {
       let incorrectAnswersCount = 0;
       let unattemptedCount = 0;
 
-      qnaSet?.forEach((question, index1) => {
+      qnaSet?.forEach((question) => {
         const correctIndexes = [];
         const checkedIndexes = [];
 
@@ -94,14 +93,12 @@ function Quiz() {
         });
 
         if (checkedIndexes.length === 0) unattemptedCount += 1;
-        else if (_.isEqual(correctIndexes, checkedIndexes))
-          correctAnswersCount += 1;
+        else if (_.isEqual(correctIndexes, checkedIndexes)) correctAnswersCount += 1;
         else incorrectAnswersCount += 1;
       });
 
       const noq = qnaSet?.length;
-      const obtainedPoints =
-        correctAnswersCount * 10 - incorrectAnswersCount * 2;
+      const obtainedPoints = correctAnswersCount * 10 - incorrectAnswersCount * 2;
       const obtainedPercentage = obtainedPoints / (0.1 * noq);
 
       return [
@@ -126,10 +123,9 @@ function Quiz() {
     const markSheetObject = {
       topicId: id,
       date: date.toLocaleDateString('en-IN'),
-      time: `${date.getHours() % 12 || 12}:${date
-        .getMinutes()
-        .toString()
-        .padStart(2, '0')} ${date.getHours() < 12 ? 'AM' : 'PM'}`,
+      time: `${date.getHours() % 12 || 12}:${date.getMinutes().toString().padStart(2, '0')} ${
+        date.getHours() < 12 ? 'AM' : 'PM'
+      }`,
       noq: noq,
       correctAnswersCount: correctAnswersCount,
       incorrectAnswersCount: incorrectAnswersCount,
@@ -147,28 +143,28 @@ function Quiz() {
     submissionsData[`submissions/${uid}/${submissionsKey}`] = markSheetObject;
     await update(ref(db), submissionsData);
     navigate(`/result/${id}`, { state: { qnaSet, markSheetObject } });
-  }, [currentUser, id, navigate, qnaSet]);
+  }, [currentUser, date, id, navigate, qnaSet]);
 
   return (
     <>
-      {loading && <p className='page-heading text-lg'>Loading ...</p>}
+      {loading && <p className="page-heading text-lg">Loading ...</p>}
       {error && <PageNotFound />}
       {!loading && !error && qnaSet && qnaSet?.length === 0 && <PageNotFound />}
       {!loading && !error && qnaSet && qnaSet?.length > 0 && (
-        <div className='quiz mx-auto w-[85%] animate-reveal'>
-          <h1 className='page-heading'>{id.split('-').join(' ')} Quiz!</h1>
+        <div className="mx-auto w-[85%] animate-reveal">
+          <h1 className="page-heading">{id.split('-').join(' ')} Quiz!</h1>
           <Rules />
-          <div className='question card mb-40 flex flex-col justify-center rounded-md p-3'>
-            <div className='flex flex-col items-center justify-center text-xl font-bold text-black dark:text-white sm:text-3xl'>
+          <div className="card mb-40 flex flex-col justify-center rounded-md p-3">
+            <div className="flex flex-col items-center justify-center text-xl font-bold text-black dark:text-white sm:text-3xl">
               Q. {qnaSet[currentQuestion].title}
             </div>
 
-            <hr className='mt-3 mb-8 h-px border-0 bg-primary' />
+            <hr className="mb-8 mt-3 h-px border-0 bg-primary" />
 
             <AnswerBox
               input
-              options={qnaSet[currentQuestion].options}
               handleChange={handleAnswerChange}
+              options={qnaSet[currentQuestion].options}
             />
           </div>
 

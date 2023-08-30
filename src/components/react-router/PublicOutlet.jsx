@@ -1,4 +1,5 @@
 import { Navigate, Outlet } from 'react-router-dom';
+
 import { useAuth } from '../../contexts/AuthContext';
 import showAlert from '../AlertList';
 
@@ -7,7 +8,7 @@ function PublicOutlet() {
 
   if (currentUser) {
     showAlert('error', 'already-logged-in');
-    return <Navigate to='/' />;
+    return <Navigate to="/" />;
   }
   return <Outlet />;
 }
