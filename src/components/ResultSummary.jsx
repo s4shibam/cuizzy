@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { ScoreCard } from './';
 
 function ResultSummary({
+  showTopicID = false,
   topicId,
   noq,
   correctAnswersCount,
@@ -14,7 +15,9 @@ function ResultSummary({
   const { id } = useParams();
   return (
     <div className='summary mx-auto'>
-      <h1 className='page-heading'>{id?.split('-').join(' ')} Quiz</h1>
+      {showTopicID && (
+        <h1 className='page-heading'>{id?.split('-').join(' ')} Quiz</h1>
+      )}
       <ScoreCard
         location='result'
         topicId={topicId}

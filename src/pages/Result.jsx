@@ -23,6 +23,7 @@ function Result() {
       {qnaSet?.length > 0 && (
         <>
           <ResultSummary
+            showTopicID
             topicId={topicId}
             noq={noq}
             date={date}
