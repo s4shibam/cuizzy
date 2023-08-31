@@ -7,7 +7,7 @@
 
 @layer components {
   * {
-    @apply m-0 box-border scroll-smooth p-0 font-montserrat text-black selection:bg-secondary/30 dark:text-white;
+    @apply m-0 box-border p-0 font-montserrat text-black selection:bg-secondary/30 dark:text-white;
   }
 
   body {
