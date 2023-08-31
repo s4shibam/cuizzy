@@ -1,30 +1,44 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Thumbnail } from '../components';
+import { Footer, Thumbnail } from '../components';
 import { useData } from '../hooks';
 
 function Learn() {
   const { loading, error, data } = useData('videos');
+  const [shuffledData, setShuffledData] = useState([]);
 
+  useEffect(() => {
+    if (data.length > 0) {
+      const shuffledArray = [...data];
+      for (let i = shuffledArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+      }
+      setShuffledData(shuffledArray);
+    }
+  }, [data]);
   return (
-    <div className="mx-auto flex w-[85%] animate-reveal flex-col justify-center">
-      <h1 className="page-heading">Learn from us</h1>
+    <>
+      <div className="mx-auto mb-32 flex min-h-screen w-[90%] animate-reveal flex-col items-center">
+        <h1 className="page-heading">Learn from us</h1>
 
-      <div className="mx-auto grid w-full grid-cols-quizzes justify-items-center gap-5">
-        {data.map((video, index) => (
-          <Link key={index} to={`/video/${video.link}`}>
-            <Thumbnail id={video.link} title={video.title} type="video" />
-          </Link>
-        ))}
-      </div>
+        <div className="mx-auto grid w-full grid-cols-quizzes justify-items-center gap-5">
+          {shuffledData.map((video, index) => (
+            <Link key={index} to={`/video/${video.link}`}>
+              <Thumbnail id={video.link} title={video.title} type="video" />
+            </Link>
+          ))}
+        </div>
 
-      <div className="flex items-center justify-center text-center text-xl">
-        {!loading && data.length === 0 && <>No data found! </>}
-        {error && <>There was an error! </>}
-        {loading && <>Loading ...</>}
+        <div className="flex items-center justify-center text-center text-xl">
+          {!loading && shuffledData.length === 0 && <>No data found! </>}
+          {error && <>There was an error! </>}
+          {loading && <>Loading ...</>}
+        </div>
       </div>
-      <br />
-    </div>
+      <Footer />
+    </>
   );
 }
 
