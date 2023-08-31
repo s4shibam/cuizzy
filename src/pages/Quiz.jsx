@@ -155,8 +155,8 @@ function Quiz() {
         await update(submissionCountRef, {
           [id]: updatedSubmissionCount
         });
-        console.log('updatedSubmissionCount ', updatedSubmissionCount);
       }
+
       // Navigate to the result page
       navigate(`/result/${id}`, { state: { qnaSet, markSheetObject } });
     } catch (error) {

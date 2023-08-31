@@ -11,7 +11,7 @@ export default function usePopularQuizzes() {
       const db = getDatabase();
       const submissionsRef = ref(db, 'submissionCount');
       const submissionsQuery = query(submissionsRef);
-      console.log(submissionsQuery);
+
       try {
         setError(false);
         setLoading(true);

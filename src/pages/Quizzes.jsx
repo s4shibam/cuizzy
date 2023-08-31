@@ -14,7 +14,7 @@ function Quizzes() {
           <div className="mx-auto grid h-full w-full grid-cols-quizzes justify-items-center gap-7">
             {data.map((topic, index) =>
               topic.noq > 0 ? (
-                <Link key={topic.topicID} to={`/quiz/${topic.topicID}`}>
+                <Link key={topic.topicID} className="w-full" to={`/quiz/${topic.topicID}`}>
                   <Thumbnail id={topic.topicID} noq={topic.noq} title={topic.title} type="quiz" />
                 </Link>
               ) : (

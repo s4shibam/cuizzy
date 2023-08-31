@@ -19,13 +19,17 @@ function Thumbnail({ title, submissions, id, noq, type }) {
     >
       <div className="card relative aspect-video w-full overflow-hidden rounded-lg p-0">
         <img
-          alt={title}
+          alt=""
           className="h-auto w-full animate-reveal object-cover"
           loading="lazy"
           src={link}
-          onLoad={() => setImageLoaded(true)}
+          onError={({ currentTarget }) => {
+            currentTarget.onerror = null;
+            currentTarget.src = placeholder;
+          }}
+          onLoad={() => setImageLoaded(false)}
         />
-        {imageLoaded && <img alt="" className="h-full w-full object-cover" src={placeholder} />}
+        {!imageLoaded && <img alt="" className="h-full w-full object-cover" src={placeholder} />}
       </div>
       <div className={`${type === 'quiz' ? 'flex h-28 flex-col justify-between gap-1' : 'h-14'}`}>
         <p className="mt-1 line-clamp-2 overflow-hidden text-center font-semibold uppercase tracking-wide text-black dark:text-slate-300 sm:text-lg">

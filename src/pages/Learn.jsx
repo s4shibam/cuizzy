@@ -25,7 +25,7 @@ function Learn() {
 
         <div className="mx-auto grid w-full grid-cols-quizzes justify-items-center gap-5">
           {shuffledData.map((video, index) => (
-            <Link key={index} to={`/video/${video.link}`}>
+            <Link key={index} className="w-full" to={`/video/${video.link}`}>
               <Thumbnail id={video.link} title={video.title} type="video" />
             </Link>
           ))}

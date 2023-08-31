@@ -1,41 +1,34 @@
 import { useState } from 'react';
 
-import { coding, hero, logo } from '../assets';
+import { coding, hero } from '../assets';
 import { BasicInfo, ContactUs, Footer, PopularQuizzes } from '../components';
 
 function Home() {
   const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
-    <div className="mt-44 flex flex-col items-center justify-center xl:mt-28">
+    <div
+      className={`mt-36 flex animate-reveal flex-col items-center justify-center xl:mt-28 ${
+        !imageLoaded && 'hidden'
+      }`}
+    >
       <div className="relative mx-auto aspect-[8/5] max-w-xl overflow-hidden px-4 xl:mt-8 2xl:max-w-3xl">
-        {imageLoaded && (
-          <div className="absolute left-0 top-0 flex w-full justify-center pr-1">
-            <img
-              alt=""
-              className="w-12 origin-center animate-rotate rounded-md drop-shadow-md md:w-20 md:rounded-xl"
-              src={coding}
-            />
-          </div>
-        )}
+        <div className="absolute left-0 top-0 flex w-full justify-center pr-1">
+          <img
+            alt=""
+            className="w-12 origin-center animate-rotate rounded-md drop-shadow-md md:w-20 md:rounded-xl"
+            src={coding}
+          />
+        </div>
+
         <img
           alt=""
-          className="animate-reveal object-cover drop-shadow-lg"
+          className="object-cover drop-shadow-lg"
           height={450}
           src={hero}
           width={720}
           onLoad={() => setImageLoaded(true)}
         />
-        {!imageLoaded && (
-          <div className="grid h-full w-full place-items-center">
-            <img
-              alt=""
-              className="aspect-square max-w-[65%] origin-center animate-rotate object-contain"
-              height={450}
-              src={logo}
-              width={720}
-            />
-          </div>
-        )}
       </div>
 
       <div className="mx-8 flex flex-col items-center justify-center gap-2">
