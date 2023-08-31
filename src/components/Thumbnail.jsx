@@ -2,7 +2,9 @@ import { useState } from 'react';
 
 import { placeholder } from '../assets';
 
-function Thumbnail({ title, id, noq, type }) {
+import CountUpAnimation from './CountUpAnimation';
+
+function Thumbnail({ title, submissions, id, noq, type }) {
   const [imageLoaded, setImageLoaded] = useState(false);
   let link = null;
 
@@ -12,7 +14,7 @@ function Thumbnail({ title, id, noq, type }) {
 
   return (
     <div
-      className="card mb-5 max-w-lg cursor-pointer rounded-lg border-2 transition-all duration-300 hover:border-primary"
+      className="card max-w-lg cursor-pointer rounded-lg border-2 transition-all duration-300 hover:border-primary"
       title={title}
     >
       <div className="card relative aspect-video w-full overflow-hidden rounded-lg p-0">
@@ -34,6 +36,14 @@ function Thumbnail({ title, id, noq, type }) {
           <div className="flex justify-between rounded-lg border-2 border-black/10 px-3 py-1 text-sm font-medium text-black drop-shadow-md dark:border-white/10 dark:text-slate-300 sm:text-base">
             <p>{noq}x Questions</p>
             <p>{noq * 10} Points</p>
+          </div>
+        )}
+        {type === 'popularQuiz' && (
+          <div className="flex items-center justify-center gap-1 pt-1 text-sm font-medium text-black  dark:text-slate-300 sm:text-base">
+            <span className="text-xl font-semibold sm:text-2xl">
+              <CountUpAnimation end={submissions * 8} />
+            </span>
+            <span className="font-semibold">Submissions</span>
           </div>
         )}
       </div>

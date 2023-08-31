@@ -1,4 +1,4 @@
-import { child, getDatabase, push, ref, update } from 'firebase/database';
+import { child, get, getDatabase, push, ref, update } from 'firebase/database';
 import _ from 'lodash';
 import { useCallback, useEffect, useMemo, useReducer, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -141,8 +141,27 @@ function Quiz() {
     const submissionsData = {};
 
     submissionsData[`submissions/${uid}/${submissionsKey}`] = markSheetObject;
-    await update(ref(db), submissionsData);
-    navigate(`/result/${id}`, { state: { qnaSet, markSheetObject } });
+    try {
+      // Update submission data in the database
+      await update(ref(db), submissionsData);
+
+      // Manually increase submission count
+      const submissionCountRef = ref(db, 'submissionCount');
+      const snapshot = await get(submissionCountRef);
+      if (snapshot.exists()) {
+        const currentSubmissionCount = snapshot.val()[id] || 0;
+        const updatedSubmissionCount = currentSubmissionCount + 1;
+
+        await update(submissionCountRef, {
+          [id]: updatedSubmissionCount
+        });
+        console.log('updatedSubmissionCount ', updatedSubmissionCount);
+      }
+      // Navigate to the result page
+      navigate(`/result/${id}`, { state: { qnaSet, markSheetObject } });
+    } catch (error) {
+      console.error('Error submitting quiz:', error);
+    }
   }, [currentUser, date, id, navigate, qnaSet]);
 
   return (

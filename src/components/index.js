@@ -20,6 +20,7 @@ export { default as DetailedReport } from './DetailedReport';
 export { default as FileSaver } from './FileSaver';
 export { default as Footer } from './Footer';
 export { default as MainNavigationBar } from './MainNavigationBar';
+export { default as PopularQuizzes } from './PopularQuizzes';
 export { default as Preloader } from './Preloader';
 export { default as ProgressBar } from './ProgressBar';
 export { default as ResultSummary } from './ResultSummary';
