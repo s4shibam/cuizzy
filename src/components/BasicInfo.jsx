@@ -51,14 +51,14 @@ function BasicInfo() {
         </div>
       </div>
       <div className="mb-20 w-[85%]">
-        <p className="mb-20 text-center text-4xl font-bold uppercase tracking-wide lg:text-5xl">
+        <p className="mb-20 text-center text-4xl font-bold uppercase tracking-wider lg:text-5xl">
           Why Quizzy?
         </p>
-        <div className="grid grid-cols-1 place-content-center gap-x-10 gap-y-14 xl:grid-cols-2 2xl:grid-cols-4">
+        <div className="grid grid-cols-1 place-content-center gap-x-10 gap-y-16 xl:grid-cols-2 2xl:grid-cols-4">
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="card mx-auto flex max-w-[500px] flex-col content-center gap-y-4 border-0 border-b-4 !border-b-primary p-8 text-center transition-transform hover:scale-105 hover:shadow-xl"
+              className="card mx-auto flex max-w-[500px] flex-col gap-y-4 border-0 border-b-4 !border-b-primary p-8 text-center transition-transform hover:scale-105 hover:shadow-xl"
             >
               <div className="mx-auto mb-4 grid h-fit w-fit place-content-center rounded-full border-2 border-primary bg-secondary p-4 drop-shadow-md">
                 <span className="material-symbols-outlined text-5xl text-white">
