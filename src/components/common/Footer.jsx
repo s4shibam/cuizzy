@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { logo } from '../assets';
+import { logo } from '../../assets';
 
 function Footer() {
   return (

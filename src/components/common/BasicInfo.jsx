@@ -1,4 +1,4 @@
-import CountUpAnimation from './CountUpAnimation';
+import { CountUpAnimation } from '..';
 
 const reasons = [
   {

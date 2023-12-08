@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { CheckBox, Form, TextInput } from '../';
 import { useAuth } from '../../contexts/AuthContext';
-import showAlert from '../AlertList';
+import { useAlert } from '../../hooks';
 
 function SignUpForm() {
   const [userName, setUserName] = useState('');
@@ -22,7 +22,7 @@ function SignUpForm() {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      showAlert('error', 'password-no-match');
+      useAlert('error', 'password-no-match');
       return;
     }
     try {
@@ -30,12 +30,12 @@ function SignUpForm() {
       document.body.style.cursor = 'wait';
       await signUp(email, password, userName);
       document.body.style.cursor = 'default';
-      showAlert('success', 'account-created');
+      useAlert('success', 'account-created');
       navigate('/');
     } catch (err) {
       setLoading(false);
       document.body.style.cursor = 'default';
-      showAlert('error', err.code);
+      useAlert('error', err.code);
     }
   }
 

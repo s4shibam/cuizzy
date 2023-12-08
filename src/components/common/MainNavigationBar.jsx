@@ -1,8 +1,7 @@
 import { Link, Outlet } from 'react-router-dom';
 
-import { AuthenticationComponent, SubNavigationBar, SwitchTheme } from './';
-
-import { logo } from '../assets';
+import { logo } from '../../assets';
+import { AuthenticationComponent, SubNavigationBar, SwitchTheme } from '../../components';
 
 function MainNavigationBar() {
   return (

@@ -1,8 +1,8 @@
 import { PDFDocument, StandardFonts } from 'pdf-lib';
 
-import { certificateTemplate } from '../assets';
+import { certificateTemplate } from '../assets/index.js';
 
-import saveAs from './FileSaver.js';
+import saveAs from './useFileSaver.js';
 
 // Draw the text on the page - Certificate Modification
 function modifyCertificate(pdfPage, text, xVal, yVal, fontSize, fontName) {
@@ -42,7 +42,7 @@ async function generateCertificate(name, description, date) {
   );
 }
 
-export default function getCertificate(name, topic, percentage, date) {
+export default function useCertificate(name, topic, percentage, date) {
   const description = `For securing ${percentage}% marks in ${topic.split('-').join(' ')} Quiz.`;
   generateCertificate(name, description, date);
 }

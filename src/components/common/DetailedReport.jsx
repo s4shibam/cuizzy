@@ -1,4 +1,4 @@
-import { AnswerBox } from './';
+import { AnswerBox } from '..';
 
 function DetailedReport({ qnaSet = [] }) {
   return (

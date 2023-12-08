@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 
-import { CheckBox } from './';
+import { CheckBox } from '../';
 
 function AnswerBox({ input, handleChange, options = [] }) {
   return (

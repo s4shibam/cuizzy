@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import showAlert from './AlertList';
+import { useAlert } from '../../hooks';
 
 function UserDetail({ data, currentUser, updateDetail }) {
   const [underEdit, setUnderEdit] = useState(false);
@@ -18,12 +18,12 @@ function UserDetail({ data, currentUser, updateDetail }) {
       try {
         document.body.style.cursor = 'wait';
         await updateDetail(userDetail);
-        showAlert('success', data === 'displayName' ? 'username-updated' : 'profile-image-updated');
+        useAlert('success', data === 'displayName' ? 'username-updated' : 'profile-image-updated');
 
         document.body.style.cursor = 'default';
       } catch (err) {
         document.body.style.cursor = 'default';
-        showAlert('error', err.code);
+        useAlert('error', err.code);
       }
     navigate('/profile');
   }

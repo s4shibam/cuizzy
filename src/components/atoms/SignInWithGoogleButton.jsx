@@ -1,9 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 
-import { google } from '../assets';
-import { useAuth } from '../contexts/AuthContext';
-
-import showAlert from './AlertList';
+import { google } from '../../assets';
+import { useAuth } from '../../contexts/AuthContext';
+import { useAlert } from '../../hooks';
 
 function SignInWithGoogleButton({ title }) {
   const navigate = useNavigate();
@@ -14,12 +13,12 @@ function SignInWithGoogleButton({ title }) {
     try {
       document.body.style.cursor = 'wait';
       await signInWithGoogle();
-      showAlert('success', 'login-success');
+      useAlert('success', 'login-success');
       document.body.style.cursor = 'default';
       navigate('/');
     } catch (err) {
       document.body.style.cursor = 'default';
-      showAlert('error', err.code);
+      useAlert('error', err.code);
     }
     return null;
   }

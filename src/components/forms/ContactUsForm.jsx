@@ -1,9 +1,9 @@
 import { send as sendEmail } from '@emailjs/browser';
 import { useState } from 'react';
 
-import showAlert from '../AlertList';
-import Form from '../elements/Form';
-import TextInput from '../elements/TextInput';
+import { useAlert } from '../../hooks';
+import Form from '../atoms/Form';
+import TextInput from '../atoms/TextInput';
 
 function ContactUsForm() {
   const [senderDetails, setSenderDetails] = useState({});
@@ -26,10 +26,10 @@ function ContactUsForm() {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
       setLoading(false);
-      showAlert('success', 'mail-sent');
+      useAlert('success', 'mail-sent');
     } catch (error) {
       console.error(error);
-      showAlert('error', error?.text || 'unknown-error');
+      useAlert('error', error?.text || 'unknown-error');
       setLoading(false);
     }
   };

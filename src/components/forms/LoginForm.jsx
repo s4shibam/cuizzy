@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { Form, TextInput } from '../';
 import { useAuth } from '../../contexts/AuthContext';
-import showAlert from '../AlertList';
+import { useAlert } from '../../hooks';
 
 function LoginForm() {
   const [email, setEmail] = useState('');
@@ -21,13 +21,13 @@ function LoginForm() {
       setLoading(true);
       document.body.style.cursor = 'wait';
       await logIn(email, password);
-      showAlert('success', 'login-success');
+      useAlert('success', 'login-success');
       document.body.style.cursor = 'default';
       navigate('/');
     } catch (err) {
       document.body.style.cursor = 'default';
       setLoading(false);
-      showAlert('error', err.code);
+      useAlert('error', err.code);
     }
     return null;
   }

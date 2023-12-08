@@ -1,8 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 
-import { useAuth } from '../contexts/AuthContext';
-
-import showAlert from './AlertList';
+import { useAuth } from '../../contexts/AuthContext';
+import { useAlert } from '../../hooks';
 
 function AuthenticationComponent() {
   const { currentUser, logOut } = useAuth();
@@ -10,7 +9,7 @@ function AuthenticationComponent() {
 
   function handleLogOut() {
     logOut();
-    showAlert('success', 'logout-success');
+    useAlert('success', 'logout-success');
     navigate('/');
   }
 

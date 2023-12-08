@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { placeholder } from '../assets';
+import { placeholder } from '../../assets';
 
 import CountUpAnimation from './CountUpAnimation';
 

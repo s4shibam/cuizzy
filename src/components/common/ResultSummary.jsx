@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-import { ScoreCard } from './';
+import { ScoreCard } from '..';
 
 function ResultSummary({
   showTopicID = false,

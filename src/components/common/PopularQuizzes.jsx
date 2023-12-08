@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 
-import usePopularQuizzes from '../hooks/usePopularQuizzes';
-
-import Thumbnail from './Thumbnail';
+import { Thumbnail } from '..';
+import { usePopularQuizzes } from '../../hooks';
 
 function PopularQuizzes() {
   const { popularQuizzes } = usePopularQuizzes();

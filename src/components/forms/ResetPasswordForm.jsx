@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Form, TextInput } from '../';
 import { useAuth } from '../../contexts/AuthContext';
-import showAlert from '../AlertList';
+import { useAlert } from '../../hooks';
 
 function ResetPasswordForm() {
   const [email, setEmail] = useState('');
@@ -17,12 +17,12 @@ function ResetPasswordForm() {
 
       document.body.style.cursor = 'wait';
       await resetPassword(email);
-      showAlert('success', 'mail-sent');
+      useAlert('success', 'mail-sent');
       document.body.style.cursor = 'default';
     } catch (err) {
       setLoading(false);
       document.body.style.cursor = 'default';
-      showAlert('error', err.code);
+      useAlert('error', err.code);
     }
   }
   return (

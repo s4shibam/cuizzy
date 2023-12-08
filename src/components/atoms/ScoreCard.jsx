@@ -1,6 +1,5 @@
-import { useAuth } from '../contexts/AuthContext';
-
-import getCertificate from './Certificate';
+import { useAuth } from '../../contexts/AuthContext';
+import { useCertificate } from '../../hooks';
 
 function ScoreCard({
   topicId,
@@ -68,7 +67,7 @@ function ScoreCard({
           className="border-button mx-auto mb-2 mt-6 w-fit rounded-lg border-2 border-primary px-4 py-2 font-semibold tracking-wider"
           title="Get Certificate"
           type="button"
-          onClick={() => getCertificate(currentUser.displayName, topicId, obtainedPercentage, date)}
+          onClick={() => useCertificate(currentUser.displayName, topicId, obtainedPercentage, date)}
         >
           <span className="uppercase">Get Certificate</span>
         </button>

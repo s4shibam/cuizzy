@@ -41,7 +41,7 @@ const errorList = {
   'unknown-error': 'Unknown error occurred!'
 };
 
-export default function showAlert(type = '', msg = '') {
+export default function useAlert(type = '', msg = '') {
   if (type === 'success') {
     const message = successList[msg] || msg;
 
@@ -76,4 +76,6 @@ export default function showAlert(type = '', msg = '') {
       });
     }
   }
+
+  return null;
 }

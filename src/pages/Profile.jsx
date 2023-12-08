@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 import { UserDetail } from '../components';
-import showAlert from '../components/AlertList';
 import { useAuth } from '../contexts/AuthContext';
+import { useAlert } from '../hooks';
 
 function Profile() {
   const { currentUser, updateProfileImage, updateUserName, resetPassword } = useAuth();
@@ -14,12 +14,12 @@ function Profile() {
       setResetLoading(true);
       document.body.style.cursor = 'wait';
       await resetPassword(currentUser.email);
-      showAlert('success', 'mail-sent');
+      useAlert('success', 'mail-sent');
       document.body.style.cursor = 'default';
     } catch (err) {
       setResetLoading(false);
       document.body.style.cursor = 'default';
-      showAlert('error', err.code);
+      useAlert('error', err.code);
     }
   }
   return (
