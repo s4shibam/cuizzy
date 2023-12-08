@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "firebase": "^9.17.1",
     "lodash": "^4.17.21",
     "pdf-lib": "^1.17.1",
