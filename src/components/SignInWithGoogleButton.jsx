@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
+import { google } from '../assets';
 import { useAuth } from '../contexts/AuthContext';
 
 import showAlert from './AlertList';
@@ -35,11 +36,7 @@ function SignInWithGoogleButton({ title }) {
         type="button"
         onClick={handleSubmit}
       >
-        <img
-          alt=""
-          className="mr-4 h-8 w-8"
-          src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-        />
+        <img alt="" className="mr-4 h-8 w-8" src={google} />
         {title}
       </button>
     </div>
