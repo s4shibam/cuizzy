@@ -37,12 +37,13 @@ const errorList = {
   // Custom error
   'password-no-match': 'Passwords not matched!',
   'login-needed': 'Login first to access!',
-  'already-logged-in': 'Invalid access!'
+  'already-logged-in': 'Invalid access!',
+  'unknown-error': 'Unknown error occurred!'
 };
 
 export default function showAlert(type = '', msg = '') {
   if (type === 'success') {
-    const message = successList[msg];
+    const message = successList[msg] || msg;
 
     if (!message) {
       toast.success('Success!', {
@@ -61,7 +62,7 @@ export default function showAlert(type = '', msg = '') {
   }
 
   if (type === 'error') {
-    const message = errorList[msg];
+    const message = errorList[msg] || msg;
 
     if (!message) {
       toast.error('Error occurred!', {
