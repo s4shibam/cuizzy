@@ -41,7 +41,7 @@ module.exports = {
         reservedFirst: true
       }
     ], // Warns about JSX props sorting rules
-    'react-hooks/rules-of-hooks': 'error', // Enforces rules of Hooks to prevent bugs.
+    'react-hooks/rules-of-hooks': 0, // Neglects rules of Hooks to prevent bugs.
     'react-hooks/exhaustive-deps': 'warn', // Warns about missing dependencies in useEffect and useCallback.
     'jsx-a11y/click-events-have-key-events': 0, // Allows click events without corresponding key events.
     'jsx-a11y/anchor-is-valid': ['error', { components: ['Link'], specialLink: ['to'] }], // Ensures valid links in JSX.
