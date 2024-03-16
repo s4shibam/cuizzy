@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Footer, Thumbnail } from '../components';
@@ -5,14 +6,30 @@ import { useData } from '../hooks';
 
 function Quizzes() {
   const { loading, error, data } = useData('topics');
+  const [shuffledData, setShuffledData] = useState([]);
+
+  useEffect(() => {
+    if (data.length > 0) {
+      const quizzes = data.filter((obj) => obj.noq !== 0);
+      const comingSoonQuizzes = data.filter((obj) => obj.noq === 0);
+
+      for (let i = quizzes.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [quizzes[i], quizzes[j]] = [quizzes[j], quizzes[i]];
+      }
+
+      const shuffledArray = quizzes.concat(comingSoonQuizzes);
+      setShuffledData(shuffledArray);
+    }
+  }, [data]);
 
   return (
     <>
       <div className="mx-auto mb-32 flex min-h-screen w-[90%] animate-reveal flex-col items-center">
         <h1 className="page-heading">Attempt Quizzes</h1>
-        {data.length > 0 && (
+        {shuffledData.length > 0 && (
           <div className="mx-auto grid h-full w-full grid-cols-quizzes justify-items-center gap-7">
-            {data.map((topic, index) =>
+            {shuffledData.map((topic, index) =>
               topic.noq > 0 ? (
                 <Link key={topic.topicID} className="w-full" to={`/quiz/${topic.topicID}`}>
                   <Thumbnail id={topic.topicID} noq={topic.noq} title={topic.title} type="quiz" />
