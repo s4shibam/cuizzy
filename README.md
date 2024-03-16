@@ -1,55 +1,52 @@
-## Quizzy - Quiz Application
+<p align="center">
+    <a href="https://quizzy.shibamsaha.dev">
+        <img alt="Quizzy" width="100" src="./public/Logo.png" style="border-radius: 10px">
+    </a>
+</p>
 
-<br/>
+<div align="center">
+    <h1>Quizzy</h1>
+    <p>Challenge your limits</p>
+</div>
 
-**Details**
+<p align="center">
+    <img src="https://img.shields.io/github/languages/code-size/s4shibam/quizzy?style=flat-square" alt="Code Size">
+    <img src="https://img.shields.io/github/license/s4shibam/quizzy?style=flat-square" alt="License">
+    <img src="https://img.shields.io/github/stars/s4shibam/quizzy?style=flat-square&logo=github" alt="Stars">
+</p>
 
-- This is a Web Application to play quizzes online as well as to learn new topics while watching video content on the platform itself.
-- Extremely user experience-centric, modern interface-based applications have options to change the theme as well to provide the best experience to the user.
 
-<br/>
+<br />
 
-**Features**
 
-- Sign up or login to view quizzes and attempt them; `Firebase authentication` has been used.
-- The user can modify their display name at any time, and a `Forgot Password` option is available to reset the password of the specific account.
-- A dedicated profile section.
-- Users can choose a theme (light/dark) for the web application.
-- View video content on the platform.
-- After completing a quiz, the user can view their performance as well as the correct solutions to the quiz problem.
-- Download the achievement certificate.
+## ⚡ Introduction
 
-<br/>
+Quizzy is a platform for online computer science or coding quizzes, as well as learning new topics by watching video content on the platform.
 
-**New Features**
+## ✨ Features
+  
+-  User experience-centric, modern and responsive interface
+-  `Dark` and `Light` theme support
+-  User authentication by `Firebase`
+   -  Google Signin
+   -  Email/Password Signin
+-  Option to edit profile and reset password
+-  Marking based quizzes
+-  Certificate on successful completion
+-  Quiz submission history
+-  Video tutorials to learn computer science topics
 
-- The `Sign In with Google` functionality has been added to make sign up/log in easier.
-- Added a `Submissions History` page, in addition to a detailed submission section.
-- Users can now update their profile image and name on the platform.
 
-<br/>
+## ⚙️ Tech Stack
+  
+- React JS
+- Tailwind CSS
+- Vite JS
+- Firebase
 
-**Live Link**
 
-- [Quizzy - Quiz Application](https://s4shibam-quizzy.netlify.app)
-
-<br/>
-
-**Tech Stack**
-
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)](#)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white)](#)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=black)](#)
-
-[![React JS](https://img.shields.io/badge/React.js-61DAFB?style=for-the-badge&logo=React&logoColor=black)](#)
-[![Vite JS](https://img.shields.io/badge/Vite.js-646CFF?style=for-the-badge&logo=Vite&logoColor=white)](#)
-
-[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=black)](#)
-
-<br/>
-
-**Additional Libraries**
-
+## 📦 Other Libraries and Tools
+  
 - FileSaver JS
 - Lodash
 - PDF LIB JS
@@ -57,22 +54,26 @@
 - React Router DOM
 - React Toastify
 
-<br/>
+## 🎯 Goals
 
-**Developer Dependencies**
+- [x] Master `React JS` and develop a project showcasing proficiency
+- [x] Implement public and private routing effectively in a React application
+- [x] Establish user authentication using context providers for enhanced security
+- [x] Acquire proficiency in NoSQL database principles and query techniques
+- [x] Seamlessly integrate a `BAAS` into a React application for streamlined backend operations
 
-- ESLint
-- Prettier
+## 🖼️ Screenshots
 
-<br/>
+![Landing](./readme_assets/screenshot_1.png)
+![Quizzes](./readme_assets/screenshot_2.png)
+![Attempt Quiz](./readme_assets/screenshot_3.png)
+![Result](./readme_assets/screenshot_4.png)
+![Answers](./readme_assets/screenshot_5.png)
+![Submissions](./readme_assets/screenshot_6.png)
+![User Profile](./readme_assets/screenshot_7.png)
 
-**Demo Video**
 
-<img src="./media/Quizzy-Demo.gif" alt="Demo Video">
-
-<br/>
-
-**Follow Me**
+## 👋🏻 Contact
 
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/s4shibam)
-[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/s4shibam)
+[![Twitter](https://img.shields.io/badge/Twitter-00ACEE?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/intent/follow?screen_name=s4shibam)
