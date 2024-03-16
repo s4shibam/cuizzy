@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://quizzy.shibamsaha.dev">
-        <img alt="Quizzy" width="100" src="./public/Logo.png" style="border-radius: 10px">
+        <img alt="Quizzy" width="100" src="./public/Logo.svg">
     </a>
 </p>
 
