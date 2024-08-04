@@ -8,9 +8,9 @@ function Footer() {
       <div className="md:mr-10 md:flex md:justify-between">
         <div className="-ml-1 mb-6 md:mb-0">
           <Link className="flex items-center" to="/">
-            <img alt="Quizzy Logo" className="mr-1 h-8 rounded-full sm:h-9" src={logo} />
+            <img alt="Cuizzy Logo" className="mr-1 h-8 rounded-full sm:h-9" src={logo} />
             <span className="self-center whitespace-nowrap text-xl font-semibold text-primary sm:text-2xl">
-              Quizzy
+              Cuizzy
             </span>
           </Link>
         </div>
@@ -61,7 +61,7 @@ function Footer() {
             Developed with 💚 by &nbsp;
             <a
               className="cursor-pointer hover:underline"
-              href="https://www.shibamsaha.dev"
+              href="https://www.s4shibam.com"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -71,7 +71,7 @@ function Footer() {
           <span>
             © 2023{' '}
             <Link className="hover:underline" to="/">
-              Quizzy.
+              Cuizzy.
             </Link>
             &ensp;All Rights Reserved.
           </span>
