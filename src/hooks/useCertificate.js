@@ -36,7 +36,7 @@ async function generateCertificate(name, description, date) {
   // Uint8Array formation from modified pdf
   const pdfBytes = await pdfDoc.save();
   saveAs(
-    new File([pdfBytes], 'Quizzy_Certificate.pdf', {
+    new File([pdfBytes], 'Cuizzy_Certificate.pdf', {
       type: 'application/pdf;charset=utf-8'
     })
   );
