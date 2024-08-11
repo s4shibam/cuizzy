@@ -15,7 +15,7 @@ function About() {
     <div className="mx-auto flex w-[85%] animate-reveal flex-col items-center justify-center">
       <h1 className="page-heading">About Cuizzy</h1>
 
-      <div className="card flex max-w-4xl flex-col gap-10 p-6 text-justify font-medium dark:text-red-300 sm:w-3/5 sm:text-xl">
+      <div className="card flex !w-full max-w-4xl flex-col gap-10 p-6 text-justify font-medium dark:text-red-300 sm:w-3/5 sm:text-xl">
         {aboutDetails.map((para, index2) => (
           <p
             key={index2}
