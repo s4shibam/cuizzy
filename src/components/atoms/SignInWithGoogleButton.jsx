@@ -2,14 +2,17 @@ import { useNavigate } from 'react-router-dom';
 
 import { google } from '../../assets';
 import { useAuth } from '../../contexts/AuthContext';
-import { useAlert } from '../../hooks';
+import { useAlert, useGAEventTracker } from '../../hooks';
 
 function SignInWithGoogleButton({ title }) {
+  const gaEventTracker = useGAEventTracker('Auth');
   const navigate = useNavigate();
   const { signInWithGoogle } = useAuth();
 
   async function handleSubmit(e) {
     e.preventDefault();
+    gaEventTracker({ action: 'Submit', label: 'Google Sign In' });
+
     try {
       document.body.style.cursor = 'wait';
       await signInWithGoogle();

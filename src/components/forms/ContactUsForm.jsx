@@ -2,9 +2,10 @@ import { send as sendEmail } from '@emailjs/browser';
 import { useState } from 'react';
 
 import { Form, TextInput } from '../../components';
-import { useAlert } from '../../hooks';
+import { useAlert, useGAEventTracker } from '../../hooks';
 
 function ContactUsForm() {
+  const gaEventTracker = useGAEventTracker('Contact Us');
   const initialSenderDetails = {
     name: '',
     email: '',
@@ -16,7 +17,7 @@ function ContactUsForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    gaEventTracker({ action: 'Submit', label: 'Contact Us' });
     setLoading(true);
     try {
       await sendEmail(

@@ -3,9 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { Form, TextInput } from '../';
 import { useAuth } from '../../contexts/AuthContext';
-import { useAlert } from '../../hooks';
+import { useAlert, useGAEventTracker } from '../../hooks';
 
 function LoginForm() {
+  const gaEventTracker = useGAEventTracker('Auth');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState('');
@@ -17,6 +18,7 @@ function LoginForm() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    gaEventTracker({ action: 'Submit', label: 'Login' });
     try {
       setLoading(true);
       document.body.style.cursor = 'wait';

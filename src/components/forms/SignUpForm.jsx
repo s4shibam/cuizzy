@@ -3,9 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { CheckBox, Form, TextInput } from '../';
 import { useAuth } from '../../contexts/AuthContext';
-import { useAlert } from '../../hooks';
+import { useAlert, useGAEventTracker } from '../../hooks';
 
 function SignUpForm() {
+  const gaEventTracker = useGAEventTracker('Auth');
+
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -21,10 +23,13 @@ function SignUpForm() {
   async function handleSubmit(e) {
     e.preventDefault();
 
+    gaEventTracker({ action: 'Submit', label: 'Sign Up' });
+
     if (password !== confirmPassword) {
       useAlert('error', 'password-no-match');
       return;
     }
+
     try {
       setLoading(true);
       document.body.style.cursor = 'wait';

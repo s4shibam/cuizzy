@@ -2,9 +2,10 @@ import { useState } from 'react';
 
 import { Form, TextInput } from '../';
 import { useAuth } from '../../contexts/AuthContext';
-import { useAlert } from '../../hooks';
+import { useAlert, useGAEventTracker } from '../../hooks';
 
 function ResetPasswordForm() {
+  const gaEventTracker = useGAEventTracker('Auth');
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState('');
 
@@ -12,6 +13,8 @@ function ResetPasswordForm() {
 
   async function sendResetMail(e) {
     e.preventDefault();
+    gaEventTracker({ action: 'Submit', label: 'Reset Password' });
+
     try {
       setLoading(true);
 
