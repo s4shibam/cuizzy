@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Footer, Thumbnail } from '../components';
-import { useData } from '../hooks';
+import { useData, useGAEventTracker } from '../hooks';
 
 function Quizzes() {
+  const gaEventTracker = useGAEventTracker('Quiz Thumbnail');
+
   const { loading, error, data } = useData('topics');
   const [shuffledData, setShuffledData] = useState([]);
 
@@ -31,11 +33,21 @@ function Quizzes() {
           <div className="mx-auto grid h-full w-full grid-cols-quizzes justify-items-center gap-7">
             {shuffledData.map((topic, index) =>
               topic.noq > 0 ? (
-                <Link key={topic.topicID} className="w-full" to={`/quiz/${topic.topicID}`}>
+                <Link
+                  key={topic.topicID}
+                  className="w-fit"
+                  to={`/quiz/${topic.topicID}`}
+                  onClick={() => gaEventTracker({ label: topic.topicID })}
+                >
                   <Thumbnail id={topic.topicID} noq={topic.noq} title={topic.title} type="quiz" />
                 </Link>
               ) : (
-                <div key={index} className="w-full">
+                // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+                <div
+                  key={index}
+                  className="w-full"
+                  onClick={() => gaEventTracker({ label: topic.topicID })}
+                >
                   <Thumbnail id={topic.topicID} noq={topic.noq} title={topic.title} type="quiz" />
                 </div>
               )

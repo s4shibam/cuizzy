@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { useAlert } from '../../hooks';
+import { useAlert, useGAEventTracker } from '../../hooks';
 
 function UserDetail({ data, currentUser, updateDetail }) {
+  const gaEventTracker = useGAEventTracker('Profile Page');
   const [underEdit, setUnderEdit] = useState(false);
   const [userDetail, setUserDetail] = useState(currentUser[data]);
   const [save, setSave] = useState(true);
@@ -26,6 +27,7 @@ function UserDetail({ data, currentUser, updateDetail }) {
         useAlert('error', err.code);
       }
     navigate('/profile');
+    gaEventTracker({ label: 'Save ' + data });
   }
 
   function handleCancel(e) {
@@ -33,6 +35,7 @@ function UserDetail({ data, currentUser, updateDetail }) {
     setUserDetail(currentUser[data]);
     setSave((prevState) => !prevState);
     setUnderEdit((prevState) => !prevState);
+    gaEventTracker({ label: 'Cancel ' + data });
   }
 
   if (data === 'displayName') {

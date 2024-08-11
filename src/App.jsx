@@ -10,6 +10,7 @@ import {
 
 import {
   DesignComponent,
+  GoogleAnalytics,
   MainNavigationBar,
   Preloader,
   PrivateOutlet,
@@ -36,10 +37,12 @@ import {
   Video
 } from './pages';
 
+
 function Root() {
   return (
     <>
       <ScrollRestoration />
+      <GoogleAnalytics />
       <Routes>
         <Route element={<MainNavigationBar />}>
           <Route element={<Home />} path="/" />

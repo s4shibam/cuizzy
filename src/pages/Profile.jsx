@@ -2,13 +2,15 @@ import { useState } from 'react';
 
 import { UserDetail } from '../components';
 import { useAuth } from '../contexts/AuthContext';
-import { useAlert } from '../hooks';
+import { useAlert, useGAEventTracker } from '../hooks';
 
 function Profile() {
+  const gaEventTracker = useGAEventTracker('Profile Page');
   const { currentUser, updateProfileImage, updateUserName, resetPassword } = useAuth();
   const [resetLoading, setResetLoading] = useState(false);
 
   async function sendResetMail() {
+    gaEventTracker({ label: 'Reset Password' });
     if (!confirm('Are you sure you want to reset?')) return;
     try {
       setResetLoading(true);

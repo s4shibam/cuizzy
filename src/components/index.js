@@ -11,6 +11,7 @@ export { default as SignInWithGoogleButton } from './atoms/SignInWithGoogleButto
 export { default as SwitchTheme } from './atoms/SwitchTheme';
 export { default as TextInput } from './atoms/TextInput';
 export { default as Thumbnail } from './atoms/Thumbnail';
+export { default as GoogleAnalytics } from './atoms/GoogleAnalytics';
 
 export { default as LoginForm } from './forms/LoginForm';
 export { default as ResetPasswordForm } from './forms/ResetPasswordForm';

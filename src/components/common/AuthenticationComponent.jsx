@@ -1,11 +1,12 @@
 import { Link, useNavigate } from 'react-router-dom';
 
 import { useAuth } from '../../contexts/AuthContext';
-import { useAlert } from '../../hooks';
+import { useAlert, useGAEventTracker } from '../../hooks';
 
 function AuthenticationComponent() {
   const { currentUser, logOut } = useAuth();
   const navigate = useNavigate();
+  const gaEventTracker = useGAEventTracker('Nav Button');
 
   function handleLogOut() {
     logOut();
@@ -35,21 +36,21 @@ function AuthenticationComponent() {
             <div className="h-1 bg-transparent"></div>
             <hr className="h-px border-0 bg-primary" />
             <div className="bg-primary">
-              <Link to="/profile">
+              <Link to="/profile" onClick={() => gaEventTracker({ label: 'Profile' })}>
                 <button className="flex w-full items-center gap-3 px-4 py-2 font-medium tracking-wider transition-all duration-300 hover:bg-gray-100/40 dark:hover:bg-gray-900/30 md:text-xl">
                   <span className="material-symbols-outlined text-2xl">person</span>
                   <span className="ml-2">My Profile</span>
                 </button>
               </Link>
               <hr />
-              <Link to="/submissions">
+              <Link to="/submissions" onClick={() => gaEventTracker({ label: 'Submissions' })}>
                 <button className="flex w-full items-center gap-3 px-4 py-2 font-medium tracking-wider transition-all duration-300 hover:bg-gray-100/40 dark:hover:bg-gray-900/30 md:text-xl">
                   <span className="material-symbols-outlined text-2xl">history</span>
                   <span className="ml-2">Submissions</span>
                 </button>
               </Link>
               <hr />
-              <Link to="/">
+              <Link to="/" onClick={() => gaEventTracker({ label: 'Logout' })}>
                 <button
                   className="flex w-full items-center gap-3 px-4 py-2 font-medium tracking-wider transition-all duration-300 hover:bg-gray-100/40 dark:hover:bg-gray-900/30 md:text-xl"
                   onClick={handleLogOut}
@@ -63,14 +64,14 @@ function AuthenticationComponent() {
         </>
       ) : (
         <>
-          <Link to="/login">
+          <Link to="/login" onClick={() => gaEventTracker({ label: 'Login' })}>
             <button className="border-button mr-2" title="Log in" type="button">
               <span className="material-symbols-outlined text-2xl">login</span>
               <span className="ml-2 hidden uppercase xl:block">Log In</span>
             </button>
           </Link>
 
-          <Link to="/signup">
+          <Link to="/signup" onClick={() => gaEventTracker({ label: 'Signup' })}>
             <button className="border-button" title="Sign up" type="button">
               <span className="mr-2 hidden uppercase xl:block">Sign Up</span>
               <span className="material-symbols-outlined text-2xl">person_add</span>

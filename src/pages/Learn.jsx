@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Footer, Thumbnail } from '../components';
-import { useData } from '../hooks';
+import { useData, useGAEventTracker } from '../hooks';
 
 function Learn() {
+  const gaEventTracker = useGAEventTracker('Video Thumbnail');
+
   const { loading, error, data } = useData('videos');
   const [shuffledData, setShuffledData] = useState([]);
 
@@ -25,7 +27,12 @@ function Learn() {
 
         <div className="mx-auto grid w-full grid-cols-quizzes justify-items-center gap-5">
           {shuffledData.map((video, index) => (
-            <Link key={index} className="w-full" to={`/video/${video.link}`}>
+            <Link
+              key={index}
+              className="w-full"
+              to={`/video/${video.link}`}
+              onClick={() => gaEventTracker({ label: video.link })}
+            >
               <Thumbnail id={video.link} title={video.title} type="video" />
             </Link>
           ))}
